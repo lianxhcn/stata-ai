@@ -1,0 +1,61 @@
+---
+title: "第 1 讲　Stata 最小入口"
+---
+
+> **本讲回答一个问题**：在 AI 时代，Stata 到底要先掌握哪几个「最小」入口，才能顺畅地进入实证研究？
+
+## 正文
+
+很多人学 Stata 时容易陷入两个极端：要么想把上千条命令背下来，要么干脆把代码丢给 AI、自己一行都不看。本讲的主张是走中间路线——**先把最小入口掌握牢**，剩下的交给 `help`、外部命令和 AI。所谓最小入口，只有五件事。
+
+**第一，认识四个窗口。** 打开 Stata，你会看到命令窗口（Command）、结果窗口（Results）、变量窗口（Variables）和历史窗口（Review）。命令窗口敲命令、结果窗口看输出、变量窗口看数据结构、历史窗口回看并重跑做过的命令。理解这四个窗口的分工，就理解了 Stata 的交互方式。
+
+**第二，三行 dofile 跑通一次完整分析。** 真正的分析不写在命令窗口里，而写在 **dofile**（`.do` 文件）中——它是可保存、可重跑、可分享的脚本。最小的一段分析只有三行：
+
+```stata
+sysuse auto, clear      // 载入 Stata 自带的 auto 数据
+summarize price mpg     // 看关键变量的描述性统计
+regress price mpg weight  // 跑一个回归
+```
+
+把这三行存成 `01_first.do`，用 `do 01_first.do` 就能一键重跑。**能重跑、能分享**，是 dofile 相对于「在窗口里手敲」的根本优势，也是可复现研究的起点。
+
+**第三，学会读 `help`。** 遇到任何命令，先 `help 命令名`。帮助文件顶部是**语法（Syntax）**，中间是**选项（Options）**，底部是**示例（Examples）**。读 `help regress` 时，先看语法行 `regress depvar indepvars`（因变量在前、自变量在后），再挑一两个选项看，最后照着示例改。不知道命令叫什么时，用 `findit 关键词`（如 `findit dynamic panel`）按关键词模糊搜索。
+
+**第四，用 `ssc install` 装外部命令。** Stata 的很多好用功能来自社区贡献的**外部命令**，最常见的来源是 SSC。用法很简单：
+
+```stata
+ssc install winsor2, replace   // 安装（覆盖旧版本）
+help winsor2                    // 装好后就能看帮助
+```
+
+`winsor2` 用来给变量缩尾、`reghdfe` 处理高维固定效应、`csdid` 做现代 DID——这些都不是 Stata 自带的，装一次即可长期使用。
+
+**第五，路径问题只用一句话记住：永远用项目文件夹 + 相对路径。** 不要把数据、代码散落在桌面各处，也不要在 dofile 里写死 `C:\Users\某某\Desktop\...` 这种绝对路径——换台电脑就全废了。正确做法是给每个项目建一个文件夹，dofile 里只用相对路径：
+
+```stata
+import delimited using "./data/raw.csv", clear
+save "./temp/clean.dta", replace
+```
+
+一个点 `.` 代表当前目录，两个点 `..` 代表上一级。这样整个项目夹拷给别人、上传 GitHub，代码都能照跑。这条规矩也为第 4 讲的 Agent 演示埋下伏笔：**Agent 之所以能接管一个项目，前提就是这个项目本身是「文件夹 + 相对路径」组织好的。**
+
+![Stata 工作流程：项目文件夹的组织](https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/Stata工作流程指南_李青塬_Fig01.png)
+
+把这五件事做扎实，你就有了一个「能跑、能重跑、能分享」的最小工作台。接下来 AI 才有用武之地：它帮你补语法、查命令、改报错，而你始终看得懂每一行在干什么。
+
+## 课堂演示要点
+
+- 打开 Stata，指出四个窗口，用 `sysuse auto, clear` 载入数据，在变量窗口看结构。
+- 新建 `01_first.do`，写三行 `use → summarize → regress`，`do` 一键跑通。
+- 现场 `help regress`，读语法行与一个选项；再 `findit` 一个关键词演示模糊搜索。
+- `ssc install winsor2, replace` 装一个外部命令，`help winsor2` 验证。
+- 一句话讲相对路径：把绝对路径改成 `./data/...`，强调「项目文件夹 + 相对路径」。
+
+## 延伸阅读
+
+- [优雅的实证研究：文档结构与基本规则](https://www.lianxh.cn/details/1633.html)
+- [Stata 外部命令：SSC 所有外部命令清单](https://www.lianxh.cn/details/1501.html)
+- [Stata：如何永久修改 PERSONAL 文件夹的位置？](https://www.lianxh.cn/details/1538.html)
+- [Stata 代码规范指南](https://www.lianxh.cn/details/1452.html)
+- [Stata：AI 写代码时代，为什么还要懂一点？](https://www.lianxh.cn/details/1833.html)

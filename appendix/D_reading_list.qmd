@@ -1,0 +1,56 @@
+---
+title: "附录 D　延伸阅读清单"
+---
+
+本清单汇总课程涉及的全部延伸阅读，均为连享会推文 / 页面链接，按主题分组，方便课后按需查阅。
+
+## 理念：AI 时代为什么还要懂一点
+
+- [Stata：AI 写代码时代，为什么还要懂一点？](https://www.lianxh.cn/details/1833.html)
+- [Python：AI 写代码时代，为什么还要懂一点？](https://www.lianxh.cn/details/1829.html)
+- [R 语言：AI 写代码时代，为什么还要懂一点？](https://www.lianxh.cn/details/1831.html)
+- [Git：AI 写代码时代，为什么还要懂一点？](https://www.lianxh.cn/details/1821.html)
+
+## AI 工具分工与 Agent 工作流（第 3、4 讲）
+
+- [ChatGPT、Codex、Copilot、Claude Code：AI 工具如何分工协作？](https://www.lianxh.cn/details/1844.html)
+- [从代码补全到 AI-Agent：Copilot、Claude Code、Codex 怎么选？](https://www.lianxh.cn/details/1856.html)
+- [从 Prompt 到 Skills：把论文复现、数据清洗和代码规范写进 AI](https://www.lianxh.cn/details/1790.html)
+- [Claude Code Skills 写作指南：如何写好一个可复用的 SKILL.md](https://www.lianxh.cn/details/1791.html)
+- [Codex 也有 Skills 了：安装、调用和定制科研工作流](https://www.lianxh.cn/details/1828.html)
+- [警惕 AI-Agent 泄密：三道闸门守住 API 密钥和账号信息](https://www.lianxh.cn/details/1851.html)
+
+## 环境配置（settings 页）
+
+- [公开课：Claude Code 协同 Stata：环境配置与应用实践](https://www.lianxh.cn/details/1767.html)
+- [VS Code 插件：安装、配置和使用](https://www.lianxh.cn/details/1490.html)
+- [50 分钟搞定个人主页：Fork 模板 + GitHub Pages + Quarto](https://www.lianxh.cn/details/1644.html)
+- [快去抢注一个 GitHub 账号](https://www.lianxh.cn/details/1692.html)
+
+## Stata 入门与规范（第 1 讲）
+
+- [优雅的实证研究：文档结构与基本规则](https://www.lianxh.cn/details/1633.html)
+- [Stata 外部命令：SSC 所有外部命令清单](https://www.lianxh.cn/details/1501.html)
+- [Stata：如何永久修改 PERSONAL 文件夹的位置？](https://www.lianxh.cn/details/1538.html)
+- [Stata 代码规范指南](https://www.lianxh.cn/details/1452.html)
+
+## DID 方法（demo 与第 4 讲）
+
+- [StatsPAI：交叠 DID 方法太多，到底怎么选？](https://www.lianxh.cn/details/1805.html)
+- [多时间点 DID 的统计检验](https://www.lianxh.cn/details/1740.html)
+- [平行趋势不显著≠平行趋势成立：pretrends](https://www.lianxh.cn/details/1704.html)
+- [四个标准：什么样的政策冲击适合做准自然实验？](https://www.lianxh.cn/details/1814.html)
+- [China Policy Shocks：中国政策冲击数据库](https://www.lianxh.cn/details/1801.html)
+
+## 复现与可重复研究（附录 B 与 demo 规范）
+
+- [代码审计：如何从源头确保你的论文可复现？](https://www.lianxh.cn/details/1739.html)
+- [社会科学研究复现包中的自述文档模板](https://www.lianxh.cn/details/1451.html)
+- [EJD 平台：13000 篇顶刊论文的复现数据和代码](https://www.lianxh.cn/details/1701.html)
+
+## 站点互链
+
+- [Stata 101](https://lianxhcn.github.io/stata101/)
+- [数据分析与经济决策（ds2026）](https://lianxhcn.github.io/ds2026/)
+- [因果推断：政策评估（ci-policy）](https://lianxhcn.github.io/ci-policy/)
+- [连享会主页](https://www.lianxh.cn)

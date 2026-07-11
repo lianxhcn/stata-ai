@@ -1,0 +1,12 @@
+body {
+  line-height: 1.7;
+}
+
+.callout {
+  border-radius: 6px;
+}
+
+.sidebar-item-section > .sidebar-item-container > .sidebar-item-text .menu-text,
+.sidebar-item-section > .sidebar-item-container > .sidebar-link .menu-text {
+  font-weight: 700;
+}

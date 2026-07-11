@@ -1,0 +1,80 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "Stata 简介与 AI 辅助实证"
+  reader-mode: true
+  author: "连玉君（中山大学）"
+  date: today
+  date-format: iso
+  repo-url: https://github.com/lianxhcn/stata-ai
+  repo-branch: main
+  repo-actions: [edit, issue]
+  sidebar:
+    title: "Stata × AI"
+    logo: images/book-logo.png
+    logo-href: https://lianxhcn.github.io/stata-ai/
+    style: floating
+    search: true
+    background: light
+    tools:
+      - icon: github
+        href: https://github.com/lianxhcn/stata-ai
+      - icon: house-fill
+        href: https://www.lianxh.cn
+  favicon: images/book-logo.png
+  site-url: https://lianxhcn.github.io/stata-ai/
+  editor: source
+  page-footer:
+    center: "[lianxh.cn](https://www.lianxh.cn)"
+    right: "基于 [Quarto](https://quarto.org/) 构建"
+  chapters:
+    - index.qmd
+    - outline.qmd
+    - settings.qmd
+    - part: "**讲义**"
+      chapters:
+        - lectures/01_stata_basics.qmd
+        - lectures/02_vscode_nbstata.qmd
+        - lectures/03_ai_vs_agent.qmd
+        - lectures/04_agent_workflow.qmd
+  appendices:
+    - appendix/A_prompt_templates.qmd
+    - appendix/B_replication.qmd
+    - appendix/C_more_usage.qmd
+    - appendix/D_reading_list.qmd
+
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    theme:
+      light: cosmo
+      dark: darkly
+    linestretch: 1.6
+    fontsize: 11.5pt
+    number-sections: true
+    link-external-newwindow: true
+    highlight: true
+    highlight-style: atom-one
+    code-fold: false
+    code-line-numbers: false
+    code-overflow: wrap
+    css: styles.css
+    callout-appearance: default
+
+crossref:
+  chapters: true
+  appendix-title: "附录"
+  fig-title: "图"
+  fig-prefix: "图"
+  tbl-title: "表"
+  tbl-prefix: "表"
+  eq-prefix: "式"
+  sec-prefix: "节"
+
+fig-cap-location: bottom
+
+language:
+  section-title-appendices: "附录"
