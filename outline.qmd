@@ -3,42 +3,57 @@ format: html
 number-sections: false
 ---
 
-# 📌 课程大纲 {.unnumbered}
+# 📌 课程导览 {.unnumbered}
 
-本页给出本次公开课「80 分钟 + 10 分钟答疑」的模块安排。课上不从 Stata 讲起，而是从一条主线讲起：**研究问题 → 对话式 AI 拆解规划 → 任务说明书 → Agent 在项目中执行 → 人来检查迭代**。Stata、Python、R 都是这条主线上可替换的零件，后面每个模块都会回到这张图。
+这一页写给你——来听课的学员。它帮你快速了解本次公开课想传达什么、本仓库里有哪些内容，以及**根据你自己的需求**该重点看哪些部分。
 
-## 模块总表
+本课不从某一种软件讲起，而是从一条工作流主线讲起：
 
-| 模块 | 时长 | 内容 | 形式 |
-|------|------|------|------|
-| M0 开场：一张图讲清理念 | 8 min | 以任务为导向的实证工作流全景 | Slides |
-| M1 Stata 最小入口 | 15 min | 界面、dofile、路径、help、外部命令 | Stata 现场演示 |
-| M2 VS Code + nbstata + Copilot | 15 min | notebook 笔记 + 运行 + AI 补全 | VS Code 现场演示 |
-| M3 对话式 AI 与执行型 Agent | 7 min | 分工逻辑 + 任务说明书 | Slides |
-| M4 Agent 演示 | 25 min | 一场直播 + 一场导览（见下） | 现场 + 预跑成果 |
-| M5 收束：配置路线图与课程衔接 | 10 min | 本仓库导览、配置清单、暑期班 | Slides |
-| 答疑 | 10 min | | |
+``` text
+研究问题 → 对话式 AI 拆解规划 → 任务说明书 → Agent 在项目中执行 → 人来检查与迭代
+```
 
-## 各模块要点
+Stata、Python、R 都是这条主线上可以替换的零件。想清楚要解决什么问题，再决定用哪种工具、交给谁做、如何检查——这比纠结"学哪个软件"更重要。
 
-**M0（8 min）**——不从 Stata 讲起，从一条主线讲起：研究问题 → 对话式 AI 拆解规划 → 任务说明书 → Agent 在项目中执行 → 人来检查迭代。Stata、Python、R 都是这条线上可替换的零件；后面每个模块都回到这张图。
+## 本课要点：你会看到什么
 
-**M1（15 min）**——只做五件事：认识四个窗口；三行 dofile 跑通（`use` → `summarize` → `regress`）；`help regress` 怎么读；`ssc install` 装一个外部命令；路径问题一句话方案——「永远用项目文件夹 + 相对路径」（为 M4 的项目文件夹埋伏笔）。详见 [第 1 讲](lectures/01_stata_basics.qmd)。
+- **Stata 最小入口**——在 AI 时代，Stata 该掌握的"最小必要"：界面、dofile、工作目录、帮助文件、外部命令。（[第 1 讲](lectures/01_stata_basics.qmd)）
+- **VS Code + nbstata + Copilot**——把笔记、代码、结果放进同一个 notebook，并让 Copilot 帮你补全代码、生成注释。（[第 2 讲](lectures/02_vscode_nbstata.qmd)）
+- **对话式 AI 与执行型 Agent**——ChatGPT / Claude 负责拆解规划，Codex / Claude Code 负责在本地项目里执行；关键中间物是一份"任务说明书"。（[第 3 讲](lectures/03_ai_vs_agent.qmd)）
+- **Agent 现场演示**——在一个 `demo/` 项目里跑一遍"计划 → 确认 → 执行 → 检查"，并看一张 TWFE vs 现代 DID vs 真值的对照表。（[第 4 讲](lectures/04_agent_workflow.qmd)）
 
-**M2（15 min）**——新建 notebook → markdown 笔记 + Stata cell 同文件；两个 Copilot 时刻：写一行注释让它生成代码；让它给一段旧代码加注释。一个「哇」点就够，不贪多。详见 [第 2 讲](lectures/02_vscode_nbstata.qmd)。
+## 按需选择你的路径
 
-**M3（7 min）**——ChatGPT / Claude 负责拆解、规划、写任务说明；Codex / Claude Code / OpenCode 负责在本地项目里读写文件、执行脚本、整理结果。关键论断：软件不再是门槛，「搭配好环境、制定好计划」才是。详见 [第 3 讲](lectures/03_ai_vs_agent.qmd)。
+不同学员需求不同，可以按下面的路径各取所需：
 
-**M4（25 min）**——
+- **只想快速把 Stata 用起来** → 看 [第 1 讲](lectures/01_stata_basics.qmd)，配合 [环境配置](settings.qmd) 的第 1 节（Stata 与外部命令）。
+- **更关心 AI 辅助的实证分析流程** → 看 [第 3 讲](lectures/03_ai_vs_agent.qmd)、[第 4 讲](lectures/04_agent_workflow.qmd) 和 [附录 A（任务说明书与提示词模板）](appendix/A_prompt_templates.qmd)，并下载 `demo/` 亲手复现课堂演示。
+- **想把本地环境完整配好** → 通读 [环境配置](settings.qmd)，并完成下面「课后务必完成本地配置」。
+- **想系统学习实证研究** → 欢迎报名 7 月 21–23 日的**连享会 2026 暑期班·初级班**（详见 [前言](index.qmd)）。
 
-- 直播段（约 15 min）：进入 `demo/` 项目文件夹（三个 CSV + README 任务说明书），启动 Claude Code：输出研究计划 → 现场补两点要求 → 确认开跑；agent 跑动期间回头讲任务说明书怎么写；跑完看中间产出。
-- 导览段（约 8 min）：展示昨晚预跑成果——分类归档的项目全貌、论文样 `report.pdf`，以及点睛之笔：TWFE vs `csdid`/`jwdid` vs 模拟真值的对照表（为什么要学新方法，表格自己会说话）。另用两页 slide 各一句话带过：论文复现、AI 写讲义（课后见附录）。详见 [第 4 讲](lectures/04_agent_workflow.qmd)。
+## 课后务必完成本地配置
 
-**M5（10 min）**——亮出仓库网址；翻 [环境配置](settings.qmd) 页讲配置路线图（听众课后照做）；一页图把今天内容映射到 7 月 21 日暑期初级班大纲：「今天看到的每一步，正式课里都会让你亲手做」。
+受课时限制（80 分钟），课堂上**无法详细演示安装与配置过程**。但请注意：**在本地用 Agent 和 AI 工具做分析，前提就是先把环境配好。** 因此，请你务必课后花点时间，按下面的文档把配置完成。
 
-## 现场纪律
+好消息是：**配置过程本身就可以借助网页版 ChatGPT 或 Claude 边问边做**——把你的系统信息、报错原文贴给它，让它一步步指导你。这本身也是本课"用 AI 辅助"理念的一次练习。
 
-报错调试不超过 1 分钟，超时切录屏 / 预跑成果；顺势讲「这正是为什么要学会看 log」。
+::: {.callout-important}
+## Stata 安装的两个要点
+
+Stata 本体的安装很简单，通过正版渠道下载安装即可。只需特别注意两点：
+
+1. **安装路径不要包含中文字符，也不要有空格等特殊字符**（例如用 `D:\stata19` 这样的纯英文路径）。
+2. **安装完成后，确认安装目录下存在 `STATA.LIC` 文件**——这是 `nbstata` 插件，以及 Agent、MCP 等工具能够正确关联到你的 Stata 应用程序的关键。
+
+以上两点及更完整的说明，见 [ds2026 · 配置 Stata 环境（nbstata）](https://lianxhcn.github.io/ds2026/Lecture/00-setup/01_01_install_anaconda.html#%E9%85%8D%E7%BD%AE-stata-%E7%8E%AF%E5%A2%83nbstata)。
+:::
+
+配置参考清单（建议课后依次阅读）：
+
+- 本仓库 [环境配置](settings.qmd) 页——按「Stata 外部命令 → VS Code + nbstata → Copilot → Claude Code / Codex」四步走，每步都有「配置成功的标志」。
+- [VS Code 插件：安装、配置和使用](https://www.lianxh.cn/details/1490.html)
+- [公开课：Claude Code 协同 Stata：环境配置与应用实践](https://www.lianxh.cn/details/1767.html)
+- [ds2026 在线书·环境配置章](https://lianxhcn.github.io/ds2026/)（Anaconda / Jupyter / nbstata 从零安装及常见问题）
 
 ------------------------------------------------------------------------
 
