@@ -19,8 +19,6 @@ book:
     search: true
     background: light
     tools:
-      - icon: github
-        href: https://github.com/lianxhcn/stata-ai
       - icon: house-fill
         href: https://www.lianxh.cn
   favicon: images/book-logo.png

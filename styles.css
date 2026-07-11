@@ -10,3 +10,16 @@ body {
 .sidebar-item-section > .sidebar-item-container > .sidebar-link .menu-text {
   font-weight: 700;
 }
+
+/* 侧边栏 header：标题占一行，工具图标（github/主页/主题切换）换到第二行 */
+.sidebar-title .sidebar-tools-main {
+  display: flex;
+  flex-basis: 100%;
+  margin-top: 0.35rem;
+  margin-left: -0.25rem;
+}
+.sidebar-title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}

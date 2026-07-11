@@ -1,5 +1,5 @@
 ---
-title: "第 2 讲　VS Code + nbstata + Copilot"
+title: "VS Code + nbstata + Copilot"
 ---
 
 > **本讲回答一个问题**：为什么要把笔记、代码和结果放进同一个 notebook，AI 又在其中扮演什么角色？

@@ -132,375 +132,375 @@
   {
     "objectID": "lectures/01_stata_basics.html",
     "href": "lectures/01_stata_basics.html",
-    "title": "1  第 1 讲　Stata 最小入口",
+    "title": "1  Stata 最小入口",
     "section": "",
     "text": "1.1 正文\n很多人学 Stata 时容易陷入两个极端：要么想把上千条命令背下来，要么干脆把代码丢给 AI、自己一行都不看。本讲的主张是走中间路线——先把最小入口掌握牢，剩下的交给 help、外部命令和 AI。所谓最小入口，只有五件事。\n第一，认识四个窗口。 打开 Stata，你会看到命令窗口（Command）、结果窗口（Results）、变量窗口（Variables）和历史窗口（Review）。命令窗口敲命令、结果窗口看输出、变量窗口看数据结构、历史窗口回看并重跑做过的命令。理解这四个窗口的分工，就理解了 Stata 的交互方式。\n第二，三行 dofile 跑通一次完整分析。 真正的分析不写在命令窗口里，而写在 dofile（.do 文件）中——它是可保存、可重跑、可分享的脚本。最小的一段分析只有三行：\n把这三行存成 01_first.do，用 do 01_first.do 就能一键重跑。能重跑、能分享，是 dofile 相对于「在窗口里手敲」的根本优势，也是可复现研究的起点。\n第三，学会读 help。 遇到任何命令，先 help 命令名。帮助文件顶部是语法（Syntax），中间是选项（Options），底部是示例（Examples）。读 help regress 时，先看语法行 regress depvar indepvars（因变量在前、自变量在后），再挑一两个选项看，最后照着示例改。不知道命令叫什么时，用 findit 关键词（如 findit dynamic panel）按关键词模糊搜索。\n第四，用 ssc install 装外部命令。 Stata 的很多好用功能来自社区贡献的外部命令，最常见的来源是 SSC。用法很简单：\nwinsor2 用来给变量缩尾、reghdfe 处理高维固定效应、csdid 做现代 DID——这些都不是 Stata 自带的，装一次即可长期使用。\n第五，路径问题只用一句话记住：永远用项目文件夹 + 相对路径。 不要把数据、代码散落在桌面各处，也不要在 dofile 里写死 C:\\Users\\某某\\Desktop\\... 这种绝对路径——换台电脑就全废了。正确做法是给每个项目建一个文件夹，dofile 里只用相对路径：\n一个点 . 代表当前目录，两个点 .. 代表上一级。这样整个项目夹拷给别人、上传 GitHub，代码都能照跑。这条规矩也为第 4 讲的 Agent 演示埋下伏笔：Agent 之所以能接管一个项目，前提就是这个项目本身是「文件夹 + 相对路径」组织好的。\n把这五件事做扎实，你就有了一个「能跑、能重跑、能分享」的最小工作台。接下来 AI 才有用武之地：它帮你补语法、查命令、改报错，而你始终看得懂每一行在干什么。",
     "crumbs": [
       "**讲义**",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>第 1 讲　Stata 最小入口</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Stata 最小入口</span>"
     ]
   },
   {
     "objectID": "lectures/01_stata_basics.html#正文",
     "href": "lectures/01_stata_basics.html#正文",
-    "title": "1  第 1 讲　Stata 最小入口",
+    "title": "1  Stata 最小入口",
     "section": "",
     "text": "sysuse auto, clear      // 载入 Stata 自带的 auto 数据\nsummarize price mpg     // 看关键变量的描述性统计\nregress price mpg weight  // 跑一个回归\n\n\n\nssc install winsor2, replace   // 安装（覆盖旧版本）\nhelp winsor2                    // 装好后就能看帮助\n\n\nimport delimited using \"./data/raw.csv\", clear\nsave \"./temp/clean.dta\", replace\n\n\n\n\nStata 工作流程：项目文件夹的组织",
     "crumbs": [
       "**讲义**",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>第 1 讲　Stata 最小入口</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Stata 最小入口</span>"
     ]
   },
   {
     "objectID": "lectures/01_stata_basics.html#课堂演示要点",
     "href": "lectures/01_stata_basics.html#课堂演示要点",
-    "title": "1  第 1 讲　Stata 最小入口",
+    "title": "1  Stata 最小入口",
     "section": "1.2 课堂演示要点",
     "text": "1.2 课堂演示要点\n\n打开 Stata，指出四个窗口，用 sysuse auto, clear 载入数据，在变量窗口看结构。\n新建 01_first.do，写三行 use → summarize → regress，do 一键跑通。\n现场 help regress，读语法行与一个选项；再 findit 一个关键词演示模糊搜索。\nssc install winsor2, replace 装一个外部命令，help winsor2 验证。\n一句话讲相对路径：把绝对路径改成 ./data/...，强调「项目文件夹 + 相对路径」。",
     "crumbs": [
       "**讲义**",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>第 1 讲　Stata 最小入口</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Stata 最小入口</span>"
     ]
   },
   {
     "objectID": "lectures/01_stata_basics.html#延伸阅读",
     "href": "lectures/01_stata_basics.html#延伸阅读",
-    "title": "1  第 1 讲　Stata 最小入口",
+    "title": "1  Stata 最小入口",
     "section": "1.3 延伸阅读",
     "text": "1.3 延伸阅读\n\n优雅的实证研究：文档结构与基本规则\nStata 外部命令：SSC 所有外部命令清单\nStata：如何永久修改 PERSONAL 文件夹的位置？\nStata 代码规范指南\nStata：AI 写代码时代，为什么还要懂一点？",
     "crumbs": [
       "**讲义**",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>第 1 讲　Stata 最小入口</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Stata 最小入口</span>"
     ]
   },
   {
     "objectID": "lectures/02_vscode_nbstata.html",
     "href": "lectures/02_vscode_nbstata.html",
-    "title": "2  第 2 讲　VS Code + nbstata + Copilot",
+    "title": "2  VS Code + nbstata + Copilot",
     "section": "",
     "text": "2.1 正文\n第 1 讲我们在 Stata 自带的界面里跑通了一段 dofile。这一讲换一个场景：在 VS Code 里新建一个 notebook 文件，把「写笔记」和「跑 Stata 代码」放进同一个文件，并让 Copilot 在旁边帮忙。\n为什么用 notebook？ dofile 很适合「把一段分析固化成脚本」，但它有个天然的短板：代码是代码、笔记是注释、结果要另开 log 或图窗看，三者是分离的。notebook（.ipynb）把它们合到了一起——一个单元格（cell）写 Markdown 笔记，下一个单元格写 Stata 代码，代码的输出（表格、图形）就直接显示在代码下方。你一边想、一边写、一边看结果，思路和证据留在同一个文件里。对做探索性分析、写讲义、整理复现记录，这种「笔记 + 代码 + 结果同文件」的形式特别顺手。\n怎么在 notebook 里跑 Stata？ 靠一个叫 nbstata 的 Jupyter 内核。装好之后（配置见 环境配置），在 VS Code 新建 .ipynb，右上角内核选 Stata，就能在代码单元格里直接写 Stata 命令：\n运行后，描述性统计的表格和散点图会直接出现在单元格下方。注意：nbstata 目前只支持 Python 3.11 及以下，配置时要单独建一个 Python 3.11 环境。\nCopilot 的两个「时刻」。 真正让人眼前一亮的，是 Copilot 在旁边的两种介入方式。\n时刻一：写一行注释，让它生成代码。 你在代码单元格里先写一句自然语言注释：\n回车后，Copilot 往往会在下方浮现出一段灰色的补全建议——大致就是 sysuse auto, clear 加上分组统计和绘图命令。你按 Tab 采纳，再根据实际变量名和输出微调即可。这把「我知道要做什么、但记不清语法」的常见卡点，变成了几秒钟的事。\n时刻二：给一段旧代码加注释。 反过来，你手上有一段别人写的、没有注释的 Stata 代码，看不太懂。把它选中，让 Copilot Chat「给这段代码逐行加中文注释」，它会解释每一行在做什么。这在阅读复现代码、接手旧项目时非常实用。\n一句话概括这两个时刻：注释 ⇄ 代码可以双向生成——你写注释它补代码，你给代码它补注释。\n但要守住一条底线：你仍然要看得懂每一行。 Copilot 是补全助手，不是替你做判断的人。它可能把变量名猜错、把选项用错、把因果关系写进注释里。正确的姿势是「我定方向、它补下一步、我来把关」，而不是「它写完、我照单全收」。这一讲只求一个「哇」点——看到注释变代码——就够了；把 notebook 用顺，比一次学十个技巧更重要。",
     "crumbs": [
       "**讲义**",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>第 2 讲　VS Code + nbstata + Copilot</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>VS Code + nbstata + Copilot</span>"
     ]
   },
   {
     "objectID": "lectures/02_vscode_nbstata.html#正文",
     "href": "lectures/02_vscode_nbstata.html#正文",
-    "title": "2  第 2 讲　VS Code + nbstata + Copilot",
+    "title": "2  VS Code + nbstata + Copilot",
     "section": "",
     "text": "sysuse auto, clear\nsummarize price mpg\nscatter price mpg\n\n\n\n* 载入 auto 数据，按 foreign 分组，计算 price 的均值并画柱状图",
     "crumbs": [
       "**讲义**",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>第 2 讲　VS Code + nbstata + Copilot</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>VS Code + nbstata + Copilot</span>"
     ]
   },
   {
     "objectID": "lectures/02_vscode_nbstata.html#课堂演示要点",
     "href": "lectures/02_vscode_nbstata.html#课堂演示要点",
-    "title": "2  第 2 讲　VS Code + nbstata + Copilot",
+    "title": "2  VS Code + nbstata + Copilot",
     "section": "2.2 课堂演示要点",
     "text": "2.2 课堂演示要点\n\n在 VS Code 新建一个 .ipynb，先写一个 Markdown 单元格作笔记，再建一个 Stata 代码单元格。\n内核选 Stata，跑 sysuse auto, clear + summarize + scatter，展示结果直接显示在单元格下方。\nCopilot 时刻一：写一行中文注释，回车触发灰色补全，Tab 采纳后微调。\nCopilot 时刻二：选中一段无注释代码，用 Copilot Chat 让它逐行加中文注释。\n强调底线：AI 补全后一定要读一遍，确认变量名、选项、结果都对。",
     "crumbs": [
       "**讲义**",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>第 2 讲　VS Code + nbstata + Copilot</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>VS Code + nbstata + Copilot</span>"
     ]
   },
   {
     "objectID": "lectures/02_vscode_nbstata.html#延伸阅读",
     "href": "lectures/02_vscode_nbstata.html#延伸阅读",
-    "title": "2  第 2 讲　VS Code + nbstata + Copilot",
+    "title": "2  VS Code + nbstata + Copilot",
     "section": "2.3 延伸阅读",
     "text": "2.3 延伸阅读\n\nVS Code 插件：安装、配置和使用\nPython：AI 写代码时代，为什么还要懂一点？\n数据分析与经济决策（ds2026 在线书）\n从 Prompt 到 Skills：把论文复现、数据清洗和代码规范写进 AI",
     "crumbs": [
       "**讲义**",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>第 2 讲　VS Code + nbstata + Copilot</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>VS Code + nbstata + Copilot</span>"
     ]
   },
   {
     "objectID": "lectures/03_ai_vs_agent.html",
     "href": "lectures/03_ai_vs_agent.html",
-    "title": "3  第 3 讲　对话式 AI 与执行型 Agent",
+    "title": "3  对话式 AI 与执行型 Agent",
     "section": "",
     "text": "3.1 正文",
     "crumbs": [
       "**讲义**",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>第 3 讲　对话式 AI 与执行型 Agent</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>对话式 AI 与执行型 Agent</span>"
     ]
   },
   {
     "objectID": "lectures/03_ai_vs_agent.html#正文",
     "href": "lectures/03_ai_vs_agent.html#正文",
-    "title": "3  第 3 讲　对话式 AI 与执行型 Agent",
+    "title": "3  对话式 AI 与执行型 Agent",
     "section": "",
     "text": "3.1.1 先分清两类任务\n用 AI 时的很多低效，不是因为模型不够强，而是把任务放错了地方。任务其实只有两类。\n一类是对话任务：主要发生在「脑子里」和「文字讨论」中。比如解释一篇论文的贡献、比较几种研究设计、判断一个识别策略有没有风险、把一段话改得更清楚、生成一张教学插图。这类任务的重点是理解、表达和判断——放在 ChatGPT / Claude 的对话框里最合适。\n另一类是项目任务：已经落到「文件夹」和「代码库」里。比如批量修改一组脚本、检查一个 notebook、统一图片路径、根据报错改代码、把数据、结果和文字整合进同一个项目。这类任务的重点不是继续聊天，而是读取文件、执行修改、验证结果——放进 Codex / Claude Code 这样的执行型 Agent 里最合适。\n一个简单的判断标准：\n\n任务主要在「文字讨论」中，优先用 ChatGPT / Claude；任务已经落到「文件夹」里，优先用 Codex / Claude Code。\n\n很多人觉得「AI 工具越用越乱」，往往不是工具太多，而是没把任务拆成不同环节：任务还没想清楚就丢给 Agent，会得到一堆看似完整、方向却不准的修改；任务已经散落在几十个文件里，却还在对话框里反复复制粘贴，人就成了低效的「文件搬运工」。\n\n\n3.1.2 两类工具的分工\n\n\n\n\n\n\n\n\n维度\n对话式 AI（ChatGPT / Claude）\n执行型 Agent（Codex / Claude Code）\n\n\n\n\n核心形态\n对话助手\n项目执行 Agent\n\n\n主要对象\n问题、文本、材料、图片\n文件夹、代码库、脚本、项目\n\n\n擅长环节\n理解、规划、表达、审稿、绘图\n读取、修改、运行、检查、交付\n\n\n典型问题\n「这件事该怎么想？」\n「这个项目该怎么改？」\n\n\n\n一句话：对话式 AI 解决「如何理解」，执行型 Agent 解决「如何落地」。 二者不是替代关系，而是前后环节的关系——Agent 越擅长执行，就越需要对话式 AI 先把任务定义清楚。\n\n\n\n四类 AI 工具的分工\n\n\n\n\n3.1.3 关键的中间产物：任务说明书\n从「想清楚」到「做出来」，中间需要一个交接物——任务说明书（可以叫 to-agent-任务说明.md，或写进 README.md）。它把一次任务的目标、输入文件、输出格式、修改边界、风格要求、验收标准写清楚。任务说明书越清楚，Agent 越不容易误改。\n一份任务说明书大致长这样：\n# 任务说明\n\n## 目标\n基于项目文件夹里的数据和说明，完成一次数据清洗与回归分析。\n\n## 输入\n- data/*.csv：原始数据\n- README.md：变量说明与分析要求\n\n## 输出\n- code/analysis.do：分析脚本（含中文注释）\n- outputs/report.md：结果说明，指出看哪一行、哪个系数\n\n## 修改方式\n- 请先阅读项目结构并列出计划，不要一上来就改\n- 不要删除原始文件\n- 改完说明每个文件改了什么\n\n\n3.1.4 稳妥的流程：规划 → 执行 → 审查\n把一次完整任务拆成三步，是目前比较稳的做法：\n\n规划：用 ChatGPT / Claude 把模糊任务拆成清楚任务，判断任务边界，生成任务说明书。\n执行：让 Codex / Claude Code 进入项目文件夹，按任务说明读文件、改文件、跑命令。复杂任务里，第一条指令最好不是「直接修改」，而是「先阅读项目结构并列出修改计划」。\n审查：回到对话式 AI（或换一个 Agent）检查产出——逻辑是否清楚、代码与文字是否一致、有没有遗漏或误改。高风险任务（涉及代码结果、论文事实、政策时点、参考文献）值得让第二个 Agent 交叉复核。\n\n\n\n\n规划 → 执行 → 审查\n\n\n\n\n3.1.5 本讲的关键论断\n工具在快速演化、边界也在模糊：Copilot 不再只是补全，Cursor 也能跑 Agent，Codex 既能在本地也能连 GitHub。与其纠结「哪个最强」，不如记住一句话：\n\n软件本身不再是门槛，「搭配好环境、制定好计划」才是。\n\n这正是本次公开课的主线：先想清楚要解决什么问题，再决定用哪种工具、交给谁做、如何检查。第 4 讲，我们就把这套「规划 → 执行 → 审查」放到一个真实的 demo 项目里跑一遍。",
     "crumbs": [
       "**讲义**",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>第 3 讲　对话式 AI 与执行型 Agent</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>对话式 AI 与执行型 Agent</span>"
     ]
   },
   {
     "objectID": "lectures/03_ai_vs_agent.html#课堂演示要点",
     "href": "lectures/03_ai_vs_agent.html#课堂演示要点",
-    "title": "3  第 3 讲　对话式 AI 与执行型 Agent",
+    "title": "3  对话式 AI 与执行型 Agent",
     "section": "3.2 课堂演示要点",
     "text": "3.2 课堂演示要点\n\n用一张图讲清「对话任务 vs 项目任务」的分界。\n展示一份真实的任务说明书（即 demo 的 README.md），指出它写清了目标、输入、输出、边界。\n口头强调关键论断：软件不是门槛，环境 + 计划才是。",
     "crumbs": [
       "**讲义**",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>第 3 讲　对话式 AI 与执行型 Agent</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>对话式 AI 与执行型 Agent</span>"
     ]
   },
   {
     "objectID": "lectures/03_ai_vs_agent.html#延伸阅读",
     "href": "lectures/03_ai_vs_agent.html#延伸阅读",
-    "title": "3  第 3 讲　对话式 AI 与执行型 Agent",
+    "title": "3  对话式 AI 与执行型 Agent",
     "section": "3.3 延伸阅读",
     "text": "3.3 延伸阅读\n\nChatGPT、Codex、Copilot、Claude Code：AI 工具如何分工协作？\n从代码补全到 AI-Agent：Copilot、Claude Code、Codex 怎么选？\n从 Prompt 到 Skills：把论文复现、数据清洗和代码规范写进 AI\nClaude Code Skills 写作指南：如何写好一个可复用的 SKILL.md\n警惕 AI-Agent 泄密：三道闸门守住 API 密钥和账号信息",
     "crumbs": [
       "**讲义**",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>第 3 讲　对话式 AI 与执行型 Agent</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>对话式 AI 与执行型 Agent</span>"
     ]
   },
   {
     "objectID": "lectures/04_agent_workflow.html",
     "href": "lectures/04_agent_workflow.html",
-    "title": "4  第 4 讲　Agent 工作流：从任务说明到结果检查",
+    "title": "4  Agent 工作流：从任务说明到结果检查",
     "section": "",
     "text": "4.1 正文\n这一讲是全课的落点。前三讲铺好了地基——最小的 Stata 入口、notebook 里的 AI 补全、对话式 AI 与执行型 Agent 的分工。现在我们把「规划 → 执行 → 审查」放进一个真实的项目里跑一遍。",
     "crumbs": [
       "**讲义**",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>第 4 讲　Agent 工作流：从任务说明到结果检查</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Agent 工作流：从任务说明到结果检查</span>"
     ]
   },
   {
     "objectID": "lectures/04_agent_workflow.html#正文",
     "href": "lectures/04_agent_workflow.html#正文",
-    "title": "4  第 4 讲　Agent 工作流：从任务说明到结果检查",
+    "title": "4  Agent 工作流：从任务说明到结果检查",
     "section": "",
     "text": "4.1.1 一切从项目文件夹开始\nAgent 之所以能接管一份工作，前提是这份工作被组织成了一个规范的项目文件夹。课堂演示用的 demo/ 就是这样一个文件夹，大致结构是：\ndemo/\n├── README.md          # 任务说明书：目标、数据说明、分析要求、验收标准\n├── data/              # 三个 CSV 数据文件\n├── code/              # 分析脚本（由 Agent 生成）\n├── outputs/           # 结果：表格、图形、report\n└── ...\nREADME.md 就是第 3 讲讲的任务说明书：它告诉 Agent 数据是什么、要做什么分析、结果要以什么形式交付。数据放在 data/、代码放在 code/、结果放在 outputs/——分门别类，Agent 和人都不会迷路。\n\n\n4.1.2 一个循环：计划 → 确认 → 执行 → 检查\n拿到项目后，正确的节奏不是「一句话让它跑通」，而是一个可以反复迭代的循环。\n第一步，让它先给计划，别急着改。 进入 demo/ 文件夹启动 Claude Code 或 Codex，第一条指令是：\n请阅读 README.md 和 data/ 下的数据，先给出一份研究计划，\n说明你打算怎么清洗数据、跑哪些模型、输出什么结果。先不要动手改文件。\n第二步，人来确认和补充。 看它的计划对不对、有没有漏。课堂上会现场补两点要求（比如「关键变量要缩尾」「回归表要同时报 TWFE 和现代 DID 估计量」），让计划更贴合意图。这一步是「人在环」的关键——你在把关方向，而不是把方向也交出去。\n第三步，确认后再让它执行。 计划敲定，让它按计划清洗数据、写脚本、跑模型、生成结果。Agent 跑动期间，正好回头讲「任务说明书该怎么写」——好的说明书能让这一步一次到位。\n第四步，检查产出。 跑完不等于做对了。检查有三个抓手：\n\n看它改了什么（diff）：Agent 说改了哪些文件，逐一核对，别只看它的文字总结。\n看 log：Stata 的运行日志里有没有报错、有没有被 capture 悄悄吞掉的错误。这也呼应了课堂纪律——学会看 log，比追求「不报错」更重要。\n核对结果：表格里的系数、样本量、图形是否合理，能不能对得上数据。\n\n发现问题，就带着具体反馈回到第一步，再走一轮。这个「计划 → 确认 → 执行 → 检查」的循环，才是 AI 辅助实证的真正工作方式。\n\n\n4.1.3 为什么要看那张对照表\ndemo 的点睛之笔，是一张 TWFE vs csdid / jwdid vs 模拟真值的对照表。因为 demo 的数据是我们自己模拟生成的，所以真值是已知的。把传统的双向固定效应（TWFE）估计量、现代交叠 DID 估计量、以及真值放在一起对照，谁离真值近、谁偏得多，一目了然。这张表不需要多讲——它自己会说明：为什么在交叠处理的场景下，要学新的 DID 方法。（方法本身的展开，留到暑期班与延伸阅读。）\n\n\n4.1.4 如何复现课堂演示\n\n下载本仓库的 demo/ 文件夹，在其中启动 Claude Code 或 Codex，输入：\n请阅读 README.md 并先给出研究计划。\n即可复现课堂上的 Agent 分析演示。记住：先让它给计划、你来确认，再让它执行、你来检查。",
     "crumbs": [
       "**讲义**",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>第 4 讲　Agent 工作流：从任务说明到结果检查</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Agent 工作流：从任务说明到结果检查</span>"
     ]
   },
   {
     "objectID": "lectures/04_agent_workflow.html#课堂演示要点",
     "href": "lectures/04_agent_workflow.html#课堂演示要点",
-    "title": "4  第 4 讲　Agent 工作流：从任务说明到结果检查",
+    "title": "4  Agent 工作流：从任务说明到结果检查",
     "section": "4.2 课堂演示要点",
     "text": "4.2 课堂演示要点\n\n进入 demo/ 启动 Claude Code：先让它读 README.md 输出研究计划。\n现场补两点要求，确认后让它开跑；跑动期间讲任务说明书怎么写。\n跑完看中间产出：diff、log、结果表。\n导览预跑成果：分类归档的项目全貌、论文样 report.pdf、TWFE vs csdid/jwdid vs 真值对照表。\n两页 slide 各一句话带过：论文复现、AI 写讲义（详见附录 B、C）。",
     "crumbs": [
       "**讲义**",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>第 4 讲　Agent 工作流：从任务说明到结果检查</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Agent 工作流：从任务说明到结果检查</span>"
     ]
   },
   {
     "objectID": "lectures/04_agent_workflow.html#延伸阅读",
     "href": "lectures/04_agent_workflow.html#延伸阅读",
-    "title": "4  第 4 讲　Agent 工作流：从任务说明到结果检查",
+    "title": "4  Agent 工作流：从任务说明到结果检查",
     "section": "4.3 延伸阅读",
     "text": "4.3 延伸阅读\n\n社会科学研究复现包中的自述文档模板\n代码审计：如何从源头确保你的论文可复现？\nStatsPAI：交叠 DID 方法太多，到底怎么选？\nChina Policy Shocks：中国政策冲击数据库",
     "crumbs": [
       "**讲义**",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>第 4 讲　Agent 工作流：从任务说明到结果检查</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Agent 工作流：从任务说明到结果检查</span>"
     ]
   },
   {
     "objectID": "appendix/A_prompt_templates.html",
     "href": "appendix/A_prompt_templates.html",
-    "title": "附录 A — 附录 A　任务说明书与提示词模板",
+    "title": "附录 A — 任务说明书与提示词模板",
     "section": "",
     "text": "A.1 任务说明书写法要点\n本附录给出一套可直接套用的任务说明书写法和四个场景的提示词模板。它们把第 3、4 讲的「规划 → 执行 → 审查」落成可复制的文字。核心思路只有一句：先和 AI 讨论清楚、确认之后，再让它动手；改完再逐项检查。\n无论用对话式 AI 还是执行型 Agent，一份好的任务说明书都应包含六个要素：\n两条通用纪律，写进说明书能显著减少翻车：",
     "crumbs": [
       "附录",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>附录 A　任务说明书与提示词模板</span>"
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>任务说明书与提示词模板</span>"
     ]
   },
   {
     "objectID": "appendix/A_prompt_templates.html#任务说明书写法要点",
     "href": "appendix/A_prompt_templates.html#任务说明书写法要点",
-    "title": "附录 A — 附录 A　任务说明书与提示词模板",
+    "title": "附录 A — 任务说明书与提示词模板",
     "section": "",
     "text": "目标：一句话说清要得到什么结果。\n输入：列出数据文件、说明文档、已有代码的路径。\n输出：结果以什么形式交付（.do 脚本、report.md、图表），放在哪个文件夹。\n修改边界：不许动的东西（如 data/raw/ 原始数据不得修改）、不许删的文件。\n风格要求：中文注释、相对路径、变量命名规范等。\n验收标准：怎样才算做对了（如「回归表能对上样本量」「图能重画出来」）。\n\n\n\n先计划、后修改：复杂任务的第一条指令是「先阅读项目结构并列出计划，不要动手改」。\n小步修改、逐项检查：一次只改少量文件，改完看 diff、看 log、核对结果，再进行下一步。\n\n\n\n\n\n\n\n通用「背景卡片」（每次新对话时先粘贴）\n\n\n\n把它放在 notebook 第一个单元格或对话开头，避免 AI 忘记你的环境和数据结构。\n【项目背景】请记住以下信息，本次对话中的所有代码都基于它。\n- 项目：&lt;一句话描述&gt;\n- 运行环境：Stata 19，Windows；如涉及 notebook 则为 VS Code + nbstata（Python 3.11）\n- 数据：data/ 下有 &lt;文件名与列说明&gt;\n- 规范：相对路径、中文注释、变量名用小写下划线\n- 当前进度：&lt;已完成什么，正在做什么&gt;\n接下来请帮我：…… &lt;本次具体任务&gt; ……",
     "crumbs": [
       "附录",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>附录 A　任务说明书与提示词模板</span>"
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>任务说明书与提示词模板</span>"
     ]
   },
   {
     "objectID": "appendix/A_prompt_templates.html#场景模板一数据清理与回归",
     "href": "appendix/A_prompt_templates.html#场景模板一数据清理与回归",
-    "title": "附录 A — 附录 A　任务说明书与提示词模板",
+    "title": "附录 A — 任务说明书与提示词模板",
     "section": "A.2 场景模板一：数据清理与回归",
     "text": "A.2 场景模板一：数据清理与回归\n\n这是 demo README.md 的骨架化版本，适合「一批数据 + 一个分析目标」的常规任务。\n\n# 任务：数据清理与回归分析\n\n## 目标\n基于 data/ 下的数据，完成清洗并跑出主回归，输出可复现的脚本与结果说明。\n\n## 输入\n- data/*.csv：原始数据（切勿修改）\n- README.md：变量口径与分析要求\n\n## 输出\n- code/01_clean.do：数据清洗（含中文注释）\n- code/02_reg.do：主回归\n- outputs/report.md：结果说明，指出看哪一行、哪个系数\n\n## 处理要求\n- 关键连续变量做 1% 缩尾（winsor2）\n- 路径一律用相对路径；不要写死绝对路径\n- 面板数据先 xtset，缺失值与异常值的处理要在 report 中记录\n\n## 修改方式\n- 先阅读数据与 README，列出清洗与建模计划，等我确认后再执行\n- 改完逐个文件说明改了什么",
     "crumbs": [
       "附录",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>附录 A　任务说明书与提示词模板</span>"
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>任务说明书与提示词模板</span>"
     ]
   },
   {
     "objectID": "appendix/A_prompt_templates.html#场景模板二论文复现",
     "href": "appendix/A_prompt_templates.html#场景模板二论文复现",
-    "title": "附录 A — 附录 A　任务说明书与提示词模板",
+    "title": "附录 A — 任务说明书与提示词模板",
     "section": "A.3 场景模板二：论文复现",
     "text": "A.3 场景模板二：论文复现\n\n适合「一篇 PDF + 一个 dofile + 一份数据」的期刊复现包（如 Energy Economics 常见的简单复现包）。\n\n# 任务：论文复现体检与复跑\n\n## 目标\n让别人下载后能从原始数据开始，复现论文的描述性统计、主回归表和主要图形。\n\n## 输入\n- paper/*.pdf：论文原文\n- code/：作者提供的 dofile\n- data/：作者提供的数据\n\n## 要求（先诊断，后复跑）\n1. 先不要改任何文件。阅读 PDF 与代码，说明：\n   - 主程序是哪个、脚本的运行顺序\n   - 路径是否写死在作者电脑上、缺哪些外部命令\n   - 哪个脚本生成描述性统计 / 主回归表 / 主要图形\n2. 输出一份「复现路线图」（reproduce_plan.md）等我确认\n3. 确认后：把绝对路径改为相对路径、补装外部命令、逐个脚本复跑\n4. 生成 outputs/reproduce_log.md：每一步做了什么、结果是否与论文一致\n\n## 边界\n- data/ 原始数据不得修改；每轮修改后给出 diff 与运行 log",
     "crumbs": [
       "附录",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>附录 A　任务说明书与提示词模板</span>"
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>任务说明书与提示词模板</span>"
     ]
   },
   {
     "objectID": "appendix/A_prompt_templates.html#场景模板三概念学习-生成讲义",
     "href": "appendix/A_prompt_templates.html#场景模板三概念学习-生成讲义",
-    "title": "附录 A — 附录 A　任务说明书与提示词模板",
+    "title": "附录 A — 任务说明书与提示词模板",
     "section": "A.4 场景模板三：概念学习 / 生成讲义",
     "text": "A.4 场景模板三：概念学习 / 生成讲义\n\n适合「我想弄懂一个新方法」——让 AI 结合可运行的 Stata 例子，生成一份自学讲义。\n\n# 任务：生成一份 &lt;方法名，如 交叠 DID&gt; 的自学讲义\n\n## 目标\n面向已掌握 OLS 的读者，讲清 &lt;方法名&gt; 的直觉、适用条件与 Stata 实现。\n\n## 输出\n- notes/&lt;方法名&gt;.md，含：\n  1. 一句话它解决什么问题、什么时候该用\n  2. 与传统做法（如 TWFE）的关键区别（直觉，不堆公式）\n  3. 一个最小可运行的 Stata 例子（用 sysuse 或模拟数据），配中文注释\n  4. 结果怎么读：看哪张表、哪个系数、哪张图\n  5. 三条常见误用与延伸阅读\n\n## 要求\n- 例子必须能在 Stata 中跑通；用到的外部命令注明 ssc install\n- 先给提纲，我确认后再展开正文",
     "crumbs": [
       "附录",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>附录 A　任务说明书与提示词模板</span>"
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>任务说明书与提示词模板</span>"
     ]
   },
   {
     "objectID": "appendix/A_prompt_templates.html#场景模板四模拟分析",
     "href": "appendix/A_prompt_templates.html#场景模板四模拟分析",
-    "title": "附录 A — 附录 A　任务说明书与提示词模板",
+    "title": "附录 A — 任务说明书与提示词模板",
     "section": "A.5 场景模板四：模拟分析",
     "text": "A.5 场景模板四：模拟分析\n\n「自己造数据、真值已知」是检验方法、也是教学演示的利器（demo 的对照表就来自这里）。\n\n# 任务：模拟数据并对比估计量\n\n## 目标\n生成一份已知真值的模拟数据，比较不同估计量离真值的远近。\n\n## 设定\n- 数据生成过程（DGP）：&lt;写清个体数、时期数、处理时点、真实处理效应 τ=…&gt;\n- 造成偏误的来源：&lt;如 交叠处理 + 异质处理效应&gt;\n\n## 输出\n- dgp/simulate.do：生成模拟数据（设定随机种子，可复现）\n- code/compare.do：分别用 TWFE、csdid、jwdid 估计处理效应\n- outputs/compare.md：一张对照表（各估计量 vs 真值），并用一句话总结谁更接近真值\n\n## 要求\n- 固定随机种子；对照表要标出真值列\n- 先说明 DGP 与对比方案，我确认后再执行\n\n\n更系统的提示词与工作流写法，见延伸阅读：从 Prompt 到 Skills：把论文复现、数据清洗和代码规范写进 AI、Claude Code Skills 写作指南。",
     "crumbs": [
       "附录",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>附录 A　任务说明书与提示词模板</span>"
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>任务说明书与提示词模板</span>"
     ]
   },
   {
     "objectID": "appendix/B_replication.html",
     "href": "appendix/B_replication.html",
-    "title": "附录 B — 附录 B　论文复现全记录",
+    "title": "附录 B — 论文复现全记录",
     "section": "",
     "text": "本附录记录一次完整的论文复现——从拿到一个「一篇 PDF + 一个 dofile + 一份数据」的复现包开始，如何借助 Agent 把它跑起来、并逐步核对结果与论文是否一致。\n\n\n\n\n\n\n施工中\n\n\n\n本附录将在公开课后 3 日内补充完整的复现全记录（含每一步的任务说明、Agent 产出、diff 与运行日志、以及与论文原表的对照）。复现所用的任务说明书骨架，可先参考 附录 A · 场景模板二：论文复现。",
     "crumbs": [
       "附录",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>附录 B　论文复现全记录</span>"
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>论文复现全记录</span>"
     ]
   },
   {
     "objectID": "appendix/C_more_usage.html",
     "href": "appendix/C_more_usage.html",
-    "title": "附录 C — 附录 C　更多用法",
+    "title": "附录 C — 更多用法",
     "section": "",
     "text": "C.1 C.1 模拟分析：自己造数据检验方法\n本附录汇集课堂上因时间关系只能一句话带过的几类用法，供课后延伸尝试。三个小节的完整演示（含截图）将在公开课后陆续补充。\n当真值已知时，模拟数据是检验估计量、也是教学演示的利器。做法是先写清数据生成过程（DGP），再用不同方法估计、与真值对照。demo 里 TWFE vs csdid/jwdid vs 真值的对照表就来自这一思路。任务说明书骨架见 附录 A · 场景模板四。",
     "crumbs": [
       "附录",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>附录 C　更多用法</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>更多用法</span>"
     ]
   },
   {
     "objectID": "appendix/C_more_usage.html#c.2-让-ai-写讲义把新概念学明白",
     "href": "appendix/C_more_usage.html#c.2-让-ai-写讲义把新概念学明白",
-    "title": "附录 C — 附录 C　更多用法",
+    "title": "附录 C — 更多用法",
     "section": "C.2 C.2 让 AI 写讲义：把新概念学明白",
     "text": "C.2 C.2 让 AI 写讲义：把新概念学明白\n想弄懂一个新方法时，可以让 AI 结合可运行的 Stata 例子，生成一份自学讲义：一句话说清它解决什么问题、与传统做法的区别、一个最小可运行例子、结果怎么读、常见误用。任务说明书骨架见 附录 A · 场景模板三。",
     "crumbs": [
       "附录",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>附录 C　更多用法</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>更多用法</span>"
     ]
   },
   {
     "objectID": "appendix/C_more_usage.html#c.3-从大压缩包里提取数据",
     "href": "appendix/C_more_usage.html#c.3-从大压缩包里提取数据",
-    "title": "附录 C — 附录 C　更多用法",
+    "title": "附录 C — 更多用法",
     "section": "C.3 C.3 从大压缩包里提取数据",
     "text": "C.3 C.3 从大压缩包里提取数据\n面对动辄几个 G 的复现包或数据压缩包，可以让 Agent 帮你先摸清目录结构、定位主程序和目标数据文件，再按需解压和抽取，而不必一次性全部展开。",
     "crumbs": [
       "附录",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>附录 C　更多用法</span>"
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>更多用法</span>"
     ]
   },
   {
     "objectID": "appendix/D_reading_list.html",
     "href": "appendix/D_reading_list.html",
-    "title": "附录 D — 附录 D　延伸阅读清单",
+    "title": "附录 D — 延伸阅读清单",
     "section": "",
     "text": "D.1 理念：AI 时代为什么还要懂一点\n本清单汇总课程涉及的全部延伸阅读，均为连享会推文 / 页面链接，按主题分组，方便课后按需查阅。",
     "crumbs": [
       "附录",
-      "<span class='chapter-number'>D</span>  <span class='chapter-title'>附录 D　延伸阅读清单</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>延伸阅读清单</span>"
     ]
   },
   {
     "objectID": "appendix/D_reading_list.html#理念ai-时代为什么还要懂一点",
     "href": "appendix/D_reading_list.html#理念ai-时代为什么还要懂一点",
-    "title": "附录 D — 附录 D　延伸阅读清单",
+    "title": "附录 D — 延伸阅读清单",
     "section": "",
     "text": "Stata：AI 写代码时代，为什么还要懂一点？\nPython：AI 写代码时代，为什么还要懂一点？\nR 语言：AI 写代码时代，为什么还要懂一点？\nGit：AI 写代码时代，为什么还要懂一点？",
     "crumbs": [
       "附录",
-      "<span class='chapter-number'>D</span>  <span class='chapter-title'>附录 D　延伸阅读清单</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>延伸阅读清单</span>"
     ]
   },
   {
     "objectID": "appendix/D_reading_list.html#ai-工具分工与-agent-工作流第-34-讲",
     "href": "appendix/D_reading_list.html#ai-工具分工与-agent-工作流第-34-讲",
-    "title": "附录 D — 附录 D　延伸阅读清单",
+    "title": "附录 D — 延伸阅读清单",
     "section": "D.2 AI 工具分工与 Agent 工作流（第 3、4 讲）",
     "text": "D.2 AI 工具分工与 Agent 工作流（第 3、4 讲）\n\nChatGPT、Codex、Copilot、Claude Code：AI 工具如何分工协作？\n从代码补全到 AI-Agent：Copilot、Claude Code、Codex 怎么选？\n从 Prompt 到 Skills：把论文复现、数据清洗和代码规范写进 AI\nClaude Code Skills 写作指南：如何写好一个可复用的 SKILL.md\nCodex 也有 Skills 了：安装、调用和定制科研工作流\n警惕 AI-Agent 泄密：三道闸门守住 API 密钥和账号信息",
     "crumbs": [
       "附录",
-      "<span class='chapter-number'>D</span>  <span class='chapter-title'>附录 D　延伸阅读清单</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>延伸阅读清单</span>"
     ]
   },
   {
     "objectID": "appendix/D_reading_list.html#环境配置settings-页",
     "href": "appendix/D_reading_list.html#环境配置settings-页",
-    "title": "附录 D — 附录 D　延伸阅读清单",
+    "title": "附录 D — 延伸阅读清单",
     "section": "D.3 环境配置（settings 页）",
     "text": "D.3 环境配置（settings 页）\n\n公开课：Claude Code 协同 Stata：环境配置与应用实践\nVS Code 插件：安装、配置和使用\n50 分钟搞定个人主页：Fork 模板 + GitHub Pages + Quarto\n快去抢注一个 GitHub 账号",
     "crumbs": [
       "附录",
-      "<span class='chapter-number'>D</span>  <span class='chapter-title'>附录 D　延伸阅读清单</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>延伸阅读清单</span>"
     ]
   },
   {
     "objectID": "appendix/D_reading_list.html#stata-入门与规范第-1-讲",
     "href": "appendix/D_reading_list.html#stata-入门与规范第-1-讲",
-    "title": "附录 D — 附录 D　延伸阅读清单",
+    "title": "附录 D — 延伸阅读清单",
     "section": "D.4 Stata 入门与规范（第 1 讲）",
     "text": "D.4 Stata 入门与规范（第 1 讲）\n\n优雅的实证研究：文档结构与基本规则\nStata 外部命令：SSC 所有外部命令清单\nStata：如何永久修改 PERSONAL 文件夹的位置？\nStata 代码规范指南",
     "crumbs": [
       "附录",
-      "<span class='chapter-number'>D</span>  <span class='chapter-title'>附录 D　延伸阅读清单</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>延伸阅读清单</span>"
     ]
   },
   {
     "objectID": "appendix/D_reading_list.html#did-方法demo-与第-4-讲",
     "href": "appendix/D_reading_list.html#did-方法demo-与第-4-讲",
-    "title": "附录 D — 附录 D　延伸阅读清单",
+    "title": "附录 D — 延伸阅读清单",
     "section": "D.5 DID 方法（demo 与第 4 讲）",
     "text": "D.5 DID 方法（demo 与第 4 讲）\n\nStatsPAI：交叠 DID 方法太多，到底怎么选？\n多时间点 DID 的统计检验\n平行趋势不显著≠平行趋势成立：pretrends\n四个标准：什么样的政策冲击适合做准自然实验？\nChina Policy Shocks：中国政策冲击数据库",
     "crumbs": [
       "附录",
-      "<span class='chapter-number'>D</span>  <span class='chapter-title'>附录 D　延伸阅读清单</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>延伸阅读清单</span>"
     ]
   },
   {
     "objectID": "appendix/D_reading_list.html#复现与可重复研究附录-b-与-demo-规范",
     "href": "appendix/D_reading_list.html#复现与可重复研究附录-b-与-demo-规范",
-    "title": "附录 D — 附录 D　延伸阅读清单",
+    "title": "附录 D — 延伸阅读清单",
     "section": "D.6 复现与可重复研究（附录 B 与 demo 规范）",
     "text": "D.6 复现与可重复研究（附录 B 与 demo 规范）\n\n代码审计：如何从源头确保你的论文可复现？\n社会科学研究复现包中的自述文档模板\nEJD 平台：13000 篇顶刊论文的复现数据和代码",
     "crumbs": [
       "附录",
-      "<span class='chapter-number'>D</span>  <span class='chapter-title'>附录 D　延伸阅读清单</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>延伸阅读清单</span>"
     ]
   },
   {
     "objectID": "appendix/D_reading_list.html#站点互链",
     "href": "appendix/D_reading_list.html#站点互链",
-    "title": "附录 D — 附录 D　延伸阅读清单",
+    "title": "附录 D — 延伸阅读清单",
     "section": "D.7 站点互链",
     "text": "D.7 站点互链\n\nStata 101\n数据分析与经济决策（ds2026）\n因果推断：政策评估（ci-policy）\n连享会主页",
     "crumbs": [
       "附录",
-      "<span class='chapter-number'>D</span>  <span class='chapter-title'>附录 D　延伸阅读清单</span>"
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>延伸阅读清单</span>"
     ]
   }
 ]

@@ -1,5 +1,5 @@
 ---
-title: "第 3 讲　对话式 AI 与执行型 Agent"
+title: "对话式 AI 与执行型 Agent"
 ---
 
 > **本讲回答一个问题**：同样都能写代码，对话式 AI（ChatGPT、Claude）和执行型 Agent（Codex、Claude Code）到底怎么分工？
