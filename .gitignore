@@ -1,16 +1,15 @@
-# === stata-ai 项目规则：过程文档与素材不推送远程 ===
-working/
-_task/
-_materials/
-CLAUDE.md
+# === 系统与临时文件 ===
 .quarto/
+/.quarto/
 /.claude/
 *.stswp
-
-# Quarto / 系统杂项
 .DS_Store
 Thumbs.db
 
-# 注意：不要忽略 demo/，它是要随仓库发布的
+# === 素材：harvest 是从 ci-policy/stata101/ds2026 整包复制来的，不公开 ===
+#     （体积大、且那三个仓库本身已公开，内容重复）
+_materials/harvest/
 
-/.quarto/
+# 说明：CLAUDE.md、working/、_task/、_materials/（harvest 除外）现在有意公开，
+#       用于向学员展示"如何借助 AI Agent 制作本仓库"的完整过程。
+# 注意：不要忽略 demo/，它是要随仓库发布的。

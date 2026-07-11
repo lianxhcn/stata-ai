@@ -1,0 +1,577 @@
+
+  ___  ____  ____  ____  ____ ®
+ /__    /   ____/   /   ____/      StataNow 19.5
+___/   /   /___/   /   /___/       MP—Parallel Edition
+
+ Statistics and Data Science       Copyright 1985-2025 StataCorp LLC
+                                   StataCorp
+                                   4905 Lakeway Drive
+                                   College Station, Texas 77845 USA
+                                   800-782-8272        https://www.stata.com
+                                   979-696-4600        service@stata.com
+
+Stata license: Single-user 4-core , expiring  8 Aug 2027
+Serial number: 501909330131
+  Licensed to: arlionn
+               sysu
+
+Notes:
+      1. Stata is running in batch mode.
+      2. Unicode is supported; see help unicode_advice.
+      3. More than 2 billion observations are allowed; see help obs_advice.
+      4. Maximum number of variables is set to 5,000 but can be increased;
+          see help set_maxvar.
+
+
+Running D:\stata19\profile.do ...
+
+. do D:\github_lianxh\stata-ai\demo\_dgp\01_gen_data.do 
+
+. *======================================================================
+. * 01_gen_data.do  —  生成「绿色转型试点城市」模拟数据（教学演示用）
+. * 规格来源：working/specs/dgp-spec.md
+. * 运行方式（工作目录 = demo/）：
+. *   "D:\stata19\StataMP-64.exe" /e do _dgp/01_gen_data.do
+. * 说明：本脚本只造数据 + 计算真值，不做任何分析。
+. *======================================================================
+. 
+. clear all
+
+. set more off
+
+. set seed 20260712
+
+. version 17
+
+. 
+. * 注意：本机 profile.do 会改变工作目录，这里显式切回 demo/，
+. * 使 01_data/ 与 ../working/ 等相对路径生效。
+. cd "D:/github_lianxh/stata-ai/demo"
+D:\github_lianxh\stata-ai\demo
+
+. 
+. *----------------------------------------------------------------------
+. * 1. 城市名单（N = 120，规范名，不带「市」）
+. *----------------------------------------------------------------------
+. local names ///
+>   南京 无锡 徐州 常州 苏州 南通 连云港 淮安 盐城 扬州 镇江 泰州 宿迁 ///
+>   杭州 宁波 温州 嘉兴 湖州 绍兴 金华 衢州 舟山 台州 丽水 ///
+>   合肥 芜湖 蚌埠 淮南 马鞍山 安庆 滁州 阜阳 宿州 六安 ///
+>   福州 厦门 莆田 三明 泉州 漳州 南平 龙岩 宁德 ///
+>   南昌 九江 赣州 吉安 宜春 上饶 抚州 景德镇 ///
+>   济南 青岛 淄博 枣庄 东营 烟台 潍坊 济宁 泰安 威海 日照 临沂 德州 菏泽 ///
+>   郑州 开封 洛阳 平顶山 安阳 新乡 焦作 许昌 漯河 南阳 商丘 信阳 ///
+>   武汉 黄石 十堰 宜昌 襄阳 荆门 孝感 荆州 黄冈 咸宁 ///
+>   长沙 株洲 湘潭 衡阳 邵阳 岳阳 常德 郴州 永州 怀化 ///
+>   广州 深圳 珠海 汕头 佛山 韶关 湛江 肇庆 江门 茂名 惠州 中山 ///
+>   成都 自贡 泸州 德阳 绵阳 乐山 南充 宜宾 ///
+>   西安 兰州 贵阳
+
+. 
+. local N : word count `names'
+
+. di as result "城市数 N = `N'"    // 期望 120
+城市数 N = 120
+
+. 
+. set obs `N'
+Number of observations (_N) was 0, now 120.
+
+. gen int i = _n
+
+. gen str24 city_name = ""
+(120 missing values generated)
+
+. forvalues k = 1/`N' {
+  2.     replace city_name = "`: word `k' of `names''" if i == `k'
+  3. }
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+(1 real change made)
+
+. gen long city_code = 200000 + 100*i
+
+. 
+. *----------------------------------------------------------------------
+. * 2. 城市层面基期协变量
+. *----------------------------------------------------------------------
+. gen double lngdp_base  = rnormal(10.5, 0.6)
+
+. gen double pop_base    = max(rnormal(450, 150), 80)
+
+. gen double second_base = rnormal(45, 8)
+
+. 
+. *----------------------------------------------------------------------
+. * 3. 处理分配（带选择性：经济更强的城市更可能入选）
+. *----------------------------------------------------------------------
+. gen double rank_noise = lngdp_base + rnormal(0, 0.3)
+
+. gsort -rank_noise
+
+. gen int rank = _n
+
+. gen byte pilot = (rank <= 60)
+
+. gen int  g = .
+(120 missing values generated)
+
+. replace  g = 2016 if rank <= 20
+(20 real changes made)
+
+. replace  g = 2018 if rank >= 21 & rank <= 40
+(20 real changes made)
+
+. replace  g = 2020 if rank >= 41 & rank <= 60
+(20 real changes made)
+
+. gen byte batch      = cond(g==2016,1, cond(g==2018,2, cond(g==2020,3,.)))
+(60 missing values generated)
+
+. gen int  pilot_year = g
+(60 missing values generated)
+
+. 
+. * 城市固定效应 a_i（试点城市水平选择 +0.8）
+. gen double a_i = rnormal(0, 1.5) + 0.8*pilot
+
+. 
+. * policy_pilot.csv 用「市」后缀标记（约一半带「市」）——城市层面一次性抽取
+. gen byte add_shi = (runiform() < 0.5)
+
+. 
+. * 保存城市层面数据，供 policy_pilot 使用
+. tempfile citylevel
+
+. save "`citylevel'"
+file C:\Users\ADMINI~1\AppData\Local\Temp\ST_3b34_000001.tmp saved as .dta
+    format
+
+. 
+. *----------------------------------------------------------------------
+. * 4. 展开为城市-年份面板（2012–2024，13 年）
+. *----------------------------------------------------------------------
+. expand 13
+(1,440 observations created)
+
+. bysort city_code (i): gen int year = 2011 + _n
+
+. * 说明：expand 后按 city_code 排序内部生成年份
+. 
+. * 年份层面共同冲击 u_t（同年所有城市共用同一实现）
+. preserve
+
+.     clear
+
+.     set obs 13
+Number of observations (_N) was 0, now 13.
+
+.     gen int year = 2011 + _n
+
+.     gen double u_t = rnormal(0, 0.2)
+
+.     tempfile yshock
+
+.     save "`yshock'"
+file C:\Users\ADMINI~1\AppData\Local\Temp\ST_3b34_000003.tmp saved as .dta
+    format
+
+. restore
+
+. merge m:1 year using "`yshock'", nogen
+
+    Result                      Number of obs
+    -----------------------------------------
+    Not matched                             0
+    Matched                             1,560  
+    -----------------------------------------
+
+. gen double l_t = 0.25*(year - 2012) + u_t
+
+. 
+. *----------------------------------------------------------------------
+. * 5. 随时间演化的协变量
+. *----------------------------------------------------------------------
+. * lngdp：基期 = lngdp_base；此后每年 +0.07 + N(0,0.02^2)
+. bysort city_code (year): gen double gr_gdp = 0.07 + rnormal(0, 0.02)
+
+. bysort city_code (year): replace gr_gdp = 0 if _n == 1
+(120 real changes made)
+
+. bysort city_code (year): gen double lngdp = lngdp_base + sum(gr_gdp)
+
+. gen double gdp = exp(lngdp)                       // 亿元
+
+. 
+. * pop：每年增长 0.5% + N(0,0.3%^2)
+. bysort city_code (year): gen double gr_pop = 0.005 + rnormal(0, 0.003)
+
+. bysort city_code (year): replace gr_pop = 0 if _n == 1
+(120 real changes made)
+
+. bysort city_code (year): gen double pop = pop_base * exp(sum(gr_pop))
+
+. 
+. * second_share：每年递减 0.3
+. gen double second_share = second_base - 0.3*(year - 2012)
+
+. 
+. *----------------------------------------------------------------------
+. * 6. 处理效应 tau_it（动态且分批异质——TWFE 出偏的关键设计）
+. *----------------------------------------------------------------------
+. gen double eff_base = cond(g==2016,1.5, cond(g==2018,1.0, cond(g==2020,0.6,.)
+> ))
+(780 missing values generated)
+
+. gen double tau = 0
+
+. replace    tau = eff_base*(1 + 0.3*(year - g)) if pilot & year >= g
+(420 real changes made)
+
+. 
+. *----------------------------------------------------------------------
+. * 7. 结果方程
+. *----------------------------------------------------------------------
+. gen double e_it = rnormal(0, 1)
+
+. gen double y = 6 + a_i + l_t + 0.8*(lngdp - 10.5) + tau + e_it
+
+. replace    y = max(y, 0)
+(1 real change made)
+
+. gen double green_patents = round(y, 0.1)
+
+. 
+. * 完整面板（含 tau，未埋瑕疵）留作真值计算与两张干净表的来源
+. tempfile fullpanel
+
+. save "`fullpanel'"
+file C:\Users\ADMINI~1\AppData\Local\Temp\ST_3b34_000004.tmp saved as .dta
+    format
+
+. 
+. *======================================================================
+. * 8. 真值 → ../working/dgp_truth.md（不放入 demo/）
+. *======================================================================
+. file open truth using "../working/dgp_truth.md", write replace text
+
+. 
+. file write truth "# DGP 真值记录（不得放入 demo/，防止分析者偷看）" _n _n
+
+. file write truth "> 由 demo/_dgp/01_gen_data.do 生成，seed = 20260712。" _n
+
+. file write truth "> 真值基于生成时的 tau_it（删行/去重前的完整 120×13 面板）
+> 。" _n _n
+
+. 
+. * 1) 整体 ATT
+. qui summarize tau if pilot & year >= g
+
+. local n_all = r(N)
+
+. local att_all : di %6.4f r(mean)
+
+. file write truth "## 1. 整体 ATT" _n _n
+
+. file write truth "- 处理后城市-年单元数：`n_all'" _n
+
+. file write truth "- 整体 ATT = `att_all'" _n _n
+
+. 
+. * 2) 分批 ATT
+. file write truth "## 2. 分批 ATT" _n _n
+
+. file write truth "| 批次 | 首次处理年 g | base_g | 处理后单元数 | 分批 ATT |"
+>  _n
+
+. file write truth "|------|-------------|--------|-------------|----------|" _
+> n
+
+. qui summarize tau if batch==1 & year >= g
+
+. local nb1 = r(N)
+
+. local mb1 : di %6.4f r(mean)
+
+. file write truth "| 1 | 2016 | 1.5 | `nb1' | `mb1' |" _n
+
+. qui summarize tau if batch==2 & year >= g
+
+. local nb2 = r(N)
+
+. local mb2 : di %6.4f r(mean)
+
+. file write truth "| 2 | 2018 | 1.0 | `nb2' | `mb2' |" _n
+
+. qui summarize tau if batch==3 & year >= g
+
+. local nb3 = r(N)
+
+. local mb3 : di %6.4f r(mean)
+
+. file write truth "| 3 | 2020 | 0.6 | `nb3' | `mb3' |" _n
+
+. file write truth _n
+
+. 
+. * 3) 分事件期 ATT，e = t - g = 0..8
+. file write truth "## 3. 分事件期 ATT（e = t − g）" _n _n
+
+. file write truth "| 事件期 e | 单元数 | ATT |" _n
+
+. file write truth "|---------|--------|-----|" _n
+
+. forvalues ee = 0/8 {
+  2.     qui summarize tau if pilot & year >= g & (year - g)==`ee'
+  3.     local nee = r(N)
+  4.     local mee : di %6.4f r(mean)
+  5.     if `nee' > 0 {
+  6.         file write truth "| `ee' | `nee' | `mee' |" _n
+  7.     }
+  8. }
+
+. file write truth _n
+
+. 
+. file write truth "## 4. 附注" _n _n
+
+. file write truth "预期 TWFE 因异质动态处理效应（分批 base 不同 + 逐期放大）而
+> 偏离上述真值；" _n
+
+. file write truth "csdid（Callaway–Sant'Anna）与 jwdid（Wooldridge）应更接近上
+> 述整体/分批/分期 ATT。" _n
+
+. 
+. file close truth
+
+. di as result "真值已写入 ../working/dgp_truth.md"
+真值已写入 ../working/dgp_truth.md
+
+. 
+. *======================================================================
+. * 9. 导出三个 CSV（UTF-8）
+. *======================================================================
+. * ---- (A) city_economic.csv：完整干净面板 120×13 = 1560 行 ----
+. use "`fullpanel'", clear
+
+. keep city_code city_name year gdp pop second_share
+
+. order city_code city_name year gdp pop second_share
+
+. replace gdp = round(gdp, 0.1)
+(1,560 real changes made)
+
+. replace pop = round(pop, 0.1)
+(1,559 real changes made)
+
+. replace second_share = round(second_share, 0.1)
+(1,560 real changes made)
+
+. sort city_code year
+
+. export delimited using "01_data/city_economic.csv", replace
+(file 01_data/city_economic.csv not found)
+file 01_data/city_economic.csv saved
+
+. 
+. * ---- (B) city_green.csv：埋入三类瑕疵 ----
+. use "`fullpanel'", clear
+
+. keep city_name year green_patents
+
+. * 瑕疵①改名（旧口径）：2015 及以前，淮安→淮阴、襄阳→襄樊
+. replace city_name = "淮阴" if city_name=="淮安" & year <= 2015
+(4 real changes made)
+
+. replace city_name = "襄樊" if city_name=="襄阳" & year <= 2015
+(4 real changes made)
+
+. * 瑕疵②缺失：随机删除约 3% 的城市-年份行
+. gen double _u = runiform()
+
+. drop if _u < 0.03
+(41 observations deleted)
+
+. drop _u
+
+. * 瑕疵③重复：随机抽 12 行原样追加到末尾
+. sort city_name year
+
+. gen double _r = runiform()
+
+. sort _r
+
+. gen long _id = _n
+
+. preserve
+
+.     keep if _id <= 12
+(1,507 observations deleted)
+
+.     drop _r _id
+
+.     tempfile dup12
+
+.     save "`dup12'"
+file C:\Users\ADMINI~1\AppData\Local\Temp\ST_3b34_000006.tmp saved as .dta
+    format
+
+. restore
+
+. drop _r _id
+
+. sort city_name year
+
+. append using "`dup12'"
+
+. export delimited using "01_data/city_green.csv", replace
+(file 01_data/city_green.csv not found)
+file 01_data/city_green.csv saved
+
+. 
+. * ---- (C) policy_pilot.csv：仅 60 个试点城市，60 行 ----
+. use "`citylevel'", clear
+
+. keep if pilot
+(60 observations deleted)
+
+. gen str30 city_name_out = city_name + cond(add_shi==1, "市", "")
+
+. keep city_name_out batch pilot_year
+
+. rename city_name_out city_name
+
+. order city_name batch pilot_year
+
+. sort batch city_name
+
+. export delimited using "01_data/policy_pilot.csv", replace
+(file 01_data/policy_pilot.csv not found)
+file 01_data/policy_pilot.csv saved
+
+. 
+. di as result "三个 CSV 已导出到 01_data/"
+三个 CSV 已导出到 01_data/
+
+. di as result "=== 01_gen_data.do 运行完成 ==="
+=== 01_gen_data.do 运行完成 ===
+
+. 
+end of do-file

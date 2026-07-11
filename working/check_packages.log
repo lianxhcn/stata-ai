@@ -1,0 +1,71 @@
+
+  ___  ____  ____  ____  ____ ®
+ /__    /   ____/   /   ____/      StataNow 19.5
+___/   /   /___/   /   /___/       MP—Parallel Edition
+
+ Statistics and Data Science       Copyright 1985-2025 StataCorp LLC
+                                   StataCorp
+                                   4905 Lakeway Drive
+                                   College Station, Texas 77845 USA
+                                   800-782-8272        https://www.stata.com
+                                   979-696-4600        service@stata.com
+
+Stata license: Single-user 4-core , expiring  8 Aug 2027
+Serial number: 501909330131
+  Licensed to: arlionn
+               sysu
+
+Notes:
+      1. Stata is running in batch mode.
+      2. Unicode is supported; see help unicode_advice.
+      3. More than 2 billion observations are allowed; see help obs_advice.
+      4. Maximum number of variables is set to 5,000 but can be increased;
+          see help set_maxvar.
+
+
+Running D:\stata19\profile.do ...
+
+. do D:\github_lianxh\stata-ai\demo\_dgp\check_packages.do 
+
+. *======================================================================
+. * check_packages.do  —  T4 彩排前检查外部命令是否齐备
+. * 运行方式（工作目录 = demo/）：
+. *   "D:\stata19\StataMP-64.exe" /e do _dgp/check_packages.do
+. * 缺失的命令会打印对应的 ssc install 语句，照抄安装即可。
+. *======================================================================
+. 
+. clear all
+
+. set more off
+
+. 
+. di as text "==== 外部命令自检 ===="
+==== 外部命令自检 ====
+
+. 
+. foreach pkg in reghdfe ftools csdid drdid estout jwdid {
+  2.     capture which `pkg'
+  3.     if _rc {
+  4.         di as error  "缺失：`pkg'  ->  请运行:  ssc install `pkg', replace
+> "
+  5.     }
+  6.     else {
+  7.         di as result "已安装：`pkg'"
+  8.     }
+  9. }
+已安装：reghdfe
+已安装：ftools
+已安装：csdid
+已安装：drdid
+已安装：estout
+已安装：jwdid
+
+. 
+. di as text "==== 自检完成 ===="
+==== 自检完成 ====
+
+. di as text "注：estout 包内含 esttab；jwdid 为可选（缺失时分析可跳过）。"
+注：estout 包内含 esttab；jwdid 为可选（缺失时分析可跳过）。
+
+. 
+end of do-file
