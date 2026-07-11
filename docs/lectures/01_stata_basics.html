@@ -224,11 +224,11 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#先说明界面与语法本讲不细讲" id="toc-先说明界面与语法本讲不细讲" class="nav-link active" data-scroll-target="#先说明界面与语法本讲不细讲"><span class="header-section-number">1.1</span> 先说明：界面与语法本讲不细讲</a></li>
   <li><a href="#为何还要学-stata" id="toc-为何还要学-stata" class="nav-link" data-scroll-target="#为何还要学-stata"><span class="header-section-number">1.2</span> 为何还要学 Stata？</a>
   <ul class="collapse">
-  <li><a href="#具备审查能力不要被-ai-误导" id="toc-具备审查能力不要被-ai-误导" class="nav-link" data-scroll-target="#具备审查能力不要被-ai-误导"><span class="header-section-number">1.2.1</span> 具备「审查能力」，不要被 AI 误导</a></li>
-  <li><a href="#能自行搜索新命令查看帮助文件" id="toc-能自行搜索新命令查看帮助文件" class="nav-link" data-scroll-target="#能自行搜索新命令查看帮助文件"><span class="header-section-number">1.2.2</span> 能自行搜索新命令、查看帮助文件</a></li>
-  <li><a href="#知道-stata-安装路径与-profile.do-机制" id="toc-知道-stata-安装路径与-profile.do-机制" class="nav-link" data-scroll-target="#知道-stata-安装路径与-profile.do-机制"><span class="header-section-number">1.2.3</span> 知道 Stata 安装路径与 profile.do 机制</a></li>
-  <li><a href="#有些方法stata-仍有独特优势如-reghdfe" id="toc-有些方法stata-仍有独特优势如-reghdfe" class="nav-link" data-scroll-target="#有些方法stata-仍有独特优势如-reghdfe"><span class="header-section-number">1.2.4</span> 有些方法，Stata 仍有独特优势（如 <code>reghdfe</code>）</a></li>
-  <li><a href="#路径依赖复现包与合作者都在用-stata" id="toc-路径依赖复现包与合作者都在用-stata" class="nav-link" data-scroll-target="#路径依赖复现包与合作者都在用-stata"><span class="header-section-number">1.2.5</span> 路径依赖：复现包与合作者都在用 Stata</a></li>
+  <li><a href="#c1-具备审查能力不要被-ai-误导" id="toc-c1-具备审查能力不要被-ai-误导" class="nav-link" data-scroll-target="#c1-具备审查能力不要被-ai-误导">C1　具备「审查能力」，不要被 AI 误导</a></li>
+  <li><a href="#c2-能自行搜索新命令查看帮助文件" id="toc-c2-能自行搜索新命令查看帮助文件" class="nav-link" data-scroll-target="#c2-能自行搜索新命令查看帮助文件">C2　能自行搜索新命令、查看帮助文件</a></li>
+  <li><a href="#c3-知道-stata-安装路径与-profile.do-机制" id="toc-c3-知道-stata-安装路径与-profile.do-机制" class="nav-link" data-scroll-target="#c3-知道-stata-安装路径与-profile.do-机制">C3　知道 Stata 安装路径与 profile.do 机制</a></li>
+  <li><a href="#c4-有些方法stata-仍有独特优势如-reghdfe" id="toc-c4-有些方法stata-仍有独特优势如-reghdfe" class="nav-link" data-scroll-target="#c4-有些方法stata-仍有独特优势如-reghdfe">C4　有些方法，Stata 仍有独特优势（如 <code>reghdfe</code>）</a></li>
+  <li><a href="#c5-路径依赖复现包与合作者都在用-stata" id="toc-c5-路径依赖复现包与合作者都在用-stata" class="nav-link" data-scroll-target="#c5-路径依赖复现包与合作者都在用-stata">C5　路径依赖：复现包与合作者都在用 Stata</a></li>
   </ul></li>
   <li><a href="#课堂演示要点" id="toc-课堂演示要点" class="nav-link" data-scroll-target="#课堂演示要点"><span class="header-section-number">1.3</span> 课堂演示要点</a></li>
   <li><a href="#延伸阅读" id="toc-延伸阅读" class="nav-link" data-scroll-target="#延伸阅读"><span class="header-section-number">1.4</span> 延伸阅读</a></li>
@@ -286,24 +286,24 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <p>具体来说，在 AI 时代仍值得懂一点 Stata，有以下五个理由。</p>
-<section id="具备审查能力不要被-ai-误导" class="level3" data-number="1.2.1">
-<h3 data-number="1.2.1" class="anchored" data-anchor-id="具备审查能力不要被-ai-误导"><span class="header-section-number">1.2.1</span> 具备「审查能力」，不要被 AI 误导</h3>
+<section id="c1-具备审查能力不要被-ai-误导" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="c1-具备审查能力不要被-ai-误导">C1　具备「审查能力」，不要被 AI 误导</h3>
 <p>AI 生成的 Stata 代码常常”看起来对、也跑得动，结果却不对”——变量名猜错、选项用反、把跨个体的滞后算到了别的单位、把相关关系写成因果。只有你自己懂一点 Stata，才能读懂它到底写了什么、判断结果是否合理。<strong>AI 是助手，最终把关的人是你。</strong></p>
 </section>
-<section id="能自行搜索新命令查看帮助文件" class="level3" data-number="1.2.2">
-<h3 data-number="1.2.2" class="anchored" data-anchor-id="能自行搜索新命令查看帮助文件"><span class="header-section-number">1.2.2</span> 能自行搜索新命令、查看帮助文件</h3>
+<section id="c2-能自行搜索新命令查看帮助文件" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="c2-能自行搜索新命令查看帮助文件">C2　能自行搜索新命令、查看帮助文件</h3>
 <p>遇到不认识的命令，你要能 <code>help</code> 一下看语法、<code>findit</code> 一下找方法、看懂它来自官方还是 SSC。有了这个能力，你才判断得出 AI 推荐的命令靠不靠谱、有没有更合适的替代。这也是”最小入口”里最该练的一手。</p>
 </section>
-<section id="知道-stata-安装路径与-profile.do-机制" class="level3" data-number="1.2.3">
-<h3 data-number="1.2.3" class="anchored" data-anchor-id="知道-stata-安装路径与-profile.do-机制"><span class="header-section-number">1.2.3</span> 知道 Stata 安装路径与 profile.do 机制</h3>
+<section id="c3-知道-stata-安装路径与-profile.do-机制" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="c3-知道-stata-安装路径与-profile.do-机制">C3　知道 Stata 安装路径与 profile.do 机制</h3>
 <p>这一条和”用 Agent”直接相关：当你让 Claude Code、Codex 或 MCP 工具去调用、配置 Stata 时，<strong>必须告诉它 Stata 的安装路径</strong>，以及 <code>profile.do</code> 的存在——这是 Stata 启动时自动运行的配置文件，可能会改变工作目录、加载外部命令路径。不了解这套机制，Agent 配置常常莫名卡住（我们在准备本课的 demo 时就踩过 <code>profile.do</code> 悄悄切换工作目录的坑）。</p>
 </section>
-<section id="有些方法stata-仍有独特优势如-reghdfe" class="level3" data-number="1.2.4">
-<h3 data-number="1.2.4" class="anchored" data-anchor-id="有些方法stata-仍有独特优势如-reghdfe"><span class="header-section-number">1.2.4</span> 有些方法，Stata 仍有独特优势（如 <code>reghdfe</code>）</h3>
+<section id="c4-有些方法stata-仍有独特优势如-reghdfe" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="c4-有些方法stata-仍有独特优势如-reghdfe">C4　有些方法，Stata 仍有独特优势（如 <code>reghdfe</code>）</h3>
 <p>不少前沿计量方法的成熟实现最先出现在 Stata：<code>reghdfe</code>（高维固定效应）、<code>csdid</code> / <code>jwdid</code>（现代交叠 DID）、<code>ivreghdfe</code> 等。做面板与因果推断时，Stata 生态往往比 Python / R 更省心、更”开箱即用”。</p>
 </section>
-<section id="路径依赖复现包与合作者都在用-stata" class="level3" data-number="1.2.5">
-<h3 data-number="1.2.5" class="anchored" data-anchor-id="路径依赖复现包与合作者都在用-stata"><span class="header-section-number">1.2.5</span> 路径依赖：复现包与合作者都在用 Stata</h3>
+<section id="c5-路径依赖复现包与合作者都在用-stata" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="c5-路径依赖复现包与合作者都在用-stata">C5　路径依赖：复现包与合作者都在用 Stata</h3>
 <p>大量顶刊论文的复现包是用 Stata 写的；你的导师、师兄师姐、合作者也很可能多年都在用 Stata。想读懂别人的代码、复现别人的结果、和团队顺畅协作，就绕不开它。会一点 Stata，是融入现有学术生产链的现实需要。</p>
 <hr>
 <p>以上只是要点。关于”AI 时代为什么还要懂一点 Stata”的更完整讨论，参阅：</p>
