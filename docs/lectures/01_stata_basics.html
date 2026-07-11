@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>1&nbsp; Stata 最小入口 – Stata 简介与 AI 辅助实证</title>
+<title>1&nbsp; 重新审视 Stata – Stata 简介与 AI 辅助实证</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -85,7 +85,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/01_stata_basics.html"><strong>讲义</strong></a></li><li class="breadcrumb-item"><a href="../lectures/01_stata_basics.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Stata 最小入口</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/01_stata_basics.html"><strong>讲义</strong></a></li><li class="breadcrumb-item"><a href="../lectures/01_stata_basics.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">重新审视 Stata</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -153,7 +153,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lectures/01_stata_basics.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Stata 最小入口</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">重新审视 Stata</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -230,7 +230,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#c4-有些方法stata-仍有独特优势如-reghdfe" id="toc-c4-有些方法stata-仍有独特优势如-reghdfe" class="nav-link" data-scroll-target="#c4-有些方法stata-仍有独特优势如-reghdfe">C4　有些方法，Stata 仍有独特优势（如 <code>reghdfe</code>）</a></li>
   <li><a href="#c5-路径依赖复现包与合作者都在用-stata" id="toc-c5-路径依赖复现包与合作者都在用-stata" class="nav-link" data-scroll-target="#c5-路径依赖复现包与合作者都在用-stata">C5　路径依赖：复现包与合作者都在用 Stata</a></li>
   </ul></li>
-  <li><a href="#最小入口动手走一遍" id="toc-最小入口动手走一遍" class="nav-link" data-scroll-target="#最小入口动手走一遍"><span class="header-section-number">1.3</span> 最小入口：动手走一遍</a></li>
+  <li><a href="#动手走一遍" id="toc-动手走一遍" class="nav-link" data-scroll-target="#动手走一遍"><span class="header-section-number">1.3</span> 动手走一遍</a></li>
   <li><a href="#延伸阅读" id="toc-延伸阅读" class="nav-link" data-scroll-target="#延伸阅读"><span class="header-section-number">1.4</span> 延伸阅读</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/lianxhcn/stata-ai/edit/main/lectures/01_stata_basics.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lianxhcn/stata-ai/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -238,9 +238,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/01_stata_basics.html"><strong>讲义</strong></a></li><li class="breadcrumb-item"><a href="../lectures/01_stata_basics.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Stata 最小入口</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/01_stata_basics.html"><strong>讲义</strong></a></li><li class="breadcrumb-item"><a href="../lectures/01_stata_basics.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">重新审视 Stata</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Stata 最小入口</span></h1>
+<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">重新审视 Stata</span></h1>
 </div>
 
 
@@ -321,8 +321,8 @@ ul.task-list li input[type="checkbox"] {
 <p>关于”AI 时代为什么还要懂一点 Stata”的更完整讨论，参阅：丁闪闪, 2026, <a href="https://www.lianxh.cn/details/1833.html">Stata：AI 写代码时代，为什么还要懂一点？</a>。</p>
 </section>
 </section>
-<section id="最小入口动手走一遍" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="最小入口动手走一遍"><span class="header-section-number">1.3</span> 最小入口：动手走一遍</h2>
+<section id="动手走一遍" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="动手走一遍"><span class="header-section-number">1.3</span> 动手走一遍</h2>
 <p>用 Stata 做一次分析，最小的一套动作如下（操作细节见上文 Stata 101 链接）：</p>
 <ul>
 <li>认识四个窗口，用 <code>sysuse auto, clear</code> 载入数据，在变量窗口查看数据结构。</li>

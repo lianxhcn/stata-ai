@@ -34,7 +34,7 @@
     "href": "index.html#如何使用本仓库",
     "title": "Stata 简介与 AI 辅助实证",
     "section": "如何使用本仓库",
-    "text": "如何使用本仓库\n本仓库使用 VS Code + Quarto 编写，并通过 GitHub Pages 发布。你可以：\n\nFork 或克隆本仓库的 GitHub 仓库，在本地阅读、修改、运行示例。\n\n根据你的需要，有三条阅读路径：\n\n只想把环境配好 → 直接看 环境配置。里面按「Stata 外部命令 → VS Code + nbstata → GitHub Copilot → Claude Code / Codex」四步给出配置清单与「配置成功的标志」。\n想复现课堂演示 → 下载本仓库的 demo/ 文件夹，按其中的 README.md 操作，在文件夹内启动 Claude Code 或 Codex，即可重跑本课的 Agent 分析演示。\n想系统学习实证研究 → 欢迎报名 7 月 21–23 日的连享会 2026 暑期班·初级班（连玉君主讲）。今天公开课里看到的每一步，正式课上都会让你亲手做一遍。\n\n\n连享会 2026 暑期班·初级班\n\n\n\n连享会 2026 暑期班海报\n\n\n\n时间：2026 年 7 月 21–23 日（三天），连玉君（中山大学）\n课程主页：https://www.lianxh.cn/PX.html\n报名链接：https://www.wjx.top/vm/QhgLvx1.aspx#\n\n\n扫码报名 · 2026 暑期班\n\n主页 | 课程 | 推文 | 资料",
+    "text": "如何使用本仓库\n本仓库使用 VS Code + Quarto 编写，并通过 GitHub Pages 发布。你可以：\n\nFork 或克隆本仓库的 GitHub 仓库，在本地阅读、修改、运行示例。\n\n根据你的需要，有三条阅读路径：\n\n只想把环境配好 → 直接看 环境配置。里面按「Stata 外部命令 → VS Code + nbstata → GitHub Copilot → Claude Code / Codex」四步给出配置清单与「配置成功的标志」。\n想复现课堂演示 → 下载本仓库的 demo/ 文件夹，按其中的 README.md 操作，在文件夹内启动 Claude Code 或 Codex，即可重跑本课的 Agent 分析演示。\n想系统学习实证研究 → 欢迎报名 7 月 21–23 日的连享会 2026 暑期班·初级班（连玉君主讲）。今天公开课里看到的每一步，正式课上都会让你亲手做一遍。\n\n\n\n连享会 2026 暑期班\n\n\n\n连享会 2026 暑期班海报\n\n\n\n时间：2026 年 7 月 21–23 日（三天），连玉君（中山大学）\n课程主页：https://www.lianxh.cn/PX.html\n报名链接：https://www.wjx.top/vm/QhgLvx1.aspx#\n\n\n扫码报名 · 2026 暑期班\n\n主页 | 课程 | 推文 | 资料",
     "crumbs": [
       "🏠 前言"
     ]
@@ -132,56 +132,56 @@
   {
     "objectID": "lectures/01_stata_basics.html",
     "href": "lectures/01_stata_basics.html",
-    "title": "1  Stata 最小入口",
+    "title": "1  重新审视 Stata",
     "section": "",
     "text": "1.1 界面与语法：从何处深入了解\nStata 的窗口、菜单和语法，是使用 Stata 的基本功。若需系统了解这些内容，推荐阅读在线书 Stata 101，尤其是下面三节：",
     "crumbs": [
       "**讲义**",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Stata 最小入口</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>重新审视 Stata</span>"
     ]
   },
   {
     "objectID": "lectures/01_stata_basics.html#界面与语法从何处深入了解",
     "href": "lectures/01_stata_basics.html#界面与语法从何处深入了解",
-    "title": "1  Stata 最小入口",
+    "title": "1  重新审视 Stata",
     "section": "",
     "text": "B0. Stata 概览\nB1. Stata 界面和菜单\nB2a. Stata 工作流程\n\n\n\n\nStata 界面",
     "crumbs": [
       "**讲义**",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Stata 最小入口</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>重新审视 Stata</span>"
     ]
   },
   {
     "objectID": "lectures/01_stata_basics.html#为何还要学-stata",
     "href": "lectures/01_stata_basics.html#为何还要学-stata",
-    "title": "1  Stata 最小入口",
+    "title": "1  重新审视 Stata",
     "section": "1.2 为何还要学 Stata？",
     "text": "1.2 为何还要学 Stata？\n写代码的门槛正在被 AI 拉低：你说一句话，它就给你一段 Stata 代码。既然如此，为什么还要花时间学 Stata？\n因为「让 AI 写」和「看懂、用好、检查」是两回事。下面这张图是一项实证研究的典型流程——从数据到结果，每一步都需要研究者自己做判断，而不是把方向也交给 AI。\n\n\n\nStata 实证分析流程\n\n\n具体来说，在 AI 时代仍值得懂一点 Stata，有以下五个理由。\n\nC1　具备「审查能力」，不要被 AI 误导\nAI 生成的 Stata 代码常常”看起来对、也跑得动，结果却不对”——变量名猜错、选项用反、把跨个体的滞后算到了别的单位、把相关关系写成因果。只有自己懂一点 Stata，才能读懂它到底写了什么、判断结果是否合理。\n\n\nC2　能自行搜索新命令、查看帮助文件\n遇到不认识的命令，能 help 一下看语法、findit 一下找方法、看懂它来自官方还是 SSC。有了这个能力，才判断得出 AI 推荐的命令靠不靠谱、有没有更合适的替代。\n\n\nC3　知道 Stata 安装路径与 profile.do 机制\n这一点和”用 Agent”直接相关：让 Claude Code、Codex 或 MCP 工具去调用、配置 Stata 时，必须告诉它 Stata 的安装路径，以及 profile.do 的存在——这是 Stata 启动时自动运行的配置文件，可能会改变工作目录、加载外部命令路径。不了解这套机制，Agent 配置常常莫名卡住。\n\n\nC4　有些方法，Stata 仍有独特优势（如 reghdfe）\n不少前沿计量方法的成熟实现最先出现在 Stata：reghdfe（高维固定效应）、csdid / jwdid（现代交叠 DID）、ivreghdfe 等。做面板与因果推断时，Stata 生态往往比 Python / R 更省心、更”开箱即用”。\n\n\nC5　路径依赖：复现包与合作者都在用 Stata\n大量顶刊论文的复现包是用 Stata 写的；导师、师兄师姐、合作者也很可能多年都在用 Stata。想读懂别人的代码、复现别人的结果、和团队顺畅协作，就绕不开它。会一点 Stata，是融入现有学术生产链的现实需要。\n\n一句话：AI 让你把代码写得更快，而懂一点 Stata，才让你把结果做得更对。\n\n关于”AI 时代为什么还要懂一点 Stata”的更完整讨论，参阅：丁闪闪, 2026, Stata：AI 写代码时代，为什么还要懂一点？。",
     "crumbs": [
       "**讲义**",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Stata 最小入口</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>重新审视 Stata</span>"
     ]
   },
   {
-    "objectID": "lectures/01_stata_basics.html#最小入口动手走一遍",
-    "href": "lectures/01_stata_basics.html#最小入口动手走一遍",
-    "title": "1  Stata 最小入口",
-    "section": "1.3 最小入口：动手走一遍",
-    "text": "1.3 最小入口：动手走一遍\n用 Stata 做一次分析，最小的一套动作如下（操作细节见上文 Stata 101 链接）：\n\n认识四个窗口，用 sysuse auto, clear 载入数据，在变量窗口查看数据结构。\n新建 01_first.do，写三行 use → summarize → regress，用 do 一键跑通——能重跑、能分享，正是 dofile 相对于”手敲命令”的根本优势。\nhelp regress 读语法行与一个选项；findit 一个关键词做模糊搜索。\nssc install winsor2, replace 安装一个外部命令，help winsor2 验证。\n路径只记一句话：永远用项目文件夹 + 相对路径（把绝对路径改成 ./data/...）。这也是第 4 讲里 Agent 能接管整个项目的前提。",
+    "objectID": "lectures/01_stata_basics.html#动手走一遍",
+    "href": "lectures/01_stata_basics.html#动手走一遍",
+    "title": "1  重新审视 Stata",
+    "section": "1.3 动手走一遍",
+    "text": "1.3 动手走一遍\n用 Stata 做一次分析，最小的一套动作如下（操作细节见上文 Stata 101 链接）：\n\n认识四个窗口，用 sysuse auto, clear 载入数据，在变量窗口查看数据结构。\n新建 01_first.do，写三行 use → summarize → regress，用 do 一键跑通——能重跑、能分享，正是 dofile 相对于”手敲命令”的根本优势。\nhelp regress 读语法行与一个选项；findit 一个关键词做模糊搜索。\nssc install winsor2, replace 安装一个外部命令，help winsor2 验证。\n路径只记一句话：永远用项目文件夹 + 相对路径（把绝对路径改成 ./data/...）。这也是第 4 讲里 Agent 能接管整个项目的前提。",
     "crumbs": [
       "**讲义**",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Stata 最小入口</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>重新审视 Stata</span>"
     ]
   },
   {
     "objectID": "lectures/01_stata_basics.html#延伸阅读",
     "href": "lectures/01_stata_basics.html#延伸阅读",
-    "title": "1  Stata 最小入口",
+    "title": "1  重新审视 Stata",
     "section": "1.4 延伸阅读",
     "text": "1.4 延伸阅读\n\n优雅的实证研究：文档结构与基本规则\nStata 外部命令：SSC 所有外部命令清单\nStata：如何永久修改 PERSONAL 文件夹的位置？\nStata 代码规范指南\nStata：AI 写代码时代，为什么还要懂一点？",
     "crumbs": [
       "**讲义**",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Stata 最小入口</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>重新审视 Stata</span>"
     ]
   },
   {
@@ -409,7 +409,7 @@
     "href": "lectures/04_agent_workflow.html#延伸阅读",
     "title": "4  Agent 工作流：从任务说明到结果检查",
     "section": "4.6 延伸阅读",
-    "text": "4.6 延伸阅读\n\n丁闪闪, 2026, Claude-Code 笔记：高频快捷键、权限模式与避坑指南（连享会）\nClaude Code 官方文档：交互模式与快捷键\n公开课：Claude Code 协同 Stata：环境配置与应用实践\n社会科学研究复现包中的自述文档模板\n代码审计：如何从源头确保你的论文可复现？\nStatsPAI：交叠 DID 方法太多，到底怎么选？\nChina Policy Shocks：中国政策冲击数据库",
+    "text": "4.6 延伸阅读\n\nClaude-Code笔记：高频快捷键、权限模式与避坑指南\nClaude Code 官方文档：交互模式与快捷键\n公开课：Claude Code 协同 Stata：环境配置与应用实践\n社会科学研究复现包中的自述文档模板\n代码审计：如何从源头确保你的论文可复现？\nStatsPAI：交叠 DID 方法太多，到底怎么选？\nChina Policy Shocks：中国政策冲击数据库",
     "crumbs": [
       "**讲义**",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Agent 工作流：从任务说明到结果检查</span>"
@@ -442,7 +442,7 @@
     "href": "appendix/A_prompt_templates.html#场景模板一数据清理与回归",
     "title": "附录 A — 任务说明书与提示词模板",
     "section": "A.2 场景模板一：数据清理与回归",
-    "text": "A.2 场景模板一：数据清理与回归\n\n这是 demo README.md 的骨架化版本，适合「一批数据 + 一个分析目标」的常规任务。\n\n# 任务：数据清理与回归分析\n\n## 目标\n基于 data/ 下的数据，完成清洗并跑出主回归，输出可复现的脚本与结果说明。\n\n## 输入\n- data/*.csv：原始数据（切勿修改）\n- README.md：变量口径与分析要求\n\n## 输出\n- code/01_clean.do：数据清洗（含中文注释）\n- code/02_reg.do：主回归\n- outputs/report.md：结果说明，指出看哪一行、哪个系数\n\n## 处理要求\n- 关键连续变量做 1% 缩尾（winsor2）\n- 路径一律用相对路径；不要写死绝对路径\n- 面板数据先 xtset，缺失值与异常值的处理要在 report 中记录\n\n## 修改方式\n- 先阅读数据与 README，列出清洗与建模计划，等我确认后再执行\n- 改完逐个文件说明改了什么",
+    "text": "A.2 场景模板一：数据清理与回归\n\n\n\n\n\n\nNote\n\n\n\n这是 demo README.md 的骨架化版本，适合「一批数据 + 一个分析目标」的常规任务。\n# 任务：数据清理与回归分析\n\n## 目标\n基于 data/ 下的数据，完成清洗并跑出主回归，输出可复现的脚本与结果说明。\n\n## 输入\n- data/*.csv：原始数据（切勿修改）\n- README.md：变量口径与分析要求\n\n## 输出\n- code/01_clean.do：数据清洗（含中文注释）\n- code/02_reg.do：主回归\n- outputs/report.md：结果说明，指出看哪一行、哪个系数\n\n## 处理要求\n- 关键连续变量做 1% 缩尾（winsor2）\n- 路径一律用相对路径；不要写死绝对路径\n- 面板数据先 xtset，缺失值与异常值的处理要在 report 中记录\n\n## 修改方式\n- 先阅读数据与 README，列出清洗与建模计划，等我确认后再执行\n- 改完逐个文件说明改了什么",
     "crumbs": [
       "附录",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>任务说明书与提示词模板</span>"
@@ -453,7 +453,7 @@
     "href": "appendix/A_prompt_templates.html#场景模板二论文复现",
     "title": "附录 A — 任务说明书与提示词模板",
     "section": "A.3 场景模板二：论文复现",
-    "text": "A.3 场景模板二：论文复现\n\n适合「一篇 PDF + 一个 dofile + 一份数据」的期刊复现包（如 Energy Economics 常见的简单复现包）。\n\n# 任务：论文复现体检与复跑\n\n## 目标\n让别人下载后能从原始数据开始，复现论文的描述性统计、主回归表和主要图形。\n\n## 输入\n- paper/*.pdf：论文原文\n- code/：作者提供的 dofile\n- data/：作者提供的数据\n\n## 要求（先诊断，后复跑）\n1. 先不要改任何文件。阅读 PDF 与代码，说明：\n   - 主程序是哪个、脚本的运行顺序\n   - 路径是否写死在作者电脑上、缺哪些外部命令\n   - 哪个脚本生成描述性统计 / 主回归表 / 主要图形\n2. 输出一份「复现路线图」（reproduce_plan.md）等我确认\n3. 确认后：把绝对路径改为相对路径、补装外部命令、逐个脚本复跑\n4. 生成 outputs/reproduce_log.md：每一步做了什么、结果是否与论文一致\n\n## 边界\n- data/ 原始数据不得修改；每轮修改后给出 diff 与运行 log",
+    "text": "A.3 场景模板二：论文复现\n\n\n\n\n\n\nNote\n\n\n\n适合「一篇 PDF + 一个 dofile + 一份数据」的期刊复现包（如 Energy Economics 常见的简单复现包）。\n# 任务：论文复现体检与复跑\n\n## 目标\n让别人下载后能从原始数据开始，复现论文的描述性统计、主回归表和主要图形。\n\n## 输入\n- paper/*.pdf：论文原文\n- code/：作者提供的 dofile\n- data/：作者提供的数据\n\n## 要求（先诊断，后复跑）\n1. 先不要改任何文件。阅读 PDF 与代码，说明：\n   - 主程序是哪个、脚本的运行顺序\n   - 路径是否写死在作者电脑上、缺哪些外部命令\n   - 哪个脚本生成描述性统计 / 主回归表 / 主要图形\n2. 输出一份「复现路线图」（reproduce_plan.md）等我确认\n3. 确认后：把绝对路径改为相对路径、补装外部命令、逐个脚本复跑\n4. 生成 outputs/reproduce_log.md：每一步做了什么、结果是否与论文一致\n\n## 边界\n- data/ 原始数据不得修改；每轮修改后给出 diff 与运行 log",
     "crumbs": [
       "附录",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>任务说明书与提示词模板</span>"
@@ -464,7 +464,7 @@
     "href": "appendix/A_prompt_templates.html#场景模板三概念学习-生成讲义",
     "title": "附录 A — 任务说明书与提示词模板",
     "section": "A.4 场景模板三：概念学习 / 生成讲义",
-    "text": "A.4 场景模板三：概念学习 / 生成讲义\n\n适合「我想弄懂一个新方法」——让 AI 结合可运行的 Stata 例子，生成一份自学讲义。\n\n# 任务：生成一份 &lt;方法名，如 交叠 DID&gt; 的自学讲义\n\n## 目标\n面向已掌握 OLS 的读者，讲清 &lt;方法名&gt; 的直觉、适用条件与 Stata 实现。\n\n## 输出\n- notes/&lt;方法名&gt;.md，含：\n  1. 一句话它解决什么问题、什么时候该用\n  2. 与传统做法（如 TWFE）的关键区别（直觉，不堆公式）\n  3. 一个最小可运行的 Stata 例子（用 sysuse 或模拟数据），配中文注释\n  4. 结果怎么读：看哪张表、哪个系数、哪张图\n  5. 三条常见误用与延伸阅读\n\n## 要求\n- 例子必须能在 Stata 中跑通；用到的外部命令注明 ssc install\n- 先给提纲，我确认后再展开正文",
+    "text": "A.4 场景模板三：概念学习 / 生成讲义\n\n\n\n\n\n\nNote\n\n\n\n适合「我想弄懂一个新方法」——让 AI 结合可运行的 Stata 例子，生成一份自学讲义。\n# 任务：生成一份 &lt;方法名，如 交叠 DID&gt; 的自学讲义\n\n## 目标\n面向已掌握 OLS 的读者，讲清 &lt;方法名&gt; 的直觉、适用条件与 Stata 实现。\n\n## 输出\n- notes/&lt;方法名&gt;.md，含：\n  1. 一句话它解决什么问题、什么时候该用\n  2. 与传统做法（如 TWFE）的关键区别（直觉，不堆公式）\n  3. 一个最小可运行的 Stata 例子（用 sysuse 或模拟数据），配中文注释\n  4. 结果怎么读：看哪张表、哪个系数、哪张图\n  5. 三条常见误用与延伸阅读\n\n## 要求\n- 例子必须能在 Stata 中跑通；用到的外部命令注明 ssc install\n- 先给提纲，我确认后再展开正文",
     "crumbs": [
       "附录",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>任务说明书与提示词模板</span>"
@@ -475,7 +475,7 @@
     "href": "appendix/A_prompt_templates.html#场景模板四模拟分析",
     "title": "附录 A — 任务说明书与提示词模板",
     "section": "A.5 场景模板四：模拟分析",
-    "text": "A.5 场景模板四：模拟分析\n\n「自己造数据、真值已知」是检验方法、也是教学演示的利器（demo 的对照表就来自这里）。\n\n# 任务：模拟数据并对比估计量\n\n## 目标\n生成一份已知真值的模拟数据，比较不同估计量离真值的远近。\n\n## 设定\n- 数据生成过程（DGP）：&lt;写清个体数、时期数、处理时点、真实处理效应 τ=…&gt;\n- 造成偏误的来源：&lt;如 交叠处理 + 异质处理效应&gt;\n\n## 输出\n- dgp/simulate.do：生成模拟数据（设定随机种子，可复现）\n- code/compare.do：分别用 TWFE、csdid、jwdid 估计处理效应\n- outputs/compare.md：一张对照表（各估计量 vs 真值），并用一句话总结谁更接近真值\n\n## 要求\n- 固定随机种子；对照表要标出真值列\n- 先说明 DGP 与对比方案，我确认后再执行\n\n\n更系统的提示词与工作流写法，见延伸阅读：从 Prompt 到 Skills：把论文复现、数据清洗和代码规范写进 AI、Claude Code Skills 写作指南。",
+    "text": "A.5 场景模板四：模拟分析\n\n\n\n\n\n\nNote\n\n\n\n「自己造数据、真值已知」是检验方法、也是教学演示的利器（demo 的对照表就来自这里）。\n# 任务：模拟数据并对比估计量\n\n## 目标\n生成一份已知真值的模拟数据，比较不同估计量离真值的远近。\n\n## 设定\n- 数据生成过程（DGP）：&lt;写清个体数、时期数、处理时点、真实处理效应 τ=…&gt;\n- 造成偏误的来源：&lt;如 交叠处理 + 异质处理效应&gt;\n\n## 输出\n- dgp/simulate.do：生成模拟数据（设定随机种子，可复现）\n- code/compare.do：分别用 TWFE、csdid、jwdid 估计处理效应\n- outputs/compare.md：一张对照表（各估计量 vs 真值），并用一句话总结谁更接近真值\n\n## 要求\n- 固定随机种子；对照表要标出真值列\n- 先说明 DGP 与对比方案，我确认后再执行\n\n\n\n\n更系统的提示词与工作流写法，见延伸阅读：从 Prompt 到 Skills：把论文复现、数据清洗和代码规范写进 AI、Claude Code Skills 写作指南。",
     "crumbs": [
       "附录",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>任务说明书与提示词模板</span>"

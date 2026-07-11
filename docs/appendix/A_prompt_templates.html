@@ -153,7 +153,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lectures/01_stata_basics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Stata 最小入口</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">重新审视 Stata</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -252,6 +252,9 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>本附录给出一套可直接套用的<strong>任务说明书写法</strong>和<strong>四个场景的提示词模板</strong>。它们把第 3、4 讲的「规划 → 执行 → 审查」落成可复制的文字。核心思路只有一句：<strong>先和 AI 讨论清楚、确认之后，再让它动手；改完再逐项检查。</strong></p>
+<blockquote class="blockquote">
+<p>下面每个模板框右上角都有复制按钮，点一下即可复制纯文本，直接粘贴给 AI 使用。</p>
+</blockquote>
 <section id="任务说明书写法要点" class="level2" data-number="A.1">
 <h2 data-number="A.1" class="anchored" data-anchor-id="任务说明书写法要点"><span class="header-section-number">A.1</span> 任务说明书写法要点</h2>
 <p>无论用对话式 AI 还是执行型 Agent，一份好的任务说明书都应包含六个要素：</p>
@@ -291,9 +294,17 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="场景模板一数据清理与回归" class="level2" data-number="A.2">
 <h2 data-number="A.2" class="anchored" data-anchor-id="场景模板一数据清理与回归"><span class="header-section-number">A.2</span> 场景模板一：数据清理与回归</h2>
-<blockquote class="blockquote">
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>这是 demo <code>README.md</code> 的骨架化版本，适合「一批数据 + 一个分析目标」的常规任务。</p>
-</blockquote>
 <pre class="text"><code># 任务：数据清理与回归分析
 
 ## 目标
@@ -316,12 +327,22 @@ ul.task-list li input[type="checkbox"] {
 ## 修改方式
 - 先阅读数据与 README，列出清洗与建模计划，等我确认后再执行
 - 改完逐个文件说明改了什么</code></pre>
+</div>
+</div>
 </section>
 <section id="场景模板二论文复现" class="level2" data-number="A.3">
 <h2 data-number="A.3" class="anchored" data-anchor-id="场景模板二论文复现"><span class="header-section-number">A.3</span> 场景模板二：论文复现</h2>
-<blockquote class="blockquote">
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>适合「一篇 PDF + 一个 dofile + 一份数据」的期刊复现包（如 <em>Energy Economics</em> 常见的简单复现包）。</p>
-</blockquote>
 <pre class="text"><code># 任务：论文复现体检与复跑
 
 ## 目标
@@ -343,12 +364,22 @@ ul.task-list li input[type="checkbox"] {
 
 ## 边界
 - data/ 原始数据不得修改；每轮修改后给出 diff 与运行 log</code></pre>
+</div>
+</div>
 </section>
 <section id="场景模板三概念学习-生成讲义" class="level2" data-number="A.4">
 <h2 data-number="A.4" class="anchored" data-anchor-id="场景模板三概念学习-生成讲义"><span class="header-section-number">A.4</span> 场景模板三：概念学习 / 生成讲义</h2>
-<blockquote class="blockquote">
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>适合「我想弄懂一个新方法」——让 AI 结合可运行的 Stata 例子，生成一份自学讲义。</p>
-</blockquote>
 <pre class="text"><code># 任务：生成一份 &lt;方法名，如 交叠 DID&gt; 的自学讲义
 
 ## 目标
@@ -365,12 +396,22 @@ ul.task-list li input[type="checkbox"] {
 ## 要求
 - 例子必须能在 Stata 中跑通；用到的外部命令注明 ssc install
 - 先给提纲，我确认后再展开正文</code></pre>
+</div>
+</div>
 </section>
 <section id="场景模板四模拟分析" class="level2" data-number="A.5">
 <h2 data-number="A.5" class="anchored" data-anchor-id="场景模板四模拟分析"><span class="header-section-number">A.5</span> 场景模板四：模拟分析</h2>
-<blockquote class="blockquote">
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>「自己造数据、真值已知」是检验方法、也是教学演示的利器（demo 的对照表就来自这里）。</p>
-</blockquote>
 <pre class="text"><code># 任务：模拟数据并对比估计量
 
 ## 目标
@@ -388,6 +429,8 @@ ul.task-list li input[type="checkbox"] {
 ## 要求
 - 固定随机种子；对照表要标出真值列
 - 先说明 DGP 与对比方案，我确认后再执行</code></pre>
+</div>
+</div>
 <hr>
 <blockquote class="blockquote">
 <p>更系统的提示词与工作流写法，见延伸阅读：<a href="https://www.lianxh.cn/details/1790.html">从 Prompt 到 Skills：把论文复现、数据清洗和代码规范写进 AI</a>、<a href="https://www.lianxh.cn/details/1791.html">Claude Code Skills 写作指南</a>。</p>
