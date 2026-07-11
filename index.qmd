@@ -5,7 +5,7 @@ number-sections: false
 
 # 🏠 前言 {.unnumbered}
 
-<!-- TODO: 课程封面图（可用 _materials/harvest/cipolicy/images/Front-design.pptx 改出新封面后放入 images/） -->
+<img src="images/book-front.png" width="450"/>
 
 > **公开课一：Stata 简介与 AI 辅助实证**
 >
