@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>📌 课程大纲 – Stata 简介与 AI 辅助实证</title>
+<title>📌 课程导览 – Stata 简介与 AI 辅助实证</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -85,7 +85,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./outline.html">📌 课程大纲</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./outline.html">📌 课程导览</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -132,7 +132,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./outline.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">📌 课程大纲</span></a>
+ <span class="menu-text">📌 课程导览</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -221,9 +221,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#模块总表" id="toc-模块总表" class="nav-link active" data-scroll-target="#模块总表">模块总表</a></li>
-  <li><a href="#各模块要点" id="toc-各模块要点" class="nav-link" data-scroll-target="#各模块要点">各模块要点</a></li>
-  <li><a href="#现场纪律" id="toc-现场纪律" class="nav-link" data-scroll-target="#现场纪律">现场纪律</a></li>
+  <li><a href="#本课要点你会看到什么" id="toc-本课要点你会看到什么" class="nav-link active" data-scroll-target="#本课要点你会看到什么">本课要点：你会看到什么</a></li>
+  <li><a href="#按需选择你的路径" id="toc-按需选择你的路径" class="nav-link" data-scroll-target="#按需选择你的路径">按需选择你的路径</a></li>
+  <li><a href="#课后务必完成本地配置" id="toc-课后务必完成本地配置" class="nav-link" data-scroll-target="#课后务必完成本地配置">课后务必完成本地配置</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/lianxhcn/stata-ai/edit/main/outline.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lianxhcn/stata-ai/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -232,7 +232,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">📌 课程大纲</h1>
+<h1 class="title">📌 课程导览</h1>
 </div>
 
 
@@ -249,86 +249,58 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>本页给出本次公开课「80 分钟 + 10 分钟答疑」的模块安排。课上不从 Stata 讲起，而是从一条主线讲起：<strong>研究问题 → 对话式 AI 拆解规划 → 任务说明书 → Agent 在项目中执行 → 人来检查迭代</strong>。Stata、Python、R 都是这条主线上可替换的零件，后面每个模块都会回到这张图。</p>
-<section id="模块总表" class="level2">
-<h2 class="anchored" data-anchor-id="模块总表">模块总表</h2>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>模块</th>
-<th>时长</th>
-<th>内容</th>
-<th>形式</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>M0 开场：一张图讲清理念</td>
-<td>8 min</td>
-<td>以任务为导向的实证工作流全景</td>
-<td>Slides</td>
-</tr>
-<tr class="even">
-<td>M1 Stata 最小入口</td>
-<td>15 min</td>
-<td>界面、dofile、路径、help、外部命令</td>
-<td>Stata 现场演示</td>
-</tr>
-<tr class="odd">
-<td>M2 VS Code + nbstata + Copilot</td>
-<td>15 min</td>
-<td>notebook 笔记 + 运行 + AI 补全</td>
-<td>VS Code 现场演示</td>
-</tr>
-<tr class="even">
-<td>M3 对话式 AI 与执行型 Agent</td>
-<td>7 min</td>
-<td>分工逻辑 + 任务说明书</td>
-<td>Slides</td>
-</tr>
-<tr class="odd">
-<td>M4 Agent 演示</td>
-<td>25 min</td>
-<td>一场直播 + 一场导览（见下）</td>
-<td>现场 + 预跑成果</td>
-</tr>
-<tr class="even">
-<td>M5 收束：配置路线图与课程衔接</td>
-<td>10 min</td>
-<td>本仓库导览、配置清单、暑期班</td>
-<td>Slides</td>
-</tr>
-<tr class="odd">
-<td>答疑</td>
-<td>10 min</td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="各模块要点" class="level2">
-<h2 class="anchored" data-anchor-id="各模块要点">各模块要点</h2>
-<p><strong>M0（8 min）</strong>——不从 Stata 讲起，从一条主线讲起：研究问题 → 对话式 AI 拆解规划 → 任务说明书 → Agent 在项目中执行 → 人来检查迭代。Stata、Python、R 都是这条线上可替换的零件；后面每个模块都回到这张图。</p>
-<p><strong>M1（15 min）</strong>——只做五件事：认识四个窗口；三行 dofile 跑通（<code>use</code> → <code>summarize</code> → <code>regress</code>）；<code>help regress</code> 怎么读；<code>ssc install</code> 装一个外部命令；路径问题一句话方案——「永远用项目文件夹 + 相对路径」（为 M4 的项目文件夹埋伏笔）。详见 <a href="./lectures/01_stata_basics.html">第 1 讲</a>。</p>
-<p><strong>M2（15 min）</strong>——新建 notebook → markdown 笔记 + Stata cell 同文件；两个 Copilot 时刻：写一行注释让它生成代码；让它给一段旧代码加注释。一个「哇」点就够，不贪多。详见 <a href="./lectures/02_vscode_nbstata.html">第 2 讲</a>。</p>
-<p><strong>M3（7 min）</strong>——ChatGPT / Claude 负责拆解、规划、写任务说明；Codex / Claude Code / OpenCode 负责在本地项目里读写文件、执行脚本、整理结果。关键论断：软件不再是门槛，「搭配好环境、制定好计划」才是。详见 <a href="./lectures/03_ai_vs_agent.html">第 3 讲</a>。</p>
-<p><strong>M4（25 min）</strong>——</p>
+<p>这一页写给你——来听课的学员。它帮你快速了解本次公开课想传达什么、本仓库里有哪些内容，以及<strong>根据你自己的需求</strong>该重点看哪些部分。</p>
+<p>本课不从某一种软件讲起，而是从一条工作流主线讲起：</p>
+<pre class="text"><code>研究问题 → 对话式 AI 拆解规划 → 任务说明书 → Agent 在项目中执行 → 人来检查与迭代</code></pre>
+<p>Stata、Python、R 都是这条主线上可以替换的零件。想清楚要解决什么问题，再决定用哪种工具、交给谁做、如何检查——这比纠结”学哪个软件”更重要。</p>
+<section id="本课要点你会看到什么" class="level2">
+<h2 class="anchored" data-anchor-id="本课要点你会看到什么">本课要点：你会看到什么</h2>
 <ul>
-<li>直播段（约 15 min）：进入 <code>demo/</code> 项目文件夹（三个 CSV + README 任务说明书），启动 Claude Code：输出研究计划 → 现场补两点要求 → 确认开跑；agent 跑动期间回头讲任务说明书怎么写；跑完看中间产出。</li>
-<li>导览段（约 8 min）：展示昨晚预跑成果——分类归档的项目全貌、论文样 <code>report.pdf</code>，以及点睛之笔：TWFE vs <code>csdid</code>/<code>jwdid</code> vs 模拟真值的对照表（为什么要学新方法，表格自己会说话）。另用两页 slide 各一句话带过：论文复现、AI 写讲义（课后见附录）。详见 <a href="./lectures/04_agent_workflow.html">第 4 讲</a>。</li>
+<li><strong>Stata 最小入口</strong>——在 AI 时代，Stata 该掌握的”最小必要”：界面、dofile、工作目录、帮助文件、外部命令。（<a href="./lectures/01_stata_basics.html">第 1 讲</a>）</li>
+<li><strong>VS Code + nbstata + Copilot</strong>——把笔记、代码、结果放进同一个 notebook，并让 Copilot 帮你补全代码、生成注释。（<a href="./lectures/02_vscode_nbstata.html">第 2 讲</a>）</li>
+<li><strong>对话式 AI 与执行型 Agent</strong>——ChatGPT / Claude 负责拆解规划，Codex / Claude Code 负责在本地项目里执行；关键中间物是一份”任务说明书”。（<a href="./lectures/03_ai_vs_agent.html">第 3 讲</a>）</li>
+<li><strong>Agent 现场演示</strong>——在一个 <code>demo/</code> 项目里跑一遍”计划 → 确认 → 执行 → 检查”，并看一张 TWFE vs 现代 DID vs 真值的对照表。（<a href="./lectures/04_agent_workflow.html">第 4 讲</a>）</li>
 </ul>
-<p><strong>M5（10 min）</strong>——亮出仓库网址；翻 <a href="./settings.html">环境配置</a> 页讲配置路线图（听众课后照做）；一页图把今天内容映射到 7 月 21 日暑期初级班大纲：「今天看到的每一步，正式课里都会让你亲手做」。</p>
 </section>
-<section id="现场纪律" class="level2">
-<h2 class="anchored" data-anchor-id="现场纪律">现场纪律</h2>
-<p>报错调试不超过 1 分钟，超时切录屏 / 预跑成果；顺势讲「这正是为什么要学会看 log」。</p>
+<section id="按需选择你的路径" class="level2">
+<h2 class="anchored" data-anchor-id="按需选择你的路径">按需选择你的路径</h2>
+<p>不同学员需求不同，可以按下面的路径各取所需：</p>
+<ul>
+<li><strong>只想快速把 Stata 用起来</strong> → 看 <a href="./lectures/01_stata_basics.html">第 1 讲</a>，配合 <a href="./settings.html">环境配置</a> 的第 1 节（Stata 与外部命令）。</li>
+<li><strong>更关心 AI 辅助的实证分析流程</strong> → 看 <a href="./lectures/03_ai_vs_agent.html">第 3 讲</a>、<a href="./lectures/04_agent_workflow.html">第 4 讲</a> 和 <a href="./appendix/A_prompt_templates.html">附录 A（任务说明书与提示词模板）</a>，并下载 <code>demo/</code> 亲手复现课堂演示。</li>
+<li><strong>想把本地环境完整配好</strong> → 通读 <a href="./settings.html">环境配置</a>，并完成下面「课后务必完成本地配置」。</li>
+<li><strong>想系统学习实证研究</strong> → 欢迎报名 7 月 21–23 日的<strong>连享会 2026 暑期班·初级班</strong>（详见 <a href="./index.html">前言</a>）。</li>
+</ul>
+</section>
+<section id="课后务必完成本地配置" class="level2">
+<h2 class="anchored" data-anchor-id="课后务必完成本地配置">课后务必完成本地配置</h2>
+<p>受课时限制（80 分钟），课堂上<strong>无法详细演示安装与配置过程</strong>。但请注意：<strong>在本地用 Agent 和 AI 工具做分析，前提就是先把环境配好。</strong> 因此，请你务必课后花点时间，按下面的文档把配置完成。</p>
+<p>好消息是：<strong>配置过程本身就可以借助网页版 ChatGPT 或 Claude 边问边做</strong>——把你的系统信息、报错原文贴给它，让它一步步指导你。这本身也是本课”用 AI 辅助”理念的一次练习。</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Stata 安装的两个要点
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Stata 本体的安装很简单，通过正版渠道下载安装即可。只需特别注意两点：</p>
+<ol type="1">
+<li><strong>安装路径不要包含中文字符，也不要有空格等特殊字符</strong>（例如用 <code>D:\stata19</code> 这样的纯英文路径）。</li>
+<li><strong>安装完成后，确认安装目录下存在 <code>STATA.LIC</code> 文件</strong>——这是 <code>nbstata</code> 插件，以及 Agent、MCP 等工具能够正确关联到你的 Stata 应用程序的关键。</li>
+</ol>
+<p>以上两点及更完整的说明，见 <a href="https://lianxhcn.github.io/ds2026/Lecture/00-setup/01_01_install_anaconda.html#%E9%85%8D%E7%BD%AE-stata-%E7%8E%AF%E5%A2%83nbstata">ds2026 · 配置 Stata 环境（nbstata）</a>。</p>
+</div>
+</div>
+<p>配置参考清单（建议课后依次阅读）：</p>
+<ul>
+<li>本仓库 <a href="./settings.html">环境配置</a> 页——按「Stata 外部命令 → VS Code + nbstata → Copilot → Claude Code / Codex」四步走，每步都有「配置成功的标志」。</li>
+<li><a href="https://www.lianxh.cn/details/1490.html">VS Code 插件：安装、配置和使用</a></li>
+<li><a href="https://www.lianxh.cn/details/1767.html">公开课：Claude Code 协同 Stata：环境配置与应用实践</a></li>
+<li><a href="https://lianxhcn.github.io/ds2026/">ds2026 在线书·环境配置章</a>（Anaconda / Jupyter / nbstata 从零安装及常见问题）</li>
+</ul>
 <hr>
 <blockquote class="blockquote">
 <p>讲义正文将在课后 3 日内持续更新，欢迎 Star 本仓库或在 <a href="https://github.com/lianxhcn/stata-ai/issues">issues</a> 中反馈。</p>
