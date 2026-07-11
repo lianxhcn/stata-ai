@@ -11,6 +11,43 @@ body {
   font-weight: 700;
 }
 
+/* 工作流「流程块」：醒目展示 研究问题 → … → 迭代（明暗主题自适应） */
+.flow-box {
+  border: 1px solid var(--bs-border-color);
+  border-left: 5px solid #3d8bcd;
+  border-radius: 10px;
+  padding: 0.9rem 1.1rem;
+  margin: 1.3rem 0;
+  background: var(--bs-tertiary-bg, rgba(61, 139, 205, 0.06));
+}
+.flow-box .flow-title {
+  display: block;
+  font-weight: 700;
+  font-size: 0.9em;
+  color: #3d8bcd;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.65rem;
+}
+.flow-box .flow-steps {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.55rem;
+  line-height: 1.6;
+}
+.flow-box .step {
+  background: var(--bs-body-bg);
+  border: 1px solid var(--bs-border-color);
+  border-radius: 8px;
+  padding: 0.4em 0.75em;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.flow-box .arrow {
+  color: #3d8bcd;
+  font-weight: 700;
+}
+
 /* 侧边栏 header：标题占一行，工具图标（github/主页/主题切换）换到第二行 */
 .sidebar-title .sidebar-tools-main {
   display: flex;

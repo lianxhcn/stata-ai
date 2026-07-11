@@ -9,9 +9,12 @@ number-sections: false
 
 本课不从某一种软件讲起，而是从一条工作流主线讲起：
 
-``` text
-研究问题 → 对话式 AI 拆解规划 → 任务说明书 → Agent 在项目中执行 → 人来检查与迭代
-```
+<div class="flow-box">
+<span class="flow-title">本课主线</span>
+<div class="flow-steps">
+<span class="step">研究问题</span><span class="arrow">→</span><span class="step">对话式 AI 拆解规划</span><span class="arrow">→</span><span class="step">任务说明书</span><span class="arrow">→</span><span class="step">Agent 在项目中执行</span><span class="arrow">→</span><span class="step">人来检查与迭代</span>
+</div>
+</div>
 
 Stata、Python、R 都是这条主线上可以替换的零件。想清楚要解决什么问题，再决定用哪种工具、交给谁做、如何检查——这比纠结"学哪个软件"更重要。
 
