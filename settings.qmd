@@ -5,7 +5,7 @@ number-sections: true
 
 # 🚀 环境配置 {.unnumbered}
 
-本页是全站最实用的一页：把课堂演示用到的四类工具，按「装什么、怎么装、装好没」的顺序列成清单。你不必一次配齐，用到哪一节看哪一节即可。每一节末尾都有一行 **✅ 配置成功的标志**——只要那一步能跑通，这一节就算过关。
+本页是全站最实用的一页：把本课用到的四类工具，按「装什么、怎么装、装好没」的顺序列成清单。你不必一次配齐，用到哪一节看哪一节即可。每一节末尾都有一个 **✅ 配置成功的标志**——只要那一步能跑通，这一节就算过关。
 
 四类工具与它们的角色：
 
@@ -14,13 +14,18 @@ number-sections: true
 - **GitHub Copilot**：在编辑器里做代码补全与注释生成。
 - **Claude Code / Codex**：执行型 Agent，在本地项目里读写文件、执行脚本、整理结果。
 
-> 更完整的软件安装（Anaconda、VS Code、Jupyter 从零安装及常见问题）不在 80 分钟课时内展开，请参考 [ds2026 在线书·环境配置](https://lianxhcn.github.io/ds2026/) 一章。
+> 若需从零安装 Anaconda、VS Code、Jupyter（含常见问题排查），请参考 [ds2026 在线书·环境配置](https://lianxhcn.github.io/ds2026/) 一章。
 
 ## Stata 本体与外部命令
 
 ### 安装
 
-Stata 请通过正版渠道购买、安装（Stata 官网或授权代理）。安装要点一笔带过：记住你的安装路径（如 `C:\Program Files\Stata19`），后面配置 nbstata 时会用到。
+Stata 请通过正版渠道购买、安装（Stata 官网或授权代理）。安装时注意两点：
+
+- **安装路径不要包含中文，也不要有空格等特殊字符**（如用 `D:\stata19` 这样的纯英文路径）；
+- **装完确认安装目录下有 `STATA.LIC` 文件**——这是 `nbstata` 以及 Agent、MCP 等工具能正确关联到 Stata 的关键。
+
+记住这个安装路径，后面配置 nbstata 时会用到。更完整的说明见 [ds2026 · 配置 Stata 环境（nbstata）](https://lianxhcn.github.io/ds2026/Lecture/00-setup/01_01_install_anaconda.html#%E9%85%8D%E7%BD%AE-stata-%E7%8E%AF%E5%A2%83nbstata)。
 
 ### 外部命令：`ssc install`
 
@@ -50,7 +55,10 @@ findit dynamic panel           // 按关键词搜索（等价于 search）
 
 > 延伸阅读：[Stata: 外部命令的搜索、安装与使用](https://www.lianxh.cn/details/1.html)。
 
-> **✅ 配置成功的标志**：在 Stata 中运行 `ssc install winsor2, replace` 能装上，且 `help winsor2` 能打开帮助文件。
+::: {.callout-tip icon=false}
+## ✅ 配置成功的标志
+在 Stata 中运行 `ssc install winsor2, replace` 能装上，且 `help winsor2` 能打开帮助文件。
+:::
 
 ## VS Code + Jupyter + nbstata
 
@@ -84,12 +92,15 @@ python -m nbstata.install --stata-dir "C:\Program Files\Stata19"
 >
 > <!-- TODO: 请老师验证本机 nbstata 安装步骤，尤其 --stata-dir 路径与 Python 版本 -->
 
-> **✅ 配置成功的标志**：在 VS Code 的 notebook 中选中 Stata 内核，运行下面两行有正常输出：
->
-> ```stata
-> sysuse auto, clear
-> summarize
-> ```
+::: {.callout-tip icon=false}
+## ✅ 配置成功的标志
+在 VS Code 的 notebook 中选中 Stata 内核，运行下面两行有正常输出：
+
+```stata
+sysuse auto, clear
+summarize
+```
+:::
 
 ## GitHub Copilot
 
@@ -111,11 +122,14 @@ Copilot 在编辑器里根据上下文给出灰色的补全建议，也能把注
 
 正常情况下，光标下方会浮现**灰色的补全建议**，按 `Tab` 采纳。
 
-> **✅ 配置成功的标志**：写下一行注释后，编辑器出现灰色的 Copilot 补全建议。
+::: {.callout-tip icon=false}
+## ✅ 配置成功的标志
+写下一行注释后，编辑器出现灰色的 Copilot 补全建议。
+:::
 
 ## Claude Code / Codex
 
-这两个是**执行型 Agent**：在你的项目文件夹里读写文件、运行脚本、整理结果。课堂 M4 的演示就靠它。
+这两个是**执行型 Agent**：在你的项目文件夹里读写文件、运行脚本、整理结果。第 4 讲的演示就靠它。
 
 ### 安装与首次运行（Windows）
 
@@ -135,7 +149,10 @@ Copilot 在编辑器里根据上下文给出灰色的补全建议，也能把注
 
 > 更系统的安装与协同实践，见公开课录播：[Claude Code 协同 Stata：环境配置与应用实践](https://www.lianxh.cn/details/1767.html)。
 
-> **✅ 配置成功的标志**：在某个项目文件夹内启动 Claude Code 或 Codex 后，它能正确列出该文件夹中的文件清单。
+::: {.callout-tip icon=false}
+## ✅ 配置成功的标志
+在某个项目文件夹内启动 Claude Code 或 Codex 后，它能正确列出该文件夹中的文件清单。
+:::
 
 ------------------------------------------------------------------------
 

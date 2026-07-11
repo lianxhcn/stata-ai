@@ -221,16 +221,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#正文" id="toc-正文" class="nav-link active" data-scroll-target="#正文"><span class="header-section-number">4.1</span> 正文</a>
-  <ul class="collapse">
-  <li><a href="#一切从项目文件夹开始" id="toc-一切从项目文件夹开始" class="nav-link" data-scroll-target="#一切从项目文件夹开始"><span class="header-section-number">4.1.1</span> 一切从项目文件夹开始</a></li>
-  <li><a href="#一个循环计划-确认-执行-检查" id="toc-一个循环计划-确认-执行-检查" class="nav-link" data-scroll-target="#一个循环计划-确认-执行-检查"><span class="header-section-number">4.1.2</span> 一个循环：计划 → 确认 → 执行 → 检查</a></li>
-  <li><a href="#几个必会的-claude-code-操作" id="toc-几个必会的-claude-code-操作" class="nav-link" data-scroll-target="#几个必会的-claude-code-操作"><span class="header-section-number">4.1.3</span> 几个必会的 Claude Code 操作</a></li>
-  <li><a href="#为什么要看那张对照表" id="toc-为什么要看那张对照表" class="nav-link" data-scroll-target="#为什么要看那张对照表"><span class="header-section-number">4.1.4</span> 为什么要看那张对照表</a></li>
-  <li><a href="#如何复现课堂演示" id="toc-如何复现课堂演示" class="nav-link" data-scroll-target="#如何复现课堂演示"><span class="header-section-number">4.1.5</span> 如何复现课堂演示</a></li>
-  </ul></li>
-  <li><a href="#课堂演示要点" id="toc-课堂演示要点" class="nav-link" data-scroll-target="#课堂演示要点"><span class="header-section-number">4.2</span> 课堂演示要点</a></li>
-  <li><a href="#延伸阅读" id="toc-延伸阅读" class="nav-link" data-scroll-target="#延伸阅读"><span class="header-section-number">4.3</span> 延伸阅读</a></li>
+  <li><a href="#一切从项目文件夹开始" id="toc-一切从项目文件夹开始" class="nav-link active" data-scroll-target="#一切从项目文件夹开始"><span class="header-section-number">4.1</span> 一切从项目文件夹开始</a></li>
+  <li><a href="#一个循环计划-确认-执行-检查" id="toc-一个循环计划-确认-执行-检查" class="nav-link" data-scroll-target="#一个循环计划-确认-执行-检查"><span class="header-section-number">4.2</span> 一个循环：计划 → 确认 → 执行 → 检查</a></li>
+  <li><a href="#几个必会的-claude-code-操作" id="toc-几个必会的-claude-code-操作" class="nav-link" data-scroll-target="#几个必会的-claude-code-操作"><span class="header-section-number">4.3</span> 几个必会的 Claude Code 操作</a></li>
+  <li><a href="#为什么要看那张对照表" id="toc-为什么要看那张对照表" class="nav-link" data-scroll-target="#为什么要看那张对照表"><span class="header-section-number">4.4</span> 为什么要看那张对照表</a></li>
+  <li><a href="#如何复现本课演示" id="toc-如何复现本课演示" class="nav-link" data-scroll-target="#如何复现本课演示"><span class="header-section-number">4.5</span> 如何复现本课演示</a></li>
+  <li><a href="#延伸阅读" id="toc-延伸阅读" class="nav-link" data-scroll-target="#延伸阅读"><span class="header-section-number">4.6</span> 延伸阅读</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/lianxhcn/stata-ai/edit/main/lectures/04_agent_workflow.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lianxhcn/stata-ai/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -256,15 +252,23 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<blockquote class="blockquote">
-<p><strong>本讲回答一个问题</strong>：拿到一个数据分析任务，如何把它交给 Agent，又如何确认它真的做对了？</p>
-</blockquote>
-<section id="正文" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="正文"><span class="header-section-number">4.1</span> 正文</h2>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+本讲要回答的问题
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>拿到一个数据分析任务，如何把它交给 Agent，又如何确认它真的做对了？</p>
+</div>
+</div>
 <p>这一讲是全课的落点。前三讲铺好了地基——最小的 Stata 入口、notebook 里的 AI 补全、对话式 AI 与执行型 Agent 的分工。现在我们把「规划 → 执行 → 审查」放进一个真实的项目里跑一遍。</p>
-<section id="一切从项目文件夹开始" class="level3" data-number="4.1.1">
-<h3 data-number="4.1.1" class="anchored" data-anchor-id="一切从项目文件夹开始"><span class="header-section-number">4.1.1</span> 一切从项目文件夹开始</h3>
-<p>Agent 之所以能接管一份工作，前提是这份工作被组织成了一个<strong>规范的项目文件夹</strong>。课堂演示用的 <code>demo/</code> 就是这样一个文件夹，大致结构是：</p>
+<section id="一切从项目文件夹开始" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="一切从项目文件夹开始"><span class="header-section-number">4.1</span> 一切从项目文件夹开始</h2>
+<p>Agent 之所以能接管一份工作，前提是这份工作被组织成了一个<strong>规范的项目文件夹</strong>。本课演示用的 <code>demo/</code> 就是这样一个文件夹，大致结构是：</p>
 <pre class="text"><code>demo/
 ├── README.md          # 任务说明书：目标、数据说明、分析要求、验收标准
 ├── data/              # 三个 CSV 数据文件
@@ -273,59 +277,66 @@ ul.task-list li input[type="checkbox"] {
 └── ...</code></pre>
 <p><code>README.md</code> 就是第 3 讲讲的<strong>任务说明书</strong>：它告诉 Agent 数据是什么、要做什么分析、结果要以什么形式交付。数据放在 <code>data/</code>、代码放在 <code>code/</code>、结果放在 <code>outputs/</code>——分门别类，Agent 和人都不会迷路。</p>
 </section>
-<section id="一个循环计划-确认-执行-检查" class="level3" data-number="4.1.2">
-<h3 data-number="4.1.2" class="anchored" data-anchor-id="一个循环计划-确认-执行-检查"><span class="header-section-number">4.1.2</span> 一个循环：计划 → 确认 → 执行 → 检查</h3>
+<section id="一个循环计划-确认-执行-检查" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="一个循环计划-确认-执行-检查"><span class="header-section-number">4.2</span> 一个循环：计划 → 确认 → 执行 → 检查</h2>
 <p>拿到项目后，正确的节奏不是「一句话让它跑通」，而是一个可以反复迭代的循环。</p>
+<div class="flow-box">
+<span class="flow-title">Agent 分析循环</span>
+<div class="flow-steps">
+<p><span class="step">计划</span><span class="arrow">→</span><span class="step">确认</span><span class="arrow">→</span><span class="step">执行</span><span class="arrow">→</span><span class="step">检查</span><span class="arrow">↺</span></p>
+</div>
+</div>
 <p><strong>第一步，让它先给计划，别急着改。</strong> 进入 <code>demo/</code> 文件夹启动 Claude Code 或 Codex，第一条指令是：</p>
 <pre class="text"><code>请阅读 README.md 和 data/ 下的数据，先给出一份研究计划，
 说明你打算怎么清洗数据、跑哪些模型、输出什么结果。先不要动手改文件。</code></pre>
-<p><strong>第二步，人来确认和补充。</strong> 看它的计划对不对、有没有漏。课堂上会现场补两点要求（比如「关键变量要缩尾」「回归表要同时报 TWFE 和现代 DID 估计量」），让计划更贴合意图。<strong>这一步是「人在环」的关键</strong>——你在把关方向，而不是把方向也交出去。</p>
-<p><strong>第三步，确认后再让它执行。</strong> 计划敲定，让它按计划清洗数据、写脚本、跑模型、生成结果。Agent 跑动期间，正好回头讲「任务说明书该怎么写」——好的说明书能让这一步一次到位。</p>
+<p><strong>第二步，人来确认和补充。</strong> 看它的计划对不对、有没有漏。确认时可以补充具体要求（例如”关键变量要缩尾”“回归表要同时报 TWFE 和现代 DID 估计量”），让计划更贴合意图。<strong>这一步是「人在环」的关键</strong>——你在把关方向，而不是把方向也交出去。</p>
+<p><strong>第三步，确认后再让它执行。</strong> 计划敲定，让它按计划清洗数据、写脚本、跑模型、生成结果。一份写得清楚的任务说明书，能让这一步尽量一次到位。</p>
 <p><strong>第四步，检查产出。</strong> 跑完不等于做对了。检查有三个抓手：</p>
 <ul>
 <li><strong>看它改了什么</strong>（<code>diff</code>）：Agent 说改了哪些文件，逐一核对，别只看它的文字总结。</li>
-<li><strong>看 log</strong>：Stata 的运行日志里有没有报错、有没有被 <code>capture</code> 悄悄吞掉的错误。这也呼应了课堂纪律——<strong>学会看 log</strong>，比追求「不报错」更重要。</li>
+<li><strong>看 log</strong>：Stata 的运行日志里有没有报错、有没有被 <code>capture</code> 悄悄吞掉的错误。<strong>学会看 log</strong>，比追求”不报错”更重要。</li>
 <li><strong>核对结果</strong>：表格里的系数、样本量、图形是否合理，能不能对得上数据。</li>
 </ul>
 <p>发现问题，就带着具体反馈回到第一步，再走一轮。这个「计划 → 确认 → 执行 → 检查」的循环，才是 AI 辅助实证的真正工作方式。</p>
 </section>
-<section id="几个必会的-claude-code-操作" class="level3" data-number="4.1.3">
-<h3 data-number="4.1.3" class="anchored" data-anchor-id="几个必会的-claude-code-操作"><span class="header-section-number">4.1.3</span> 几个必会的 Claude Code 操作</h3>
-<p>要顺畅地跑完上面这个循环，有几个 Claude Code 的操作值得先形成肌肉记忆（Codex 的对应操作类似）。这些也是现场演示时你会看到我反复用到的：</p>
+<section id="几个必会的-claude-code-操作" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="几个必会的-claude-code-操作"><span class="header-section-number">4.3</span> 几个必会的 Claude Code 操作</h2>
+<p>要顺畅地跑完上面这个循环，有几个 Claude Code 的操作值得先形成肌肉记忆（Codex 的对应操作类似）：</p>
 <ul>
 <li><strong>文件夹即工作区</strong>：在项目文件夹里打开终端、输入 <code>claude</code> 就地启动，它就以当前文件夹为工作区。新项目可用 <code>/init</code> 生成 <code>CLAUDE.md</code>——这是每次启动都会自动读取的「项目记忆」，把项目背景、文件夹用途、工作规则写在里面。</li>
 <li><strong>三个高频前缀</strong>：<code>@</code> 引用文件（如 <code>@README.md 开始第一步</code>）、<code>#</code> 把一条规则永久写进记忆、<code>!</code> 直接执行 shell 命令（如 <code>! git status</code>）。</li>
 <li><strong>权限模式（<code>Shift+Tab</code> 循环切换）</strong>：<strong>计划模式</strong>只读不写、先出方案；<strong>自动接受</strong>直接执行文件编辑；<strong>默认模式</strong>每步征求同意。推荐节奏——复杂任务先切计划模式、方案确认后切自动接受、敏感改动再切回默认。（部分 Windows 版本 <code>Shift+Tab</code> 会跳过计划模式，可直接输入 <code>/plan</code>。）</li>
 <li><strong>两个救命键</strong>：<code>Esc</code> 打断正在跑的任务（已完成部分保留）；连按两次 <code>Esc</code> 打开「回退」菜单，把代码和对话恢复到之前的检查点。<strong>开工前先 <code>git init</code></strong>，与 <code>Esc Esc</code> 双保险。</li>
 <li><strong>上下文管理</strong>：对话越长越容易”犯糊涂”（上下文快满了，且每轮都更费 token）。<code>/context</code> 看占用、<code>/compact</code> 压缩历史、<code>/clear</code> 清空重开一个话题；真正要长期记住的规则用 <code>#</code> 写进 <code>CLAUDE.md</code>，别指望对话历史。</li>
-<li><strong>一条铁律</strong>：<strong>不要只看 AI 的解释，要看它实际改了什么</strong>——每轮花半分钟核对 diff，是成本最低的质量保险。</li>
 </ul>
+<div class="keypoint">
+<p>不要只看 AI 的解释，要看它实际改了什么——每轮花半分钟核对 diff，是成本最低的质量保险。</p>
+</div>
 </section>
-<section id="为什么要看那张对照表" class="level3" data-number="4.1.4">
-<h3 data-number="4.1.4" class="anchored" data-anchor-id="为什么要看那张对照表"><span class="header-section-number">4.1.4</span> 为什么要看那张对照表</h3>
-<p>demo 的点睛之笔，是一张 <strong>TWFE vs <code>csdid</code> / <code>jwdid</code> vs 模拟真值</strong>的对照表。因为 demo 的数据是我们自己模拟生成的，所以<strong>真值是已知的</strong>。把传统的双向固定效应（TWFE）估计量、现代交叠 DID 估计量、以及真值放在一起对照，谁离真值近、谁偏得多，一目了然。这张表不需要多讲——它自己会说明：为什么在交叠处理的场景下，要学新的 DID 方法。（方法本身的展开，留到暑期班与延伸阅读。）</p>
+<section id="为什么要看那张对照表" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="为什么要看那张对照表"><span class="header-section-number">4.4</span> 为什么要看那张对照表</h2>
+<p>demo 的点睛之笔，是一张 <strong>TWFE vs <code>csdid</code> / <code>jwdid</code> vs 模拟真值</strong>的对照表。因为 demo 的数据是模拟生成的，所以<strong>真值是已知的</strong>。把传统的双向固定效应（TWFE）估计量、现代交叠 DID 估计量、以及真值放在一起对照，谁离真值近、谁偏得多，一目了然。这张表自己会说明：为什么在交叠处理的场景下，值得学新的 DID 方法。（方法本身的展开，见暑期班与延伸阅读。）</p>
 </section>
-<section id="如何复现课堂演示" class="level3" data-number="4.1.5">
-<h3 data-number="4.1.5" class="anchored" data-anchor-id="如何复现课堂演示"><span class="header-section-number">4.1.5</span> 如何复现课堂演示</h3>
-<blockquote class="blockquote">
+<section id="如何复现本课演示" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="如何复现本课演示"><span class="header-section-number">4.5</span> 如何复现本课演示</h2>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+动手复现
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>下载本仓库的 <code>demo/</code> 文件夹，在其中启动 Claude Code 或 Codex，输入：</p>
 <pre class="text"><code>请阅读 README.md 并先给出研究计划。</code></pre>
-<p>即可复现课堂上的 Agent 分析演示。记住：先让它给计划、你来确认，再让它执行、你来检查。</p>
-</blockquote>
+<p>即可复现本课的 Agent 分析演示。记住：先让它给计划、你来确认，再让它执行、你来检查。</p>
+</div>
+</div>
 </section>
-</section>
-<section id="课堂演示要点" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="课堂演示要点"><span class="header-section-number">4.2</span> 课堂演示要点</h2>
-<ul>
-<li>进入 <code>demo/</code> 启动 Claude Code：先让它读 <code>README.md</code> 输出研究计划。</li>
-<li>现场补两点要求，确认后让它开跑；跑动期间讲任务说明书怎么写。</li>
-<li>跑完看中间产出：<code>diff</code>、log、结果表。</li>
-<li>导览预跑成果：分类归档的项目全貌、论文样 <code>report.pdf</code>、TWFE vs <code>csdid</code>/<code>jwdid</code> vs 真值对照表。</li>
-<li>两页 slide 各一句话带过：论文复现、AI 写讲义（详见附录 B、C）。</li>
-</ul>
-</section>
-<section id="延伸阅读" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="延伸阅读"><span class="header-section-number">4.3</span> 延伸阅读</h2>
+<section id="延伸阅读" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="延伸阅读"><span class="header-section-number">4.6</span> 延伸阅读</h2>
 <ul>
 <li>丁闪闪, 2026, Claude-Code 笔记：高频快捷键、权限模式与避坑指南（连享会）</li>
 <li><a href="https://code.claude.com/docs/en/interactive-mode">Claude Code 官方文档：交互模式与快捷键</a></li>

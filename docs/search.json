@@ -24,7 +24,7 @@
     "href": "index.html#一条主线",
     "title": "Stata 简介与 AI 辅助实证",
     "section": "一条主线",
-    "text": "一条主线\n本课程不从某一种软件讲起，而是从一条工作流主线讲起：\n\n本课主线\n\n研究问题→对话式 AI 拆解规划→任务说明书→Agent 在项目中执行→人来检查与迭代\n\n\nStata、Python、R 都是这条主线上可以替换的零件。课上每个模块都会回到这张图：先想清楚要解决什么问题，再决定用哪种工具、交给谁做、如何检查。",
+    "text": "一条主线\n本课程不从某一种软件讲起，而是从一条工作流主线讲起：\n\n本课主线\n\n研究问题→对话式 AI 拆解规划→任务说明书→Agent 在项目中执行→人来检查与迭代\n\n\nStata、Python、R 都是这条主线上可以替换的零件。每个模块都会回到这张图：先想清楚要解决什么问题，再决定用哪种工具、交给谁做、如何检查。",
     "crumbs": [
       "🏠 前言"
     ]
@@ -34,7 +34,7 @@
     "href": "index.html#如何使用本仓库",
     "title": "Stata 简介与 AI 辅助实证",
     "section": "如何使用本仓库",
-    "text": "如何使用本仓库\n本仓库使用 VS Code + Quarto 编写，并通过 GitHub Pages 发布。你可以：\n\nFork 或克隆本仓库的 GitHub 仓库，在本地阅读、修改、运行示例。\n\n根据你的需要，有三条阅读路径：\n\n只想把环境配好 → 直接看 环境配置。里面按「Stata 外部命令 → VS Code + nbstata → GitHub Copilot → Claude Code / Codex」四步给出配置清单与「配置成功的标志」。\n想复现课堂演示 → 下载本仓库的 demo/ 文件夹，按其中的 README.md 操作，在文件夹内启动 Claude Code 或 Codex，即可重跑课堂上的 Agent 分析演示。\n想系统学习实证研究 → 欢迎报名 7 月 21–23 日的连享会 2026 暑期班·初级班（连玉君主讲）。今天公开课里看到的每一步，正式课上都会让你亲手做一遍。\n\n\n连享会 2026 暑期班·初级班\n\n\n\n连享会 2026 暑期班海报\n\n\n\n时间：2026 年 7 月 21–23 日（三天），连玉君（中山大学）\n课程主页：https://www.lianxh.cn/PX.html\n报名链接：https://www.wjx.top/vm/QhgLvx1.aspx#\n\n\n扫码报名 · 2026 暑期班\n\n主页 | 课程 | 推文 | 资料",
+    "text": "如何使用本仓库\n本仓库使用 VS Code + Quarto 编写，并通过 GitHub Pages 发布。你可以：\n\nFork 或克隆本仓库的 GitHub 仓库，在本地阅读、修改、运行示例。\n\n根据你的需要，有三条阅读路径：\n\n只想把环境配好 → 直接看 环境配置。里面按「Stata 外部命令 → VS Code + nbstata → GitHub Copilot → Claude Code / Codex」四步给出配置清单与「配置成功的标志」。\n想复现课堂演示 → 下载本仓库的 demo/ 文件夹，按其中的 README.md 操作，在文件夹内启动 Claude Code 或 Codex，即可重跑本课的 Agent 分析演示。\n想系统学习实证研究 → 欢迎报名 7 月 21–23 日的连享会 2026 暑期班·初级班（连玉君主讲）。今天公开课里看到的每一步，正式课上都会让你亲手做一遍。\n\n\n连享会 2026 暑期班·初级班\n\n\n\n连享会 2026 暑期班海报\n\n\n\n时间：2026 年 7 月 21–23 日（三天），连玉君（中山大学）\n课程主页：https://www.lianxh.cn/PX.html\n报名链接：https://www.wjx.top/vm/QhgLvx1.aspx#\n\n\n扫码报名 · 2026 暑期班\n\n主页 | 课程 | 推文 | 资料",
     "crumbs": [
       "🏠 前言"
     ]
@@ -54,7 +54,7 @@
     "href": "outline.html#本课要点你会看到什么",
     "title": "📌 课程导览",
     "section": "",
-    "text": "Stata 最小入口——在 AI 时代，Stata 该掌握的”最小必要”：界面、dofile、工作目录、帮助文件、外部命令。（第 1 讲）\nVS Code + nbstata + Copilot——把笔记、代码、结果放进同一个 notebook，并让 Copilot 帮你补全代码、生成注释。（第 2 讲）\n对话式 AI 与执行型 Agent——ChatGPT / Claude 负责拆解规划，Codex / Claude Code 负责在本地项目里执行；关键中间物是一份”任务说明书”。（第 3 讲）\nAgent 现场演示——在一个 demo/ 项目里跑一遍”计划 → 确认 → 执行 → 检查”，并看一张 TWFE vs 现代 DID vs 真值的对照表。（第 4 讲）",
+    "text": "Stata 最小入口——在 AI 时代，Stata 该掌握的”最小必要”：界面、dofile、工作目录、帮助文件、外部命令。（第 1 讲）\nVS Code + nbstata + Copilot——把笔记、代码、结果放进同一个 notebook，并让 Copilot 帮你补全代码、生成注释。（第 2 讲）\n对话式 AI 与执行型 Agent——ChatGPT / Claude 负责拆解规划，Codex / Claude Code 负责在本地项目里执行；关键中间物是一份”任务说明书”。（第 3 讲）\nAgent 演示——在一个 demo/ 项目里跑一遍”计划 → 确认 → 执行 → 检查”，并看一张 TWFE vs 现代 DID vs 真值的对照表。（第 4 讲）",
     "crumbs": [
       "📌 课程导览"
     ]
@@ -64,7 +64,7 @@
     "href": "outline.html#按需选择你的路径",
     "title": "📌 课程导览",
     "section": "按需选择你的路径",
-    "text": "按需选择你的路径\n不同学员需求不同，可以按下面的路径各取所需：\n\n只想快速把 Stata 用起来 → 看 第 1 讲，配合 环境配置 的第 1 节（Stata 与外部命令）。\n更关心 AI 辅助的实证分析流程 → 看 第 3 讲、第 4 讲 和 附录 A（任务说明书与提示词模板），并下载 demo/ 亲手复现课堂演示。\n想把本地环境完整配好 → 通读 环境配置，并完成下面「课后务必完成本地配置」。\n想系统学习实证研究 → 欢迎报名 7 月 21–23 日的连享会 2026 暑期班·初级班（详见 前言）。",
+    "text": "按需选择你的路径\n不同学员需求不同，可以按下面的路径各取所需：\n\n只想快速把 Stata 用起来 → 看 第 1 讲，配合 环境配置 的第 1 节（Stata 与外部命令）。\n更关心 AI 辅助的实证分析流程 → 看 第 3 讲、第 4 讲 和 附录 A（任务说明书与提示词模板），并下载 demo/ 亲手复现本课演示。\n想把本地环境完整配好 → 通读 环境配置，并完成下面「课后务必完成本地配置」。\n想系统学习实证研究 → 欢迎报名 7 月 21–23 日的连享会 2026 暑期班·初级班（详见 前言）。",
     "crumbs": [
       "📌 课程导览"
     ]
@@ -74,7 +74,7 @@
     "href": "outline.html#课后务必完成本地配置",
     "title": "📌 课程导览",
     "section": "课后务必完成本地配置",
-    "text": "课后务必完成本地配置\n受课时限制（80 分钟），课堂上无法详细演示安装与配置过程。但请注意：在本地用 Agent 和 AI 工具做分析，前提就是先把环境配好。 因此，请你务必课后花点时间，按下面的文档把配置完成。\n好消息是：配置过程本身就可以借助网页版 ChatGPT 或 Claude 边问边做——把你的系统信息、报错原文贴给它，让它一步步指导你。这本身也是本课”用 AI 辅助”理念的一次练习。\n\n\n\n\n\n\nStata 安装的两个要点\n\n\n\nStata 本体的安装很简单，通过正版渠道下载安装即可。只需特别注意两点：\n\n安装路径不要包含中文字符，也不要有空格等特殊字符（例如用 D:\\stata19 这样的纯英文路径）。\n安装完成后，确认安装目录下存在 STATA.LIC 文件——这是 nbstata 插件，以及 Agent、MCP 等工具能够正确关联到你的 Stata 应用程序的关键。\n\n以上两点及更完整的说明，见 ds2026 · 配置 Stata 环境（nbstata）。\n\n\n配置参考清单（建议课后依次阅读）：\n\n本仓库 环境配置 页——按「Stata 外部命令 → VS Code + nbstata → Copilot → Claude Code / Codex」四步走，每步都有「配置成功的标志」。\nVS Code 插件：安装、配置和使用\n公开课：Claude Code 协同 Stata：环境配置与应用实践\nds2026 在线书·环境配置章（Anaconda / Jupyter / nbstata 从零安装及常见问题）\n\n\n\n讲义正文将在课后 3 日内持续更新，欢迎 Star 本仓库或在 issues 中反馈。",
+    "text": "课后务必完成本地配置\n受课时所限，安装与配置的完整过程更适合课后按文档从容完成。但请注意：在本地用 Agent 和 AI 工具做分析，前提就是先把环境配好。 因此，请务必花点时间，按下面的文档把配置走通。\n好消息是：配置过程本身就可以借助网页版 ChatGPT 或 Claude 边问边做——把你的系统信息、报错原文贴给它，让它一步步指导你。这本身也是本课”用 AI 辅助”理念的一次练习。\n\n\n\n\n\n\nStata 安装的两个要点\n\n\n\nStata 本体的安装很简单，通过正版渠道下载安装即可。只需特别注意两点：\n\n安装路径不要包含中文字符，也不要有空格等特殊字符（例如用 D:\\stata19 这样的纯英文路径）。\n安装完成后，确认安装目录下存在 STATA.LIC 文件——这是 nbstata 插件，以及 Agent、MCP 等工具能够正确关联到你的 Stata 应用程序的关键。\n\n以上两点及更完整的说明，见 ds2026 · 配置 Stata 环境（nbstata）。\n\n\n配置参考清单（建议课后依次阅读）：\n\n本仓库 环境配置 页——按「Stata 外部命令 → VS Code + nbstata → Copilot → Claude Code / Codex」四步走，每步都有「配置成功的标志」。\nVS Code 插件：安装、配置和使用\n公开课：Claude Code 协同 Stata：环境配置与应用实践\nds2026 在线书·环境配置章（Anaconda / Jupyter / nbstata 从零安装及常见问题）\n\n\n\n讲义正文将在课后 3 日内持续更新，欢迎 Star 本仓库或在 issues 中反馈。",
     "crumbs": [
       "📌 课程导览"
     ]
@@ -84,7 +84,7 @@
     "href": "settings.html",
     "title": "🚀 环境配置",
     "section": "",
-    "text": "Stata 本体与外部命令\n本页是全站最实用的一页：把课堂演示用到的四类工具，按「装什么、怎么装、装好没」的顺序列成清单。你不必一次配齐，用到哪一节看哪一节即可。每一节末尾都有一行 ✅ 配置成功的标志——只要那一步能跑通，这一节就算过关。\n四类工具与它们的角色：",
+    "text": "Stata 本体与外部命令\n本页是全站最实用的一页：把本课用到的四类工具，按「装什么、怎么装、装好没」的顺序列成清单。你不必一次配齐，用到哪一节看哪一节即可。每一节末尾都有一个 ✅ 配置成功的标志——只要那一步能跑通，这一节就算过关。\n四类工具与它们的角色：",
     "crumbs": [
       "🚀 环境配置"
     ]
@@ -94,7 +94,7 @@
     "href": "settings.html#stata-本体与外部命令",
     "title": "🚀 环境配置",
     "section": "",
-    "text": "安装\nStata 请通过正版渠道购买、安装（Stata 官网或授权代理）。安装要点一笔带过：记住你的安装路径（如 C:\\Program Files\\Stata19），后面配置 nbstata 时会用到。\n\n\n外部命令：ssc install\nStata 的很多实用功能来自外部命令。最常用的来源是 SSC（Statistical Software Components）。基本用法：\nssc install winsor2, replace   // 安装（或覆盖旧版本）\nhelp winsor2                    // 打开帮助文件\nwhich winsor2                   // 查看版本与安装位置\nado, find(winsor)              // 查询本机已装的相关命令\n不知道命令确切名字时，用模糊检索：\nfindit dynamic panel           // 按关键词搜索（等价于 search）\n检索小技巧：大小写和词序不影响结果、介词可省略、尽量用单数与原形（distribution 优于 distributions）、逐步缩小范围（distribution → normal distribution）。\n\n\n常见失败与处理\n\n装不上 / 超时：多为网络问题。先重试 ssc install winsor2, replace；仍失败可换网络，或参考 SSC 外部命令清单 查证命令名与来源。\ncommand winsor2 not found：命令没装上，或装到了别处。用 which winsor2 看是否已安装、装在哪个路径。\n想改外部命令的安装位置：先建好目标文件夹，再 net set ado \"D:\\stata\\personal\\myplus\"。\n看官方 PDF 手册：ssc install ihelp 后用 ihelp xtreg 直接打开官方 PDF。\n\n\n延伸阅读：Stata: 外部命令的搜索、安装与使用。\n\n\n✅ 配置成功的标志：在 Stata 中运行 ssc install winsor2, replace 能装上，且 help winsor2 能打开帮助文件。",
+    "text": "安装\nStata 请通过正版渠道购买、安装（Stata 官网或授权代理）。安装时注意两点：\n\n安装路径不要包含中文，也不要有空格等特殊字符（如用 D:\\stata19 这样的纯英文路径）；\n装完确认安装目录下有 STATA.LIC 文件——这是 nbstata 以及 Agent、MCP 等工具能正确关联到 Stata 的关键。\n\n记住这个安装路径，后面配置 nbstata 时会用到。更完整的说明见 ds2026 · 配置 Stata 环境（nbstata）。\n\n\n外部命令：ssc install\nStata 的很多实用功能来自外部命令。最常用的来源是 SSC（Statistical Software Components）。基本用法：\nssc install winsor2, replace   // 安装（或覆盖旧版本）\nhelp winsor2                    // 打开帮助文件\nwhich winsor2                   // 查看版本与安装位置\nado, find(winsor)              // 查询本机已装的相关命令\n不知道命令确切名字时，用模糊检索：\nfindit dynamic panel           // 按关键词搜索（等价于 search）\n检索小技巧：大小写和词序不影响结果、介词可省略、尽量用单数与原形（distribution 优于 distributions）、逐步缩小范围（distribution → normal distribution）。\n\n\n常见失败与处理\n\n装不上 / 超时：多为网络问题。先重试 ssc install winsor2, replace；仍失败可换网络，或参考 SSC 外部命令清单 查证命令名与来源。\ncommand winsor2 not found：命令没装上，或装到了别处。用 which winsor2 看是否已安装、装在哪个路径。\n想改外部命令的安装位置：先建好目标文件夹，再 net set ado \"D:\\stata\\personal\\myplus\"。\n看官方 PDF 手册：ssc install ihelp 后用 ihelp xtreg 直接打开官方 PDF。\n\n\n延伸阅读：Stata: 外部命令的搜索、安装与使用。\n\n\n\n\n\n\n\n✅ 配置成功的标志\n\n\n\n在 Stata 中运行 ssc install winsor2, replace 能装上，且 help winsor2 能打开帮助文件。",
     "crumbs": [
       "🚀 环境配置"
     ]
@@ -104,7 +104,7 @@
     "href": "settings.html#vs-code-jupyter-nbstata",
     "title": "🚀 环境配置",
     "section": "VS Code + Jupyter + nbstata",
-    "text": "VS Code + Jupyter + nbstata\n这一步的目标：在 VS Code 的一个 notebook 文件里，既能写 markdown 笔记，又能运行 Stata 代码。\n\n装什么\n\nVS Code：到官网下载安装。\nVS Code 扩展：在扩展面板搜索并安装 Python、Jupyter（微软官方）。参考 VS Code 插件：安装、配置和使用。\nPython 环境：建议装 Anaconda / Miniconda。注意：nbstata 目前只支持 Python 3.11 及以下，请单独建一个 Python 3.11 环境使用。\n\n\n\n配置 nbstata（Stata 内核）\n在 Python 3.11 环境中安装并注册 Stata 内核：\npip install nbstata\npython -m nbstata.install\n如果 nbstata 没能自动找到 Stata，手动指定安装路径（按你的 Stata 版本改）：\n# Windows\npython -m nbstata.install --stata-dir \"C:\\Program Files\\Stata19\"\n装好后，在 VS Code 中新建一个 .ipynb 文件，点击右上角内核选择器，选择 Stata 内核。\n\n完整的 Anaconda / 虚拟环境 / nbstata 配置流程（含镜像加速、报错排查、可直接粘给 AI 的提示词），见 ds2026 在线书：Python 安装、Jupyter Notebook 使用、安装常见问题。\n\n\n\n✅ 配置成功的标志：在 VS Code 的 notebook 中选中 Stata 内核，运行下面两行有正常输出：\nsysuse auto, clear\nsummarize",
+    "text": "VS Code + Jupyter + nbstata\n这一步的目标：在 VS Code 的一个 notebook 文件里，既能写 markdown 笔记，又能运行 Stata 代码。\n\n装什么\n\nVS Code：到官网下载安装。\nVS Code 扩展：在扩展面板搜索并安装 Python、Jupyter（微软官方）。参考 VS Code 插件：安装、配置和使用。\nPython 环境：建议装 Anaconda / Miniconda。注意：nbstata 目前只支持 Python 3.11 及以下，请单独建一个 Python 3.11 环境使用。\n\n\n\n配置 nbstata（Stata 内核）\n在 Python 3.11 环境中安装并注册 Stata 内核：\npip install nbstata\npython -m nbstata.install\n如果 nbstata 没能自动找到 Stata，手动指定安装路径（按你的 Stata 版本改）：\n# Windows\npython -m nbstata.install --stata-dir \"C:\\Program Files\\Stata19\"\n装好后，在 VS Code 中新建一个 .ipynb 文件，点击右上角内核选择器，选择 Stata 内核。\n\n完整的 Anaconda / 虚拟环境 / nbstata 配置流程（含镜像加速、报错排查、可直接粘给 AI 的提示词），见 ds2026 在线书：Python 安装、Jupyter Notebook 使用、安装常见问题。\n\n\n\n\n\n\n\n\n✅ 配置成功的标志\n\n\n\n在 VS Code 的 notebook 中选中 Stata 内核，运行下面两行有正常输出：\nsysuse auto, clear\nsummarize",
     "crumbs": [
       "🚀 环境配置"
     ]
@@ -114,7 +114,7 @@
     "href": "settings.html#github-copilot",
     "title": "🚀 环境配置",
     "section": "GitHub Copilot",
-    "text": "GitHub Copilot\nCopilot 在编辑器里根据上下文给出灰色的补全建议，也能把注释变成代码、把代码变成注释。\n\n开通与登录\n\n在 github.com/features/copilot 用 GitHub 账号开通 Copilot（学生 / 教师可申请免费权益）。\n在 VS Code 扩展面板搜索安装 GitHub Copilot（及 GitHub Copilot Chat）。\n安装后按提示用 GitHub 账号登录授权。\n\n\n\n快速自测\n新建一个 .do 或 notebook 的 Stata cell，输入一行注释后回车，例如：\n* 载入 auto 数据并对 price 做描述性统计\n正常情况下，光标下方会浮现灰色的补全建议，按 Tab 采纳。\n\n✅ 配置成功的标志：写下一行注释后，编辑器出现灰色的 Copilot 补全建议。",
+    "text": "GitHub Copilot\nCopilot 在编辑器里根据上下文给出灰色的补全建议，也能把注释变成代码、把代码变成注释。\n\n开通与登录\n\n在 github.com/features/copilot 用 GitHub 账号开通 Copilot（学生 / 教师可申请免费权益）。\n在 VS Code 扩展面板搜索安装 GitHub Copilot（及 GitHub Copilot Chat）。\n安装后按提示用 GitHub 账号登录授权。\n\n\n\n快速自测\n新建一个 .do 或 notebook 的 Stata cell，输入一行注释后回车，例如：\n* 载入 auto 数据并对 price 做描述性统计\n正常情况下，光标下方会浮现灰色的补全建议，按 Tab 采纳。\n\n\n\n\n\n\n✅ 配置成功的标志\n\n\n\n写下一行注释后，编辑器出现灰色的 Copilot 补全建议。",
     "crumbs": [
       "🚀 环境配置"
     ]
@@ -124,7 +124,7 @@
     "href": "settings.html#claude-code-codex",
     "title": "🚀 环境配置",
     "section": "Claude Code / Codex",
-    "text": "Claude Code / Codex\n这两个是执行型 Agent：在你的项目文件夹里读写文件、运行脚本、整理结果。课堂 M4 的演示就靠它。\n\n安装与首次运行（Windows）\n\n按官方文档安装（通常经 npm 安装 CLI，或使用其桌面 / VS Code 版本）。\n首次运行需登录对应账号并完成授权。\n在 VS Code 中启动：打开你的项目文件夹 → 打开集成终端（Ctrl+`）→ 在终端里运行 claude（或 codex）启动。\n\n\n\n快速自测\n在一个项目文件夹内启动 Agent 后，输入：\n请列出当前文件夹里的文件清单。\n它应当能读取并列出该目录下的文件。\n\n更系统的安装与协同实践，见公开课录播：Claude Code 协同 Stata：环境配置与应用实践。\n\n\n✅ 配置成功的标志：在某个项目文件夹内启动 Claude Code 或 Codex 后，它能正确列出该文件夹中的文件清单。\n\n\n主页 | 课程 | 推文 | 资料",
+    "text": "Claude Code / Codex\n这两个是执行型 Agent：在你的项目文件夹里读写文件、运行脚本、整理结果。第 4 讲的演示就靠它。\n\n安装与首次运行（Windows）\n\n按官方文档安装（通常经 npm 安装 CLI，或使用其桌面 / VS Code 版本）。\n首次运行需登录对应账号并完成授权。\n在 VS Code 中启动：打开你的项目文件夹 → 打开集成终端（Ctrl+`）→ 在终端里运行 claude（或 codex）启动。\n\n\n\n快速自测\n在一个项目文件夹内启动 Agent 后，输入：\n请列出当前文件夹里的文件清单。\n它应当能读取并列出该目录下的文件。\n\n更系统的安装与协同实践，见公开课录播：Claude Code 协同 Stata：环境配置与应用实践。\n\n\n\n\n\n\n\n✅ 配置成功的标志\n\n\n\n在某个项目文件夹内启动 Claude Code 或 Codex 后，它能正确列出该文件夹中的文件清单。\n\n\n\n主页 | 课程 | 推文 | 资料",
     "crumbs": [
       "🚀 环境配置"
     ]
@@ -134,15 +134,15 @@
     "href": "lectures/01_stata_basics.html",
     "title": "1  Stata 最小入口",
     "section": "",
-    "text": "1.1 先说明：界面与语法本讲不细讲\n本讲不会逐一介绍 Stata 的窗口、菜单和语法细节——课堂上我会现场快速演示一遍，讲义正文里就不再展开。如果你希望系统地了解 Stata 的界面、工作流程和语法，推荐阅读在线书 Stata 101，尤其建议先读这三节：",
+    "text": "1.1 界面与语法：从何处深入了解\nStata 的窗口、菜单和语法，是使用 Stata 的基本功。若需系统了解这些内容，推荐阅读在线书 Stata 101，尤其是下面三节：",
     "crumbs": [
       "**讲义**",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Stata 最小入口</span>"
     ]
   },
   {
-    "objectID": "lectures/01_stata_basics.html#先说明界面与语法本讲不细讲",
-    "href": "lectures/01_stata_basics.html#先说明界面与语法本讲不细讲",
+    "objectID": "lectures/01_stata_basics.html#界面与语法从何处深入了解",
+    "href": "lectures/01_stata_basics.html#界面与语法从何处深入了解",
     "title": "1  Stata 最小入口",
     "section": "",
     "text": "B0. Stata 概览\nB1. Stata 界面和菜单\nB2a. Stata 工作流程\n\n\n\n\nStata 界面",
@@ -156,18 +156,18 @@
     "href": "lectures/01_stata_basics.html#为何还要学-stata",
     "title": "1  Stata 最小入口",
     "section": "1.2 为何还要学 Stata？",
-    "text": "1.2 为何还要学 Stata？\n写代码的门槛正在被 AI 拉低：你说一句话，它就给你一段 Stata 代码。既然如此，为什么还要花时间学 Stata？\n因为「让 AI 写」和「看懂、用好、检查」是两回事。下面这张图是一项实证研究的典型流程——从数据到结果，每一步都需要你做判断，而不是把方向也交给 AI。\n\n\n\nStata 实证分析流程\n\n\n具体来说，在 AI 时代仍值得懂一点 Stata，有以下五个理由。\n\nC1　具备「审查能力」，不要被 AI 误导\nAI 生成的 Stata 代码常常”看起来对、也跑得动，结果却不对”——变量名猜错、选项用反、把跨个体的滞后算到了别的单位、把相关关系写成因果。只有你自己懂一点 Stata，才能读懂它到底写了什么、判断结果是否合理。AI 是助手，最终把关的人是你。\n\n\nC2　能自行搜索新命令、查看帮助文件\n遇到不认识的命令，你要能 help 一下看语法、findit 一下找方法、看懂它来自官方还是 SSC。有了这个能力，你才判断得出 AI 推荐的命令靠不靠谱、有没有更合适的替代。这也是”最小入口”里最该练的一手。\n\n\nC3　知道 Stata 安装路径与 profile.do 机制\n这一条和”用 Agent”直接相关：当你让 Claude Code、Codex 或 MCP 工具去调用、配置 Stata 时，必须告诉它 Stata 的安装路径，以及 profile.do 的存在——这是 Stata 启动时自动运行的配置文件，可能会改变工作目录、加载外部命令路径。不了解这套机制，Agent 配置常常莫名卡住（我们在准备本课的 demo 时就踩过 profile.do 悄悄切换工作目录的坑）。\n\n\nC4　有些方法，Stata 仍有独特优势（如 reghdfe）\n不少前沿计量方法的成熟实现最先出现在 Stata：reghdfe（高维固定效应）、csdid / jwdid（现代交叠 DID）、ivreghdfe 等。做面板与因果推断时，Stata 生态往往比 Python / R 更省心、更”开箱即用”。\n\n\nC5　路径依赖：复现包与合作者都在用 Stata\n大量顶刊论文的复现包是用 Stata 写的；你的导师、师兄师姐、合作者也很可能多年都在用 Stata。想读懂别人的代码、复现别人的结果、和团队顺畅协作，就绕不开它。会一点 Stata，是融入现有学术生产链的现实需要。\n\n以上只是要点。关于”AI 时代为什么还要懂一点 Stata”的更完整讨论，参阅：\n\n丁闪闪, 2026, Stata：AI 写代码时代，为什么还要懂一点？.",
+    "text": "1.2 为何还要学 Stata？\n写代码的门槛正在被 AI 拉低：你说一句话，它就给你一段 Stata 代码。既然如此，为什么还要花时间学 Stata？\n因为「让 AI 写」和「看懂、用好、检查」是两回事。下面这张图是一项实证研究的典型流程——从数据到结果，每一步都需要研究者自己做判断，而不是把方向也交给 AI。\n\n\n\nStata 实证分析流程\n\n\n具体来说，在 AI 时代仍值得懂一点 Stata，有以下五个理由。\n\nC1　具备「审查能力」，不要被 AI 误导\nAI 生成的 Stata 代码常常”看起来对、也跑得动，结果却不对”——变量名猜错、选项用反、把跨个体的滞后算到了别的单位、把相关关系写成因果。只有自己懂一点 Stata，才能读懂它到底写了什么、判断结果是否合理。\n\n\nC2　能自行搜索新命令、查看帮助文件\n遇到不认识的命令，能 help 一下看语法、findit 一下找方法、看懂它来自官方还是 SSC。有了这个能力，才判断得出 AI 推荐的命令靠不靠谱、有没有更合适的替代。\n\n\nC3　知道 Stata 安装路径与 profile.do 机制\n这一点和”用 Agent”直接相关：让 Claude Code、Codex 或 MCP 工具去调用、配置 Stata 时，必须告诉它 Stata 的安装路径，以及 profile.do 的存在——这是 Stata 启动时自动运行的配置文件，可能会改变工作目录、加载外部命令路径。不了解这套机制，Agent 配置常常莫名卡住。\n\n\nC4　有些方法，Stata 仍有独特优势（如 reghdfe）\n不少前沿计量方法的成熟实现最先出现在 Stata：reghdfe（高维固定效应）、csdid / jwdid（现代交叠 DID）、ivreghdfe 等。做面板与因果推断时，Stata 生态往往比 Python / R 更省心、更”开箱即用”。\n\n\nC5　路径依赖：复现包与合作者都在用 Stata\n大量顶刊论文的复现包是用 Stata 写的；导师、师兄师姐、合作者也很可能多年都在用 Stata。想读懂别人的代码、复现别人的结果、和团队顺畅协作，就绕不开它。会一点 Stata，是融入现有学术生产链的现实需要。\n\n一句话：AI 让你把代码写得更快，而懂一点 Stata，才让你把结果做得更对。\n\n关于”AI 时代为什么还要懂一点 Stata”的更完整讨论，参阅：丁闪闪, 2026, Stata：AI 写代码时代，为什么还要懂一点？。",
     "crumbs": [
       "**讲义**",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Stata 最小入口</span>"
     ]
   },
   {
-    "objectID": "lectures/01_stata_basics.html#课堂演示要点",
-    "href": "lectures/01_stata_basics.html#课堂演示要点",
+    "objectID": "lectures/01_stata_basics.html#最小入口动手走一遍",
+    "href": "lectures/01_stata_basics.html#最小入口动手走一遍",
     "title": "1  Stata 最小入口",
-    "section": "1.3 课堂演示要点",
-    "text": "1.3 课堂演示要点\n课上我会在 Stata 里快速走一遍”最小入口”的几个动作（讲义不展开，细节见上面的 Stata 101 链接）：\n\n认识四个窗口，用 sysuse auto, clear 载入数据，在变量窗口看结构。\n新建 01_first.do，写三行 use → summarize → regress，do 一键跑通。\nhelp regress 读语法行与一个选项；findit 一个关键词演示模糊搜索。\nssc install winsor2, replace 装一个外部命令，help winsor2 验证。\n一句话讲相对路径：把绝对路径改成 ./data/...，强调「永远用项目文件夹 + 相对路径」（为第 4 讲的 Agent 演示埋伏笔）。",
+    "section": "1.3 最小入口：动手走一遍",
+    "text": "1.3 最小入口：动手走一遍\n用 Stata 做一次分析，最小的一套动作如下（操作细节见上文 Stata 101 链接）：\n\n认识四个窗口，用 sysuse auto, clear 载入数据，在变量窗口查看数据结构。\n新建 01_first.do，写三行 use → summarize → regress，用 do 一键跑通——能重跑、能分享，正是 dofile 相对于”手敲命令”的根本优势。\nhelp regress 读语法行与一个选项；findit 一个关键词做模糊搜索。\nssc install winsor2, replace 安装一个外部命令，help winsor2 验证。\n路径只记一句话：永远用项目文件夹 + 相对路径（把绝对路径改成 ./data/...）。这也是第 4 讲里 Agent 能接管整个项目的前提。",
     "crumbs": [
       "**讲义**",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Stata 最小入口</span>"
@@ -211,7 +211,7 @@
     "href": "lectures/02_vscode_nbstata.html#vs-code-nbstata",
     "title": "2  VS Code + nbstata + Copilot",
     "section": "2.2 VS Code + nbstata",
-    "text": "2.2 VS Code + nbstata\n要在 notebook 里运行 Stata 代码，靠的是一个叫 nbstata 的 Jupyter 内核。把它和 VS Code 搭配起来，好处很直接：一个编辑器里就能同时写笔记、跑多种语言的代码，而 Copilot 和后面几讲要用的 Agent 也都在同一个环境中协作，不必在多个软件之间来回切换。\n安装并不复杂（注意：nbstata 目前只支持 Python 3.11 及以下，需单独建一个 3.11 环境）：本仓库 环境配置 的第 2 节给了最简步骤；配置详情参见 ds2026 · 配置说明 第 2–4 章。\n装好后，在 VS Code 新建一个 .ipynb，右上角内核选 Stata，就能在代码单元格里直接写：\nsysuse auto, clear\nsummarize price mpg\nscatter price mpg\n运行后，描述性统计的表格和散点图会直接出现在单元格下方。",
+    "text": "2.2 VS Code + nbstata\n要在 notebook 里运行 Stata 代码，靠的是一个叫 nbstata 的 Jupyter 内核。把它和 VS Code 搭配起来，好处很直接：一个编辑器里就能同时写笔记、跑多种语言的代码，而 Copilot 和后面几讲要用的 Agent 也都在同一个环境中协作，不必在多个软件之间来回切换。\n安装并不复杂（注意：nbstata 目前只支持 Python 3.11 及以下，需单独建一个 3.11 环境）：本仓库 环境配置 的第 2 节给了最简步骤；若需完整流程，参见 ds2026 · 配置说明 第 2–4 章。\n装好后，在 VS Code 新建一个 .ipynb，右上角内核选 Stata，就能在代码单元格里直接写：\nsysuse auto, clear\nsummarize price mpg\nscatter price mpg\n运行后，描述性统计的表格和散点图会直接出现在单元格下方。",
     "crumbs": [
       "**讲义**",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>VS Code + nbstata + Copilot</span>"
@@ -222,18 +222,18 @@
     "href": "lectures/02_vscode_nbstata.html#copilot两个时刻",
     "title": "2  VS Code + nbstata + Copilot",
     "section": "2.3 Copilot：两个「时刻」",
-    "text": "2.3 Copilot：两个「时刻」\n真正让人眼前一亮的，是 Copilot 在旁边的介入。课上我会现场新建一个 notebook 给大家演示；讲义里先说清两个最值得看的「Copilot 时刻」。\n时刻一：写一行注释，让它生成代码。 你先写一句自然语言注释：\n* 载入 auto 数据，按 foreign 分组，计算 price 的均值并画柱状图\n回车后，Copilot 往往会在下方浮现出灰色的补全建议，按 Tab 采纳，再根据实际变量名微调即可。\n时刻二：给一段旧代码加注释。 反过来，你手上有一段没有注释、看不太懂的旧代码，选中它，让 Copilot Chat「逐行加中文注释」，它会解释每一行在做什么。这在阅读复现代码、接手旧项目时非常实用。\n一句话概括：注释 ⇄ 代码可以双向生成。但要守住一条底线——你仍然要看得懂每一行。Copilot 是补全助手，不替你做判断；采纳后一定要读一遍，确认变量名、选项、结果都对。",
+    "text": "2.3 Copilot：两个「时刻」\n在 notebook 里写 Stata 代码时，Copilot 会在旁边给出补全建议。最值得体会的是两个「时刻」。\n时刻一：写一行注释，让它生成代码。 先写一句自然语言注释：\n* 载入 auto 数据，按 foreign 分组，计算 price 的均值并画柱状图\n回车后，Copilot 往往会在下方浮现出灰色的补全建议，按 Tab 采纳，再根据实际变量名微调即可。\n时刻二：给一段旧代码加注释。 反过来，手上有一段没有注释、看不太懂的旧代码，选中它，让 Copilot Chat「逐行加中文注释」，它会解释每一行在做什么。这在阅读复现代码、接手旧项目时非常实用。\n\n注释 ⇄ 代码可以双向生成；但采纳之后，一定要读一遍，确认变量名、选项、结果都对——Copilot 是补全助手，不替你做判断。",
     "crumbs": [
       "**讲义**",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>VS Code + nbstata + Copilot</span>"
     ]
   },
   {
-    "objectID": "lectures/02_vscode_nbstata.html#课堂演示要点",
-    "href": "lectures/02_vscode_nbstata.html#课堂演示要点",
+    "objectID": "lectures/02_vscode_nbstata.html#动手演示在-notebook-里跑通",
+    "href": "lectures/02_vscode_nbstata.html#动手演示在-notebook-里跑通",
     "title": "2  VS Code + nbstata + Copilot",
-    "section": "2.4 课堂演示要点",
-    "text": "2.4 课堂演示要点\n\n在 VS Code 新建一个 .ipynb，先写一个 Markdown 单元格作笔记，再建一个 Stata 代码单元格。\n内核选 Stata，跑 sysuse auto, clear + summarize + scatter，展示结果直接显示在单元格下方。\nCopilot 时刻一：写一行中文注释，回车触发灰色补全，Tab 采纳后微调。\nCopilot 时刻二：选中一段无注释代码，用 Copilot Chat 让它逐行加中文注释。",
+    "section": "2.4 动手演示：在 notebook 里跑通",
+    "text": "2.4 动手演示：在 notebook 里跑通\n一次最小的演示，可以这样走一遍：\n\n在 VS Code 新建一个 .ipynb，先写一个 Markdown 单元格作笔记，再建一个 Stata 代码单元格。\n内核选 Stata，跑 sysuse auto, clear + summarize + scatter，结果直接显示在单元格下方。\nCopilot 时刻一：写一行中文注释，回车触发灰色补全，Tab 采纳后微调。\nCopilot 时刻二：选中一段无注释代码，用 Copilot Chat 让它逐行加中文注释。",
     "crumbs": [
       "**讲义**",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>VS Code + nbstata + Copilot</span>"
@@ -255,29 +255,73 @@
     "href": "lectures/03_ai_vs_agent.html",
     "title": "3  对话式 AI 与执行型 Agent",
     "section": "",
-    "text": "3.1 正文",
+    "text": "3.1 先分清两类任务\n用 AI 时的很多低效，不是因为模型不够强，而是把任务放错了地方。任务其实只有两类。\n一类是对话任务：主要发生在「脑子里」和「文字讨论」中。比如解释一篇论文的贡献、比较几种研究设计、判断一个识别策略有没有风险、把一段话改得更清楚、生成一张教学插图。这类任务的重点是理解、表达和判断——放在 ChatGPT / Claude 的对话框里最合适。\n另一类是项目任务：已经落到「文件夹」和「代码库」里。比如批量修改一组脚本、检查一个 notebook、统一图片路径、根据报错改代码、把数据、结果和文字整合进同一个项目。这类任务的重点不是继续聊天，而是读取文件、执行修改、验证结果——放进 Codex / Claude Code 这样的执行型 Agent 里最合适。\n一个简单的判断标准：\n很多人觉得「AI 工具越用越乱」，往往不是工具太多，而是没把任务拆成不同环节：任务还没想清楚就丢给 Agent，会得到一堆看似完整、方向却不准的修改；任务已经散落在几十个文件里，却还在对话框里反复复制粘贴，人就成了低效的「文件搬运工」。",
     "crumbs": [
       "**讲义**",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>对话式 AI 与执行型 Agent</span>"
     ]
   },
   {
-    "objectID": "lectures/03_ai_vs_agent.html#正文",
-    "href": "lectures/03_ai_vs_agent.html#正文",
+    "objectID": "lectures/03_ai_vs_agent.html#先分清两类任务",
+    "href": "lectures/03_ai_vs_agent.html#先分清两类任务",
     "title": "3  对话式 AI 与执行型 Agent",
     "section": "",
-    "text": "3.1.1 先分清两类任务\n用 AI 时的很多低效，不是因为模型不够强，而是把任务放错了地方。任务其实只有两类。\n一类是对话任务：主要发生在「脑子里」和「文字讨论」中。比如解释一篇论文的贡献、比较几种研究设计、判断一个识别策略有没有风险、把一段话改得更清楚、生成一张教学插图。这类任务的重点是理解、表达和判断——放在 ChatGPT / Claude 的对话框里最合适。\n另一类是项目任务：已经落到「文件夹」和「代码库」里。比如批量修改一组脚本、检查一个 notebook、统一图片路径、根据报错改代码、把数据、结果和文字整合进同一个项目。这类任务的重点不是继续聊天，而是读取文件、执行修改、验证结果——放进 Codex / Claude Code 这样的执行型 Agent 里最合适。\n一个简单的判断标准：\n\n任务主要在「文字讨论」中，优先用 ChatGPT / Claude；任务已经落到「文件夹」里，优先用 Codex / Claude Code。\n\n很多人觉得「AI 工具越用越乱」，往往不是工具太多，而是没把任务拆成不同环节：任务还没想清楚就丢给 Agent，会得到一堆看似完整、方向却不准的修改；任务已经散落在几十个文件里，却还在对话框里反复复制粘贴，人就成了低效的「文件搬运工」。\n\n\n3.1.2 两类工具的分工\n\n\n\n\n\n\n\n\n维度\n对话式 AI（ChatGPT / Claude）\n执行型 Agent（Codex / Claude Code）\n\n\n\n\n核心形态\n对话助手\n项目执行 Agent\n\n\n主要对象\n问题、文本、材料、图片\n文件夹、代码库、脚本、项目\n\n\n擅长环节\n理解、规划、表达、审稿、绘图\n读取、修改、运行、检查、交付\n\n\n典型问题\n「这件事该怎么想？」\n「这个项目该怎么改？」\n\n\n\n一句话：对话式 AI 解决「如何理解」，执行型 Agent 解决「如何落地」。 二者不是替代关系，而是前后环节的关系——Agent 越擅长执行，就越需要对话式 AI 先把任务定义清楚。\n\n\n\n四类 AI 工具的分工\n\n\n\n\n3.1.3 关键的中间产物：任务说明书\n从「想清楚」到「做出来」，中间需要一个交接物——任务说明书（可以叫 to-agent-任务说明.md，或写进 README.md）。它把一次任务的目标、输入文件、输出格式、修改边界、风格要求、验收标准写清楚。任务说明书越清楚，Agent 越不容易误改。\n一份任务说明书大致长这样：\n# 任务说明\n\n## 目标\n基于项目文件夹里的数据和说明，完成一次数据清洗与回归分析。\n\n## 输入\n- data/*.csv：原始数据\n- README.md：变量说明与分析要求\n\n## 输出\n- code/analysis.do：分析脚本（含中文注释）\n- outputs/report.md：结果说明，指出看哪一行、哪个系数\n\n## 修改方式\n- 请先阅读项目结构并列出计划，不要一上来就改\n- 不要删除原始文件\n- 改完说明每个文件改了什么\n\n\n3.1.4 一个真实例子：这本讲义就是这样做出来的\n这不是纸上谈兵。你现在看到的这个仓库和讲义，就是按上面这套流程做出来的：我先在网页版 AI 里把”想做一个什么样的公开课仓库”聊清楚，让它帮我拆解目标、制定计划，甚至直接生成了一整个任务文件夹（里面是一份份任务说明书）；然后我把这个文件夹交给本地的 Agent，让它逐个任务去执行——收割素材、搭建仓库、生成 demo 数据……课上我会给大家现场展示我本地的工作目录，以及 AI 帮我拟好的那些计划文档。\n\n生成 stata-ai 仓库和书稿的对话链接 · Claude\n生成 stata-ai 仓库和书稿的对话链接 · ChatGPT\n\n\n\n\n\n\n\n在网页版制定计划时，怎么把话说清楚？\n\n\n\n和网页版 AI 聊”规划”时，把三件事说清楚，它给出的计划会完整得多：\n\n你的目标：想做成什么、给谁用、成功长什么样；\n你已有的资料：手头有哪些数据、文档、素材、参考仓库；\n希望它完成的工作：需要它帮你拆解、规划，还是直接产出任务说明书。\n\n\n\n\n\n\n\n\n\n一个小技巧：适当「示弱」，让 AI 反问你\n\n\n\n不必每句话都像下命令。适当”示弱”，让 AI 来反问、引导，往往能得到更完整的分析和建议，而不是一个仓促的答案。比如：\n\n「我目前还不太清楚应该如何开始这个分析。」\n「我不知道网上有没有类似的项目，比如 Top Journal 发布的复现资料，或 GitHub 仓库，你能帮我找一下吗？」\n「这些只是我初步想到的，不知你是否有更好的建议？」\n\n\n\n\n\n3.1.5 稳妥的流程：规划 → 执行 → 审查\n把一次完整任务拆成三步，是目前比较稳的做法：\n\n规划：用 ChatGPT / Claude 把模糊任务拆成清楚任务，判断任务边界，生成任务说明书。\n执行：让 Codex / Claude Code 进入项目文件夹，按任务说明读文件、改文件、跑命令。复杂任务里，第一条指令最好不是「直接修改」，而是「先阅读项目结构并列出修改计划」。\n审查：回到对话式 AI（或换一个 Agent）检查产出——逻辑是否清楚、代码与文字是否一致、有没有遗漏或误改。高风险任务（涉及代码结果、论文事实、政策时点、参考文献）值得让第二个 Agent 交叉复核。\n\n\n\n\n规划 → 执行 → 审查\n\n\n\n\n3.1.6 本讲的关键论断\n工具在快速演化、边界也在模糊：Copilot 不再只是补全，Cursor 也能跑 Agent，Codex 既能在本地也能连 GitHub。与其纠结「哪个最强」，不如记住一句话：\n\n软件本身不再是门槛，「搭配好环境、制定好计划」才是。\n\n这正是本次公开课的主线：先想清楚要解决什么问题，再决定用哪种工具、交给谁做、如何检查。第 4 讲，我们就把这套「规划 → 执行 → 审查」放到一个真实的 demo 项目里跑一遍。",
+    "text": "任务主要在「文字讨论」中，优先用 ChatGPT / Claude；任务已经落到「文件夹」里，优先用 Codex / Claude Code。",
     "crumbs": [
       "**讲义**",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>对话式 AI 与执行型 Agent</span>"
     ]
   },
   {
-    "objectID": "lectures/03_ai_vs_agent.html#课堂演示要点",
-    "href": "lectures/03_ai_vs_agent.html#课堂演示要点",
+    "objectID": "lectures/03_ai_vs_agent.html#两类工具的分工",
+    "href": "lectures/03_ai_vs_agent.html#两类工具的分工",
     "title": "3  对话式 AI 与执行型 Agent",
-    "section": "3.2 课堂演示要点",
-    "text": "3.2 课堂演示要点\n\n用一张图讲清「对话任务 vs 项目任务」的分界。\n展示一份真实的任务说明书（即 demo 的 README.md），指出它写清了目标、输入、输出、边界。\n口头强调关键论断：软件不是门槛，环境 + 计划才是。",
+    "section": "3.2 两类工具的分工",
+    "text": "3.2 两类工具的分工\n\n\n\n\n\n\n\n\n维度\n对话式 AI（ChatGPT / Claude）\n执行型 Agent（Codex / Claude Code）\n\n\n\n\n核心形态\n对话助手\n项目执行 Agent\n\n\n主要对象\n问题、文本、材料、图片\n文件夹、代码库、脚本、项目\n\n\n擅长环节\n理解、规划、表达、审稿、绘图\n读取、修改、运行、检查、交付\n\n\n典型问题\n「这件事该怎么想？」\n「这个项目该怎么改？」\n\n\n\n一句话：对话式 AI 解决「如何理解」，执行型 Agent 解决「如何落地」。 二者不是替代关系，而是前后环节的关系——Agent 越擅长执行，就越需要对话式 AI 先把任务定义清楚。\n\n\n\n四类 AI 工具的分工",
+    "crumbs": [
+      "**讲义**",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>对话式 AI 与执行型 Agent</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/03_ai_vs_agent.html#关键的中间产物任务说明书",
+    "href": "lectures/03_ai_vs_agent.html#关键的中间产物任务说明书",
+    "title": "3  对话式 AI 与执行型 Agent",
+    "section": "3.3 关键的中间产物：任务说明书",
+    "text": "3.3 关键的中间产物：任务说明书\n从「想清楚」到「做出来」，中间需要一个交接物——任务说明书（可以叫 to-agent-任务说明.md，或写进 README.md）。它把一次任务的目标、输入文件、输出格式、修改边界、风格要求、验收标准写清楚。任务说明书越清楚，Agent 越不容易误改。\n一份任务说明书大致长这样：\n# 任务说明\n\n## 目标\n基于项目文件夹里的数据和说明，完成一次数据清洗与回归分析。\n\n## 输入\n- data/*.csv：原始数据\n- README.md：变量说明与分析要求\n\n## 输出\n- code/analysis.do：分析脚本（含中文注释）\n- outputs/report.md：结果说明，指出看哪一行、哪个系数\n\n## 修改方式\n- 请先阅读项目结构并列出计划，不要一上来就改\n- 不要删除原始文件\n- 改完说明每个文件改了什么",
+    "crumbs": [
+      "**讲义**",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>对话式 AI 与执行型 Agent</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/03_ai_vs_agent.html#一个真实例子这本讲义就是这样做出来的",
+    "href": "lectures/03_ai_vs_agent.html#一个真实例子这本讲义就是这样做出来的",
+    "title": "3  对话式 AI 与执行型 Agent",
+    "section": "3.4 一个真实例子：这本讲义就是这样做出来的",
+    "text": "3.4 一个真实例子：这本讲义就是这样做出来的\n这不是纸上谈兵。你现在看到的这个仓库和讲义，就是按上面这套流程做出来的：先在网页版 AI 里把”想做一个什么样的公开课仓库”聊清楚，让它拆解目标、制定计划，甚至直接生成了一整个任务文件夹（里面是一份份任务说明书）；然后把这个文件夹交给本地的 Agent，让它逐个任务去执行——收割素材、搭建仓库、生成 demo 数据。本课的演示中，会展示这个本地工作目录，以及 AI 拟定的那些计划文档。\n\n生成 stata-ai 仓库和书稿的对话链接 · Claude\n生成 stata-ai 仓库和书稿的对话链接 · ChatGPT\n\n\n\n\n\n\n\n在网页版制定计划时，怎么把话说清楚？\n\n\n\n和网页版 AI 聊”规划”时，把三件事说清楚，它给出的计划会完整得多：\n\n你的目标：想做成什么、给谁用、成功长什么样；\n你已有的资料：手头有哪些数据、文档、素材、参考仓库；\n希望它完成的工作：需要它帮你拆解、规划，还是直接产出任务说明书。\n\n\n\n\n\n\n\n\n\n一个小技巧：适当「示弱」，让 AI 反问你\n\n\n\n不必每句话都像下命令。适当”示弱”，让 AI 来反问、引导，往往能得到更完整的分析和建议，而不是一个仓促的答案。比如：\n\n「我目前还不太清楚应该如何开始这个分析。」\n「我不知道网上有没有类似的项目，比如 Top Journal 发布的复现资料，或 GitHub 仓库，你能帮我找一下吗？」\n「这些只是我初步想到的，不知你是否有更好的建议？」",
+    "crumbs": [
+      "**讲义**",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>对话式 AI 与执行型 Agent</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/03_ai_vs_agent.html#稳妥的流程规划-执行-审查",
+    "href": "lectures/03_ai_vs_agent.html#稳妥的流程规划-执行-审查",
+    "title": "3  对话式 AI 与执行型 Agent",
+    "section": "3.5 稳妥的流程：规划 → 执行 → 审查",
+    "text": "3.5 稳妥的流程：规划 → 执行 → 审查\n把一次完整任务拆成三步，是目前比较稳的做法：\n\nAgent 工作流\n\n规划（对话式 AI）→执行（Agent）→审查（人 / 另一个 Agent）\n\n\n\n规划：用 ChatGPT / Claude 把模糊任务拆成清楚任务，判断任务边界，生成任务说明书。\n执行：让 Codex / Claude Code 进入项目文件夹，按任务说明读文件、改文件、跑命令。复杂任务里，第一条指令最好不是「直接修改」，而是「先阅读项目结构并列出修改计划」。\n审查：回到对话式 AI（或换一个 Agent）检查产出——逻辑是否清楚、代码与文字是否一致、有没有遗漏或误改。高风险任务（涉及代码结果、论文事实、政策时点、参考文献）值得让第二个 Agent 交叉复核。\n\n\n\n\n规划 → 执行 → 审查",
+    "crumbs": [
+      "**讲义**",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>对话式 AI 与执行型 Agent</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/03_ai_vs_agent.html#关键论断",
+    "href": "lectures/03_ai_vs_agent.html#关键论断",
+    "title": "3  对话式 AI 与执行型 Agent",
+    "section": "3.6 关键论断",
+    "text": "3.6 关键论断\n工具在快速演化、边界也在模糊：Copilot 不再只是补全，Cursor 也能跑 Agent，Codex 既能在本地也能连 GitHub。与其纠结「哪个最强」，不如记住一句话：\n\n软件本身不再是门槛，「搭配好环境、制定好计划」才是。\n\n这正是本课的主线：先想清楚要解决什么问题，再决定用哪种工具、交给谁做、如何检查。第 4 讲，就把这套「规划 → 执行 → 审查」放到一个真实的 demo 项目里跑一遍。",
     "crumbs": [
       "**讲义**",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>对话式 AI 与执行型 Agent</span>"
@@ -287,8 +331,8 @@
     "objectID": "lectures/03_ai_vs_agent.html#延伸阅读",
     "href": "lectures/03_ai_vs_agent.html#延伸阅读",
     "title": "3  对话式 AI 与执行型 Agent",
-    "section": "3.3 延伸阅读",
-    "text": "3.3 延伸阅读\n\nChatGPT、Codex、Copilot、Claude Code：AI 工具如何分工协作？\n从代码补全到 AI-Agent：Copilot、Claude Code、Codex 怎么选？\n从 Prompt 到 Skills：把论文复现、数据清洗和代码规范写进 AI\nClaude Code Skills 写作指南：如何写好一个可复用的 SKILL.md\n警惕 AI-Agent 泄密：三道闸门守住 API 密钥和账号信息",
+    "section": "3.7 延伸阅读",
+    "text": "3.7 延伸阅读\n\nChatGPT、Codex、Copilot、Claude Code：AI 工具如何分工协作？\n从代码补全到 AI-Agent：Copilot、Claude Code、Codex 怎么选？\n从 Prompt 到 Skills：把论文复现、数据清洗和代码规范写进 AI\nClaude Code Skills 写作指南：如何写好一个可复用的 SKILL.md\n警惕 AI-Agent 泄密：三道闸门守住 API 密钥和账号信息",
     "crumbs": [
       "**讲义**",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>对话式 AI 与执行型 Agent</span>"
@@ -299,29 +343,62 @@
     "href": "lectures/04_agent_workflow.html",
     "title": "4  Agent 工作流：从任务说明到结果检查",
     "section": "",
-    "text": "4.1 正文\n这一讲是全课的落点。前三讲铺好了地基——最小的 Stata 入口、notebook 里的 AI 补全、对话式 AI 与执行型 Agent 的分工。现在我们把「规划 → 执行 → 审查」放进一个真实的项目里跑一遍。",
+    "text": "4.1 一切从项目文件夹开始\n这一讲是全课的落点。前三讲铺好了地基——最小的 Stata 入口、notebook 里的 AI 补全、对话式 AI 与执行型 Agent 的分工。现在我们把「规划 → 执行 → 审查」放进一个真实的项目里跑一遍。\nAgent 之所以能接管一份工作，前提是这份工作被组织成了一个规范的项目文件夹。本课演示用的 demo/ 就是这样一个文件夹，大致结构是：\nREADME.md 就是第 3 讲讲的任务说明书：它告诉 Agent 数据是什么、要做什么分析、结果要以什么形式交付。数据放在 data/、代码放在 code/、结果放在 outputs/——分门别类，Agent 和人都不会迷路。",
     "crumbs": [
       "**讲义**",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Agent 工作流：从任务说明到结果检查</span>"
     ]
   },
   {
-    "objectID": "lectures/04_agent_workflow.html#正文",
-    "href": "lectures/04_agent_workflow.html#正文",
+    "objectID": "lectures/04_agent_workflow.html#一切从项目文件夹开始",
+    "href": "lectures/04_agent_workflow.html#一切从项目文件夹开始",
     "title": "4  Agent 工作流：从任务说明到结果检查",
     "section": "",
-    "text": "4.1.1 一切从项目文件夹开始\nAgent 之所以能接管一份工作，前提是这份工作被组织成了一个规范的项目文件夹。课堂演示用的 demo/ 就是这样一个文件夹，大致结构是：\ndemo/\n├── README.md          # 任务说明书：目标、数据说明、分析要求、验收标准\n├── data/              # 三个 CSV 数据文件\n├── code/              # 分析脚本（由 Agent 生成）\n├── outputs/           # 结果：表格、图形、report\n└── ...\nREADME.md 就是第 3 讲讲的任务说明书：它告诉 Agent 数据是什么、要做什么分析、结果要以什么形式交付。数据放在 data/、代码放在 code/、结果放在 outputs/——分门别类，Agent 和人都不会迷路。\n\n\n4.1.2 一个循环：计划 → 确认 → 执行 → 检查\n拿到项目后，正确的节奏不是「一句话让它跑通」，而是一个可以反复迭代的循环。\n第一步，让它先给计划，别急着改。 进入 demo/ 文件夹启动 Claude Code 或 Codex，第一条指令是：\n请阅读 README.md 和 data/ 下的数据，先给出一份研究计划，\n说明你打算怎么清洗数据、跑哪些模型、输出什么结果。先不要动手改文件。\n第二步，人来确认和补充。 看它的计划对不对、有没有漏。课堂上会现场补两点要求（比如「关键变量要缩尾」「回归表要同时报 TWFE 和现代 DID 估计量」），让计划更贴合意图。这一步是「人在环」的关键——你在把关方向，而不是把方向也交出去。\n第三步，确认后再让它执行。 计划敲定，让它按计划清洗数据、写脚本、跑模型、生成结果。Agent 跑动期间，正好回头讲「任务说明书该怎么写」——好的说明书能让这一步一次到位。\n第四步，检查产出。 跑完不等于做对了。检查有三个抓手：\n\n看它改了什么（diff）：Agent 说改了哪些文件，逐一核对，别只看它的文字总结。\n看 log：Stata 的运行日志里有没有报错、有没有被 capture 悄悄吞掉的错误。这也呼应了课堂纪律——学会看 log，比追求「不报错」更重要。\n核对结果：表格里的系数、样本量、图形是否合理，能不能对得上数据。\n\n发现问题，就带着具体反馈回到第一步，再走一轮。这个「计划 → 确认 → 执行 → 检查」的循环，才是 AI 辅助实证的真正工作方式。\n\n\n4.1.3 几个必会的 Claude Code 操作\n要顺畅地跑完上面这个循环，有几个 Claude Code 的操作值得先形成肌肉记忆（Codex 的对应操作类似）。这些也是现场演示时你会看到我反复用到的：\n\n文件夹即工作区：在项目文件夹里打开终端、输入 claude 就地启动，它就以当前文件夹为工作区。新项目可用 /init 生成 CLAUDE.md——这是每次启动都会自动读取的「项目记忆」，把项目背景、文件夹用途、工作规则写在里面。\n三个高频前缀：@ 引用文件（如 @README.md 开始第一步）、# 把一条规则永久写进记忆、! 直接执行 shell 命令（如 ! git status）。\n权限模式（Shift+Tab 循环切换）：计划模式只读不写、先出方案；自动接受直接执行文件编辑；默认模式每步征求同意。推荐节奏——复杂任务先切计划模式、方案确认后切自动接受、敏感改动再切回默认。（部分 Windows 版本 Shift+Tab 会跳过计划模式，可直接输入 /plan。）\n两个救命键：Esc 打断正在跑的任务（已完成部分保留）；连按两次 Esc 打开「回退」菜单，把代码和对话恢复到之前的检查点。开工前先 git init，与 Esc Esc 双保险。\n上下文管理：对话越长越容易”犯糊涂”（上下文快满了，且每轮都更费 token）。/context 看占用、/compact 压缩历史、/clear 清空重开一个话题；真正要长期记住的规则用 # 写进 CLAUDE.md，别指望对话历史。\n一条铁律：不要只看 AI 的解释，要看它实际改了什么——每轮花半分钟核对 diff，是成本最低的质量保险。\n\n\n\n4.1.4 为什么要看那张对照表\ndemo 的点睛之笔，是一张 TWFE vs csdid / jwdid vs 模拟真值的对照表。因为 demo 的数据是我们自己模拟生成的，所以真值是已知的。把传统的双向固定效应（TWFE）估计量、现代交叠 DID 估计量、以及真值放在一起对照，谁离真值近、谁偏得多，一目了然。这张表不需要多讲——它自己会说明：为什么在交叠处理的场景下，要学新的 DID 方法。（方法本身的展开，留到暑期班与延伸阅读。）\n\n\n4.1.5 如何复现课堂演示\n\n下载本仓库的 demo/ 文件夹，在其中启动 Claude Code 或 Codex，输入：\n请阅读 README.md 并先给出研究计划。\n即可复现课堂上的 Agent 分析演示。记住：先让它给计划、你来确认，再让它执行、你来检查。",
+    "text": "demo/\n├── README.md          # 任务说明书：目标、数据说明、分析要求、验收标准\n├── data/              # 三个 CSV 数据文件\n├── code/              # 分析脚本（由 Agent 生成）\n├── outputs/           # 结果：表格、图形、report\n└── ...",
     "crumbs": [
       "**讲义**",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Agent 工作流：从任务说明到结果检查</span>"
     ]
   },
   {
-    "objectID": "lectures/04_agent_workflow.html#课堂演示要点",
-    "href": "lectures/04_agent_workflow.html#课堂演示要点",
+    "objectID": "lectures/04_agent_workflow.html#一个循环计划-确认-执行-检查",
+    "href": "lectures/04_agent_workflow.html#一个循环计划-确认-执行-检查",
     "title": "4  Agent 工作流：从任务说明到结果检查",
-    "section": "4.2 课堂演示要点",
-    "text": "4.2 课堂演示要点\n\n进入 demo/ 启动 Claude Code：先让它读 README.md 输出研究计划。\n现场补两点要求，确认后让它开跑；跑动期间讲任务说明书怎么写。\n跑完看中间产出：diff、log、结果表。\n导览预跑成果：分类归档的项目全貌、论文样 report.pdf、TWFE vs csdid/jwdid vs 真值对照表。\n两页 slide 各一句话带过：论文复现、AI 写讲义（详见附录 B、C）。",
+    "section": "4.2 一个循环：计划 → 确认 → 执行 → 检查",
+    "text": "4.2 一个循环：计划 → 确认 → 执行 → 检查\n拿到项目后，正确的节奏不是「一句话让它跑通」，而是一个可以反复迭代的循环。\n\nAgent 分析循环\n\n计划→确认→执行→检查↺\n\n\n第一步，让它先给计划，别急着改。 进入 demo/ 文件夹启动 Claude Code 或 Codex，第一条指令是：\n请阅读 README.md 和 data/ 下的数据，先给出一份研究计划，\n说明你打算怎么清洗数据、跑哪些模型、输出什么结果。先不要动手改文件。\n第二步，人来确认和补充。 看它的计划对不对、有没有漏。确认时可以补充具体要求（例如”关键变量要缩尾”“回归表要同时报 TWFE 和现代 DID 估计量”），让计划更贴合意图。这一步是「人在环」的关键——你在把关方向，而不是把方向也交出去。\n第三步，确认后再让它执行。 计划敲定，让它按计划清洗数据、写脚本、跑模型、生成结果。一份写得清楚的任务说明书，能让这一步尽量一次到位。\n第四步，检查产出。 跑完不等于做对了。检查有三个抓手：\n\n看它改了什么（diff）：Agent 说改了哪些文件，逐一核对，别只看它的文字总结。\n看 log：Stata 的运行日志里有没有报错、有没有被 capture 悄悄吞掉的错误。学会看 log，比追求”不报错”更重要。\n核对结果：表格里的系数、样本量、图形是否合理，能不能对得上数据。\n\n发现问题，就带着具体反馈回到第一步，再走一轮。这个「计划 → 确认 → 执行 → 检查」的循环，才是 AI 辅助实证的真正工作方式。",
+    "crumbs": [
+      "**讲义**",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Agent 工作流：从任务说明到结果检查</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/04_agent_workflow.html#几个必会的-claude-code-操作",
+    "href": "lectures/04_agent_workflow.html#几个必会的-claude-code-操作",
+    "title": "4  Agent 工作流：从任务说明到结果检查",
+    "section": "4.3 几个必会的 Claude Code 操作",
+    "text": "4.3 几个必会的 Claude Code 操作\n要顺畅地跑完上面这个循环，有几个 Claude Code 的操作值得先形成肌肉记忆（Codex 的对应操作类似）：\n\n文件夹即工作区：在项目文件夹里打开终端、输入 claude 就地启动，它就以当前文件夹为工作区。新项目可用 /init 生成 CLAUDE.md——这是每次启动都会自动读取的「项目记忆」，把项目背景、文件夹用途、工作规则写在里面。\n三个高频前缀：@ 引用文件（如 @README.md 开始第一步）、# 把一条规则永久写进记忆、! 直接执行 shell 命令（如 ! git status）。\n权限模式（Shift+Tab 循环切换）：计划模式只读不写、先出方案；自动接受直接执行文件编辑；默认模式每步征求同意。推荐节奏——复杂任务先切计划模式、方案确认后切自动接受、敏感改动再切回默认。（部分 Windows 版本 Shift+Tab 会跳过计划模式，可直接输入 /plan。）\n两个救命键：Esc 打断正在跑的任务（已完成部分保留）；连按两次 Esc 打开「回退」菜单，把代码和对话恢复到之前的检查点。开工前先 git init，与 Esc Esc 双保险。\n上下文管理：对话越长越容易”犯糊涂”（上下文快满了，且每轮都更费 token）。/context 看占用、/compact 压缩历史、/clear 清空重开一个话题；真正要长期记住的规则用 # 写进 CLAUDE.md，别指望对话历史。\n\n\n不要只看 AI 的解释，要看它实际改了什么——每轮花半分钟核对 diff，是成本最低的质量保险。",
+    "crumbs": [
+      "**讲义**",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Agent 工作流：从任务说明到结果检查</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/04_agent_workflow.html#为什么要看那张对照表",
+    "href": "lectures/04_agent_workflow.html#为什么要看那张对照表",
+    "title": "4  Agent 工作流：从任务说明到结果检查",
+    "section": "4.4 为什么要看那张对照表",
+    "text": "4.4 为什么要看那张对照表\ndemo 的点睛之笔，是一张 TWFE vs csdid / jwdid vs 模拟真值的对照表。因为 demo 的数据是模拟生成的，所以真值是已知的。把传统的双向固定效应（TWFE）估计量、现代交叠 DID 估计量、以及真值放在一起对照，谁离真值近、谁偏得多，一目了然。这张表自己会说明：为什么在交叠处理的场景下，值得学新的 DID 方法。（方法本身的展开，见暑期班与延伸阅读。）",
+    "crumbs": [
+      "**讲义**",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Agent 工作流：从任务说明到结果检查</span>"
+    ]
+  },
+  {
+    "objectID": "lectures/04_agent_workflow.html#如何复现本课演示",
+    "href": "lectures/04_agent_workflow.html#如何复现本课演示",
+    "title": "4  Agent 工作流：从任务说明到结果检查",
+    "section": "4.5 如何复现本课演示",
+    "text": "4.5 如何复现本课演示\n\n\n\n\n\n\n动手复现\n\n\n\n下载本仓库的 demo/ 文件夹，在其中启动 Claude Code 或 Codex，输入：\n请阅读 README.md 并先给出研究计划。\n即可复现本课的 Agent 分析演示。记住：先让它给计划、你来确认，再让它执行、你来检查。",
     "crumbs": [
       "**讲义**",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Agent 工作流：从任务说明到结果检查</span>"
@@ -331,8 +408,8 @@
     "objectID": "lectures/04_agent_workflow.html#延伸阅读",
     "href": "lectures/04_agent_workflow.html#延伸阅读",
     "title": "4  Agent 工作流：从任务说明到结果检查",
-    "section": "4.3 延伸阅读",
-    "text": "4.3 延伸阅读\n\n丁闪闪, 2026, Claude-Code 笔记：高频快捷键、权限模式与避坑指南（连享会）\nClaude Code 官方文档：交互模式与快捷键\n公开课：Claude Code 协同 Stata：环境配置与应用实践\n社会科学研究复现包中的自述文档模板\n代码审计：如何从源头确保你的论文可复现？\nStatsPAI：交叠 DID 方法太多，到底怎么选？\nChina Policy Shocks：中国政策冲击数据库",
+    "section": "4.6 延伸阅读",
+    "text": "4.6 延伸阅读\n\n丁闪闪, 2026, Claude-Code 笔记：高频快捷键、权限模式与避坑指南（连享会）\nClaude Code 官方文档：交互模式与快捷键\n公开课：Claude Code 协同 Stata：环境配置与应用实践\n社会科学研究复现包中的自述文档模板\n代码审计：如何从源头确保你的论文可复现？\nStatsPAI：交叠 DID 方法太多，到底怎么选？\nChina Policy Shocks：中国政策冲击数据库",
     "crumbs": [
       "**讲义**",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Agent 工作流：从任务说明到结果检查</span>"
@@ -420,7 +497,7 @@
     "href": "appendix/C_more_usage.html",
     "title": "附录 C — 更多用法",
     "section": "",
-    "text": "C.1 C.1 模拟分析：自己造数据检验方法\n本附录汇集课堂上因时间关系只能一句话带过的几类用法，供课后延伸尝试。三个小节的完整演示（含截图）将在公开课后陆续补充。\n当真值已知时，模拟数据是检验估计量、也是教学演示的利器。做法是先写清数据生成过程（DGP），再用不同方法估计、与真值对照。demo 里 TWFE vs csdid/jwdid vs 真值的对照表就来自这一思路。任务说明书骨架见 附录 A · 场景模板四。",
+    "text": "C.1 C.1 模拟分析：自己造数据检验方法\n本附录汇集几类因课时有限未及展开的用法，供课后延伸尝试。三个小节的完整演示（含截图）将在课后陆续补充。\n当真值已知时，模拟数据是检验估计量、也是教学演示的利器。做法是先写清数据生成过程（DGP），再用不同方法估计、与真值对照。demo 里 TWFE vs csdid/jwdid vs 真值的对照表就来自这一思路。任务说明书骨架见 附录 A · 场景模板四。",
     "crumbs": [
       "附录",
       "<span class='chapter-number'>C</span>  <span class='chapter-title'>更多用法</span>"

@@ -11,6 +11,17 @@ body {
   font-weight: 700;
 }
 
+/* 关键「金句」高亮块（明暗主题自适应） */
+.keypoint {
+  border-left: 5px solid #e8935a;
+  background: var(--bs-tertiary-bg, rgba(232, 147, 90, 0.08));
+  border-radius: 0 10px 10px 0;
+  padding: 0.85rem 1.15rem;
+  margin: 1.3rem 0;
+  font-size: 1.06em;
+  font-weight: 600;
+}
+
 /* 工作流「流程块」：醒目展示 研究问题 → … → 迭代（明暗主题自适应） */
 .flow-box {
   border: 1px solid var(--bs-border-color);

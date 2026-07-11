@@ -258,7 +258,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#jupyter-notebook" id="toc-jupyter-notebook" class="nav-link active" data-scroll-target="#jupyter-notebook"><span class="header-section-number">2.1</span> Jupyter Notebook</a></li>
   <li><a href="#vs-code-nbstata" id="toc-vs-code-nbstata" class="nav-link" data-scroll-target="#vs-code-nbstata"><span class="header-section-number">2.2</span> VS Code + nbstata</a></li>
   <li><a href="#copilot两个时刻" id="toc-copilot两个时刻" class="nav-link" data-scroll-target="#copilot两个时刻"><span class="header-section-number">2.3</span> Copilot：两个「时刻」</a></li>
-  <li><a href="#课堂演示要点" id="toc-课堂演示要点" class="nav-link" data-scroll-target="#课堂演示要点"><span class="header-section-number">2.4</span> 课堂演示要点</a></li>
+  <li><a href="#动手演示在-notebook-里跑通" id="toc-动手演示在-notebook-里跑通" class="nav-link" data-scroll-target="#动手演示在-notebook-里跑通"><span class="header-section-number">2.4</span> 动手演示：在 notebook 里跑通</a></li>
   <li><a href="#延伸阅读" id="toc-延伸阅读" class="nav-link" data-scroll-target="#延伸阅读"><span class="header-section-number">2.5</span> 延伸阅读</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/lianxhcn/stata-ai/edit/main/lectures/02_vscode_nbstata.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lianxhcn/stata-ai/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -285,9 +285,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<blockquote class="blockquote">
-<p><strong>本讲回答一个问题</strong>：为什么要把笔记、代码和结果放进同一个 notebook，AI 又在其中扮演什么角色？</p>
-</blockquote>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+本讲要回答的问题
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>为什么要把笔记、代码和结果放进同一个 notebook，AI 又在其中扮演什么角色？</p>
+</div>
+</div>
 <section id="jupyter-notebook" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="jupyter-notebook"><span class="header-section-number">2.1</span> Jupyter Notebook</h2>
 <p>第 1 讲我们在 Stata 自带界面里跑通了一段 dofile。这一讲换一个场景：在 VS Code 里新建一个 <strong>notebook</strong> 文件（<code>.ipynb</code>），把”写笔记”和”跑代码”放进同一个文件。</p>
@@ -302,7 +312,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="vs-code-nbstata" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="vs-code-nbstata"><span class="header-section-number">2.2</span> VS Code + nbstata</h2>
 <p>要在 notebook 里运行 Stata 代码，靠的是一个叫 <strong>nbstata</strong> 的 Jupyter 内核。把它和 VS Code 搭配起来，好处很直接：<strong>一个编辑器</strong>里就能同时写笔记、跑多种语言的代码，而 Copilot 和后面几讲要用的 Agent 也都在同一个环境中协作，不必在多个软件之间来回切换。</p>
-<p>安装并不复杂（<strong>注意</strong>：nbstata 目前只支持 Python 3.11 及以下，需单独建一个 3.11 环境）：本仓库 <a href="../settings.html">环境配置</a> 的第 2 节给了最简步骤；配置详情参见 <a href="https://lianxhcn.github.io/ds2026">ds2026 · 配置说明</a> 第 2–4 章。</p>
+<p>安装并不复杂（<strong>注意</strong>：nbstata 目前只支持 Python 3.11 及以下，需单独建一个 3.11 环境）：本仓库 <a href="../settings.html">环境配置</a> 的第 2 节给了最简步骤；若需完整流程，参见 <a href="https://lianxhcn.github.io/ds2026">ds2026 · 配置说明</a> 第 2–4 章。</p>
 <p>装好后，在 VS Code 新建一个 <code>.ipynb</code>，右上角内核选 <strong>Stata</strong>，就能在代码单元格里直接写：</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">sysuse</span> auto, <span class="kw">clear</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">summarize</span> price mpg</span>
@@ -311,18 +321,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="copilot两个时刻" class="level2" data-number="2.3">
 <h2 data-number="2.3" class="anchored" data-anchor-id="copilot两个时刻"><span class="header-section-number">2.3</span> Copilot：两个「时刻」</h2>
-<p>真正让人眼前一亮的，是 Copilot 在旁边的介入。课上我会现场新建一个 notebook 给大家演示；讲义里先说清两个最值得看的「Copilot 时刻」。</p>
-<p><strong>时刻一：写一行注释，让它生成代码。</strong> 你先写一句自然语言注释：</p>
+<p>在 notebook 里写 Stata 代码时，Copilot 会在旁边给出补全建议。最值得体会的是两个「时刻」。</p>
+<p><strong>时刻一：写一行注释，让它生成代码。</strong> 先写一句自然语言注释：</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>* 载入 auto 数据，按 foreign 分组，计算 price 的均值并画柱状图</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>回车后，Copilot 往往会在下方浮现出灰色的补全建议，按 <code>Tab</code> 采纳，再根据实际变量名微调即可。</p>
-<p><strong>时刻二：给一段旧代码加注释。</strong> 反过来，你手上有一段没有注释、看不太懂的旧代码，选中它，让 Copilot Chat「逐行加中文注释」，它会解释每一行在做什么。这在阅读复现代码、接手旧项目时非常实用。</p>
-<p>一句话概括：<strong>注释 ⇄ 代码可以双向生成</strong>。但要守住一条底线——<strong>你仍然要看得懂每一行</strong>。Copilot 是补全助手，不替你做判断；采纳后一定要读一遍，确认变量名、选项、结果都对。</p>
+<p><strong>时刻二：给一段旧代码加注释。</strong> 反过来，手上有一段没有注释、看不太懂的旧代码，选中它，让 Copilot Chat「逐行加中文注释」，它会解释每一行在做什么。这在阅读复现代码、接手旧项目时非常实用。</p>
+<div class="keypoint">
+<p>注释 ⇄ 代码可以双向生成；但采纳之后，一定要读一遍，确认变量名、选项、结果都对——Copilot 是补全助手，不替你做判断。</p>
+</div>
 </section>
-<section id="课堂演示要点" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="课堂演示要点"><span class="header-section-number">2.4</span> 课堂演示要点</h2>
+<section id="动手演示在-notebook-里跑通" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="动手演示在-notebook-里跑通"><span class="header-section-number">2.4</span> 动手演示：在 notebook 里跑通</h2>
+<p>一次最小的演示，可以这样走一遍：</p>
 <ul>
 <li>在 VS Code 新建一个 <code>.ipynb</code>，先写一个 Markdown 单元格作笔记，再建一个 Stata 代码单元格。</li>
-<li>内核选 Stata，跑 <code>sysuse auto, clear</code> + <code>summarize</code> + <code>scatter</code>，展示结果直接显示在单元格下方。</li>
+<li>内核选 Stata，跑 <code>sysuse auto, clear</code> + <code>summarize</code> + <code>scatter</code>，结果直接显示在单元格下方。</li>
 <li><strong>Copilot 时刻一</strong>：写一行中文注释，回车触发灰色补全，<code>Tab</code> 采纳后微调。</li>
 <li><strong>Copilot 时刻二</strong>：选中一段无注释代码，用 Copilot Chat 让它逐行加中文注释。</li>
 </ul>

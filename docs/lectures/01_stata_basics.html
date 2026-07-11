@@ -221,7 +221,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#先说明界面与语法本讲不细讲" id="toc-先说明界面与语法本讲不细讲" class="nav-link active" data-scroll-target="#先说明界面与语法本讲不细讲"><span class="header-section-number">1.1</span> 先说明：界面与语法本讲不细讲</a></li>
+  <li><a href="#界面与语法从何处深入了解" id="toc-界面与语法从何处深入了解" class="nav-link active" data-scroll-target="#界面与语法从何处深入了解"><span class="header-section-number">1.1</span> 界面与语法：从何处深入了解</a></li>
   <li><a href="#为何还要学-stata" id="toc-为何还要学-stata" class="nav-link" data-scroll-target="#为何还要学-stata"><span class="header-section-number">1.2</span> 为何还要学 Stata？</a>
   <ul class="collapse">
   <li><a href="#c1-具备审查能力不要被-ai-误导" id="toc-c1-具备审查能力不要被-ai-误导" class="nav-link" data-scroll-target="#c1-具备审查能力不要被-ai-误导">C1　具备「审查能力」，不要被 AI 误导</a></li>
@@ -230,7 +230,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#c4-有些方法stata-仍有独特优势如-reghdfe" id="toc-c4-有些方法stata-仍有独特优势如-reghdfe" class="nav-link" data-scroll-target="#c4-有些方法stata-仍有独特优势如-reghdfe">C4　有些方法，Stata 仍有独特优势（如 <code>reghdfe</code>）</a></li>
   <li><a href="#c5-路径依赖复现包与合作者都在用-stata" id="toc-c5-路径依赖复现包与合作者都在用-stata" class="nav-link" data-scroll-target="#c5-路径依赖复现包与合作者都在用-stata">C5　路径依赖：复现包与合作者都在用 Stata</a></li>
   </ul></li>
-  <li><a href="#课堂演示要点" id="toc-课堂演示要点" class="nav-link" data-scroll-target="#课堂演示要点"><span class="header-section-number">1.3</span> 课堂演示要点</a></li>
+  <li><a href="#最小入口动手走一遍" id="toc-最小入口动手走一遍" class="nav-link" data-scroll-target="#最小入口动手走一遍"><span class="header-section-number">1.3</span> 最小入口：动手走一遍</a></li>
   <li><a href="#延伸阅读" id="toc-延伸阅读" class="nav-link" data-scroll-target="#延伸阅读"><span class="header-section-number">1.4</span> 延伸阅读</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/lianxhcn/stata-ai/edit/main/lectures/01_stata_basics.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lianxhcn/stata-ai/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -257,12 +257,22 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<blockquote class="blockquote">
-<p><strong>本讲回答一个问题</strong>：AI 都能帮我们写代码了，为什么还要学一点 Stata？</p>
-</blockquote>
-<section id="先说明界面与语法本讲不细讲" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="先说明界面与语法本讲不细讲"><span class="header-section-number">1.1</span> 先说明：界面与语法本讲不细讲</h2>
-<p>本讲不会逐一介绍 Stata 的窗口、菜单和语法细节——课堂上我会现场快速演示一遍，讲义正文里就不再展开。如果你希望系统地了解 Stata 的界面、工作流程和语法，推荐阅读在线书 <a href="https://lianxhcn.github.io/stata101/index.html">Stata 101</a>，尤其建议先读这三节：</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+本讲要回答的问题
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>AI 都能帮我们写代码了，为什么还要学一点 Stata？</p>
+</div>
+</div>
+<section id="界面与语法从何处深入了解" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="界面与语法从何处深入了解"><span class="header-section-number">1.1</span> 界面与语法：从何处深入了解</h2>
+<p>Stata 的窗口、菜单和语法，是使用 Stata 的基本功。若需系统了解这些内容，推荐阅读在线书 <a href="https://lianxhcn.github.io/stata101/index.html">Stata 101</a>，尤其是下面三节：</p>
 <ul>
 <li><a href="https://lianxhcn.github.io/stata101/body/B0-Stata%E6%A6%82%E8%A7%88.html">B0. Stata 概览</a></li>
 <li><a href="https://lianxhcn.github.io/stata101/body/B1-Stata%E7%95%8C%E9%9D%A2.html">B1. Stata 界面和菜单</a></li>
@@ -278,7 +288,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="为何还要学-stata" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="为何还要学-stata"><span class="header-section-number">1.2</span> 为何还要学 Stata？</h2>
 <p>写代码的门槛正在被 AI 拉低：你说一句话，它就给你一段 Stata 代码。既然如此，为什么还要花时间学 Stata？</p>
-<p>因为<strong>「让 AI 写」和「看懂、用好、检查」是两回事</strong>。下面这张图是一项实证研究的典型流程——从数据到结果，每一步都需要你做判断，而不是把方向也交给 AI。</p>
+<p>因为<strong>「让 AI 写」和「看懂、用好、检查」是两回事</strong>。下面这张图是一项实证研究的典型流程——从数据到结果，每一步都需要研究者自己做判断，而不是把方向也交给 AI。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/Stata_intro_Emplical_procedure001.png" class="img-fluid figure-img"></p>
@@ -288,15 +298,15 @@ ul.task-list li input[type="checkbox"] {
 <p>具体来说，在 AI 时代仍值得懂一点 Stata，有以下五个理由。</p>
 <section id="c1-具备审查能力不要被-ai-误导" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="c1-具备审查能力不要被-ai-误导">C1　具备「审查能力」，不要被 AI 误导</h3>
-<p>AI 生成的 Stata 代码常常”看起来对、也跑得动，结果却不对”——变量名猜错、选项用反、把跨个体的滞后算到了别的单位、把相关关系写成因果。只有你自己懂一点 Stata，才能读懂它到底写了什么、判断结果是否合理。<strong>AI 是助手，最终把关的人是你。</strong></p>
+<p>AI 生成的 Stata 代码常常”看起来对、也跑得动，结果却不对”——变量名猜错、选项用反、把跨个体的滞后算到了别的单位、把相关关系写成因果。只有自己懂一点 Stata，才能读懂它到底写了什么、判断结果是否合理。</p>
 </section>
 <section id="c2-能自行搜索新命令查看帮助文件" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="c2-能自行搜索新命令查看帮助文件">C2　能自行搜索新命令、查看帮助文件</h3>
-<p>遇到不认识的命令，你要能 <code>help</code> 一下看语法、<code>findit</code> 一下找方法、看懂它来自官方还是 SSC。有了这个能力，你才判断得出 AI 推荐的命令靠不靠谱、有没有更合适的替代。这也是”最小入口”里最该练的一手。</p>
+<p>遇到不认识的命令，能 <code>help</code> 一下看语法、<code>findit</code> 一下找方法、看懂它来自官方还是 SSC。有了这个能力，才判断得出 AI 推荐的命令靠不靠谱、有没有更合适的替代。</p>
 </section>
 <section id="c3-知道-stata-安装路径与-profile.do-机制" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="c3-知道-stata-安装路径与-profile.do-机制">C3　知道 Stata 安装路径与 profile.do 机制</h3>
-<p>这一条和”用 Agent”直接相关：当你让 Claude Code、Codex 或 MCP 工具去调用、配置 Stata 时，<strong>必须告诉它 Stata 的安装路径</strong>，以及 <code>profile.do</code> 的存在——这是 Stata 启动时自动运行的配置文件，可能会改变工作目录、加载外部命令路径。不了解这套机制，Agent 配置常常莫名卡住（我们在准备本课的 demo 时就踩过 <code>profile.do</code> 悄悄切换工作目录的坑）。</p>
+<p>这一点和”用 Agent”直接相关：让 Claude Code、Codex 或 MCP 工具去调用、配置 Stata 时，<strong>必须告诉它 Stata 的安装路径</strong>，以及 <code>profile.do</code> 的存在——这是 Stata 启动时自动运行的配置文件，可能会改变工作目录、加载外部命令路径。不了解这套机制，Agent 配置常常莫名卡住。</p>
 </section>
 <section id="c4-有些方法stata-仍有独特优势如-reghdfe" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="c4-有些方法stata-仍有独特优势如-reghdfe">C4　有些方法，Stata 仍有独特优势（如 <code>reghdfe</code>）</h3>
@@ -304,23 +314,22 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="c5-路径依赖复现包与合作者都在用-stata" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="c5-路径依赖复现包与合作者都在用-stata">C5　路径依赖：复现包与合作者都在用 Stata</h3>
-<p>大量顶刊论文的复现包是用 Stata 写的；你的导师、师兄师姐、合作者也很可能多年都在用 Stata。想读懂别人的代码、复现别人的结果、和团队顺畅协作，就绕不开它。会一点 Stata，是融入现有学术生产链的现实需要。</p>
-<hr>
-<p>以上只是要点。关于”AI 时代为什么还要懂一点 Stata”的更完整讨论，参阅：</p>
-<ul>
-<li>丁闪闪, 2026, <a href="https://www.lianxh.cn/details/1833.html">Stata：AI 写代码时代，为什么还要懂一点？</a>.</li>
-</ul>
+<p>大量顶刊论文的复现包是用 Stata 写的；导师、师兄师姐、合作者也很可能多年都在用 Stata。想读懂别人的代码、复现别人的结果、和团队顺畅协作，就绕不开它。会一点 Stata，是融入现有学术生产链的现实需要。</p>
+<div class="keypoint">
+<p>一句话：AI 让你把代码写得更快，而懂一点 Stata，才让你把结果做得更对。</p>
+</div>
+<p>关于”AI 时代为什么还要懂一点 Stata”的更完整讨论，参阅：丁闪闪, 2026, <a href="https://www.lianxh.cn/details/1833.html">Stata：AI 写代码时代，为什么还要懂一点？</a>。</p>
 </section>
 </section>
-<section id="课堂演示要点" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="课堂演示要点"><span class="header-section-number">1.3</span> 课堂演示要点</h2>
-<p>课上我会在 Stata 里快速走一遍”最小入口”的几个动作（讲义不展开，细节见上面的 Stata 101 链接）：</p>
+<section id="最小入口动手走一遍" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="最小入口动手走一遍"><span class="header-section-number">1.3</span> 最小入口：动手走一遍</h2>
+<p>用 Stata 做一次分析，最小的一套动作如下（操作细节见上文 Stata 101 链接）：</p>
 <ul>
-<li>认识四个窗口，用 <code>sysuse auto, clear</code> 载入数据，在变量窗口看结构。</li>
-<li>新建 <code>01_first.do</code>，写三行 <code>use → summarize → regress</code>，<code>do</code> 一键跑通。</li>
-<li><code>help regress</code> 读语法行与一个选项；<code>findit</code> 一个关键词演示模糊搜索。</li>
-<li><code>ssc install winsor2, replace</code> 装一个外部命令，<code>help winsor2</code> 验证。</li>
-<li>一句话讲相对路径：把绝对路径改成 <code>./data/...</code>，强调「永远用项目文件夹 + 相对路径」（为第 4 讲的 Agent 演示埋伏笔）。</li>
+<li>认识四个窗口，用 <code>sysuse auto, clear</code> 载入数据，在变量窗口查看数据结构。</li>
+<li>新建 <code>01_first.do</code>，写三行 <code>use → summarize → regress</code>，用 <code>do</code> 一键跑通——<strong>能重跑、能分享</strong>，正是 dofile 相对于”手敲命令”的根本优势。</li>
+<li><code>help regress</code> 读语法行与一个选项；<code>findit</code> 一个关键词做模糊搜索。</li>
+<li><code>ssc install winsor2, replace</code> 安装一个外部命令，<code>help winsor2</code> 验证。</li>
+<li>路径只记一句话：<strong>永远用项目文件夹 + 相对路径</strong>（把绝对路径改成 <code>./data/...</code>）。这也是第 4 讲里 Agent 能接管整个项目的前提。</li>
 </ul>
 </section>
 <section id="延伸阅读" class="level2" data-number="1.4">

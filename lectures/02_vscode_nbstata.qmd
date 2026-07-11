@@ -2,7 +2,10 @@
 title: "VS Code + nbstata + Copilot"
 ---
 
-> **本讲回答一个问题**：为什么要把笔记、代码和结果放进同一个 notebook，AI 又在其中扮演什么角色？
+::: {.callout-note icon=false}
+## 本讲要回答的问题
+为什么要把笔记、代码和结果放进同一个 notebook，AI 又在其中扮演什么角色？
+:::
 
 ## Jupyter Notebook
 
@@ -19,7 +22,7 @@ title: "VS Code + nbstata + Copilot"
 
 要在 notebook 里运行 Stata 代码，靠的是一个叫 **nbstata** 的 Jupyter 内核。把它和 VS Code 搭配起来，好处很直接：**一个编辑器**里就能同时写笔记、跑多种语言的代码，而 Copilot 和后面几讲要用的 Agent 也都在同一个环境中协作，不必在多个软件之间来回切换。
 
-安装并不复杂（**注意**：nbstata 目前只支持 Python 3.11 及以下，需单独建一个 3.11 环境）：本仓库 [环境配置](../settings.qmd) 的第 2 节给了最简步骤；配置详情参见 [ds2026 · 配置说明](https://lianxhcn.github.io/ds2026) 第 2–4 章。
+安装并不复杂（**注意**：nbstata 目前只支持 Python 3.11 及以下，需单独建一个 3.11 环境）：本仓库 [环境配置](../settings.qmd) 的第 2 节给了最简步骤；若需完整流程，参见 [ds2026 · 配置说明](https://lianxhcn.github.io/ds2026) 第 2–4 章。
 
 装好后，在 VS Code 新建一个 `.ipynb`，右上角内核选 **Stata**，就能在代码单元格里直接写：
 
@@ -33,9 +36,9 @@ scatter price mpg
 
 ## Copilot：两个「时刻」
 
-真正让人眼前一亮的，是 Copilot 在旁边的介入。课上我会现场新建一个 notebook 给大家演示；讲义里先说清两个最值得看的「Copilot 时刻」。
+在 notebook 里写 Stata 代码时，Copilot 会在旁边给出补全建议。最值得体会的是两个「时刻」。
 
-**时刻一：写一行注释，让它生成代码。** 你先写一句自然语言注释：
+**时刻一：写一行注释，让它生成代码。** 先写一句自然语言注释：
 
 ```stata
 * 载入 auto 数据，按 foreign 分组，计算 price 的均值并画柱状图
@@ -43,14 +46,18 @@ scatter price mpg
 
 回车后，Copilot 往往会在下方浮现出灰色的补全建议，按 `Tab` 采纳，再根据实际变量名微调即可。
 
-**时刻二：给一段旧代码加注释。** 反过来，你手上有一段没有注释、看不太懂的旧代码，选中它，让 Copilot Chat「逐行加中文注释」，它会解释每一行在做什么。这在阅读复现代码、接手旧项目时非常实用。
+**时刻二：给一段旧代码加注释。** 反过来，手上有一段没有注释、看不太懂的旧代码，选中它，让 Copilot Chat「逐行加中文注释」，它会解释每一行在做什么。这在阅读复现代码、接手旧项目时非常实用。
 
-一句话概括：**注释 ⇄ 代码可以双向生成**。但要守住一条底线——**你仍然要看得懂每一行**。Copilot 是补全助手，不替你做判断；采纳后一定要读一遍，确认变量名、选项、结果都对。
+::: {.keypoint}
+注释 ⇄ 代码可以双向生成；但采纳之后，一定要读一遍，确认变量名、选项、结果都对——Copilot 是补全助手，不替你做判断。
+:::
 
-## 课堂演示要点
+## 动手演示：在 notebook 里跑通
+
+一次最小的演示，可以这样走一遍：
 
 - 在 VS Code 新建一个 `.ipynb`，先写一个 Markdown 单元格作笔记，再建一个 Stata 代码单元格。
-- 内核选 Stata，跑 `sysuse auto, clear` + `summarize` + `scatter`，展示结果直接显示在单元格下方。
+- 内核选 Stata，跑 `sysuse auto, clear` + `summarize` + `scatter`，结果直接显示在单元格下方。
 - **Copilot 时刻一**：写一行中文注释，回车触发灰色补全，`Tab` 采纳后微调。
 - **Copilot 时刻二**：选中一段无注释代码，用 Copilot Chat 让它逐行加中文注释。
 

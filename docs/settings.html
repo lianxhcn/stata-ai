@@ -301,7 +301,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>本页是全站最实用的一页：把课堂演示用到的四类工具，按「装什么、怎么装、装好没」的顺序列成清单。你不必一次配齐，用到哪一节看哪一节即可。每一节末尾都有一行 <strong>✅ 配置成功的标志</strong>——只要那一步能跑通，这一节就算过关。</p>
+<p>本页是全站最实用的一页：把本课用到的四类工具，按「装什么、怎么装、装好没」的顺序列成清单。你不必一次配齐，用到哪一节看哪一节即可。每一节末尾都有一个 <strong>✅ 配置成功的标志</strong>——只要那一步能跑通，这一节就算过关。</p>
 <p>四类工具与它们的角色：</p>
 <ul>
 <li><strong>Stata 本体 + 外部命令</strong>：统计与编程环境，实证分析的主力。</li>
@@ -310,13 +310,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>Claude Code / Codex</strong>：执行型 Agent，在本地项目里读写文件、执行脚本、整理结果。</li>
 </ul>
 <blockquote class="blockquote">
-<p>更完整的软件安装（Anaconda、VS Code、Jupyter 从零安装及常见问题）不在 80 分钟课时内展开，请参考 <a href="https://lianxhcn.github.io/ds2026/">ds2026 在线书·环境配置</a> 一章。</p>
+<p>若需从零安装 Anaconda、VS Code、Jupyter（含常见问题排查），请参考 <a href="https://lianxhcn.github.io/ds2026/">ds2026 在线书·环境配置</a> 一章。</p>
 </blockquote>
 <section id="stata-本体与外部命令" class="level2">
 <h2 class="anchored" data-anchor-id="stata-本体与外部命令">Stata 本体与外部命令</h2>
 <section id="安装" class="level3">
 <h3 class="anchored" data-anchor-id="安装">安装</h3>
-<p>Stata 请通过正版渠道购买、安装（Stata 官网或授权代理）。安装要点一笔带过：记住你的安装路径（如 <code>C:\Program Files\Stata19</code>），后面配置 nbstata 时会用到。</p>
+<p>Stata 请通过正版渠道购买、安装（Stata 官网或授权代理）。安装时注意两点：</p>
+<ul>
+<li><strong>安装路径不要包含中文，也不要有空格等特殊字符</strong>（如用 <code>D:\stata19</code> 这样的纯英文路径）；</li>
+<li><strong>装完确认安装目录下有 <code>STATA.LIC</code> 文件</strong>——这是 <code>nbstata</code> 以及 Agent、MCP 等工具能正确关联到 Stata 的关键。</li>
+</ul>
+<p>记住这个安装路径，后面配置 nbstata 时会用到。更完整的说明见 <a href="https://lianxhcn.github.io/ds2026/Lecture/00-setup/01_01_install_anaconda.html#%E9%85%8D%E7%BD%AE-stata-%E7%8E%AF%E5%A2%83nbstata">ds2026 · 配置 Stata 环境（nbstata）</a>。</p>
 </section>
 <section id="外部命令ssc-install" class="level3">
 <h3 class="anchored" data-anchor-id="外部命令ssc-install">外部命令：<code>ssc install</code></h3>
@@ -340,9 +345,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <blockquote class="blockquote">
 <p>延伸阅读：<a href="https://www.lianxh.cn/details/1.html">Stata: 外部命令的搜索、安装与使用</a>。</p>
 </blockquote>
-<blockquote class="blockquote">
-<p><strong>✅ 配置成功的标志</strong>：在 Stata 中运行 <code>ssc install winsor2, replace</code> 能装上，且 <code>help winsor2</code> 能打开帮助文件。</p>
-</blockquote>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+✅ 配置成功的标志
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>在 Stata 中运行 <code>ssc install winsor2, replace</code> 能装上，且 <code>help winsor2</code> 能打开帮助文件。</p>
+</div>
+</div>
 </section>
 </section>
 <section id="vs-code-jupyter-nbstata" class="level2">
@@ -369,11 +384,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>完整的 Anaconda / 虚拟环境 / nbstata 配置流程（含镜像加速、报错排查、可直接粘给 AI 的提示词），见 ds2026 在线书：<a href="https://lianxhcn.github.io/ds2026/Lecture/00-setup/01_01_install_anaconda.html">Python 安装</a>、<a href="https://lianxhcn.github.io/ds2026/Lecture/00-setup/01_02_jupyter_notebook.html">Jupyter Notebook 使用</a>、<a href="https://lianxhcn.github.io/ds2026/Lecture/00-setup/01_03_install_FAQs.html">安装常见问题</a>。</p>
 <!-- TODO: 请老师验证本机 nbstata 安装步骤，尤其 --stata-dir 路径与 Python 版本 -->
 </blockquote>
-<blockquote class="blockquote">
-<p><strong>✅ 配置成功的标志</strong>：在 VS Code 的 notebook 中选中 Stata 内核，运行下面两行有正常输出：</p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+✅ 配置成功的标志
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>在 VS Code 的 notebook 中选中 Stata 内核，运行下面两行有正常输出：</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">sysuse</span> auto, <span class="kw">clear</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="kw">summarize</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</blockquote>
+</div>
+</div>
 </section>
 </section>
 <section id="github-copilot" class="level2">
@@ -392,14 +417,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>新建一个 <code>.do</code> 或 notebook 的 Stata cell，输入一行注释后回车，例如：</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>* 载入 auto 数据并对 price 做描述性统计</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>正常情况下，光标下方会浮现<strong>灰色的补全建议</strong>，按 <code>Tab</code> 采纳。</p>
-<blockquote class="blockquote">
-<p><strong>✅ 配置成功的标志</strong>：写下一行注释后，编辑器出现灰色的 Copilot 补全建议。</p>
-</blockquote>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+✅ 配置成功的标志
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>写下一行注释后，编辑器出现灰色的 Copilot 补全建议。</p>
+</div>
+</div>
 </section>
 </section>
 <section id="claude-code-codex" class="level2">
 <h2 class="anchored" data-anchor-id="claude-code-codex">Claude Code / Codex</h2>
-<p>这两个是<strong>执行型 Agent</strong>：在你的项目文件夹里读写文件、运行脚本、整理结果。课堂 M4 的演示就靠它。</p>
+<p>这两个是<strong>执行型 Agent</strong>：在你的项目文件夹里读写文件、运行脚本、整理结果。第 4 讲的演示就靠它。</p>
 <section id="安装与首次运行windows" class="level3">
 <h3 class="anchored" data-anchor-id="安装与首次运行windows">安装与首次运行（Windows）</h3>
 <ol type="1">
@@ -416,9 +451,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <blockquote class="blockquote">
 <p>更系统的安装与协同实践，见公开课录播：<a href="https://www.lianxh.cn/details/1767.html">Claude Code 协同 Stata：环境配置与应用实践</a>。</p>
 </blockquote>
-<blockquote class="blockquote">
-<p><strong>✅ 配置成功的标志</strong>：在某个项目文件夹内启动 Claude Code 或 Codex 后，它能正确列出该文件夹中的文件清单。</p>
-</blockquote>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+✅ 配置成功的标志
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>在某个项目文件夹内启动 Claude Code 或 Codex 后，它能正确列出该文件夹中的文件清单。</p>
+</div>
+</div>
 <hr>
 <p><a href="https://www.lianxh.cn">主页</a> | <a href="https://www.lianxh.cn/PX.html">课程</a> | <a href="https://www.lianxh.cn/blogs/all.html">推文</a> | <a href="https://www.lianxh.cn/share.html">资料</a></p>
 
