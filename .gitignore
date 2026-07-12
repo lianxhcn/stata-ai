@@ -10,11 +10,12 @@ Thumbs.db
 #     （体积大、且那三个仓库本身已公开，内容重复）
 _materials/harvest/
 
-# === images/：只提交封面与 logo，其余（草稿版本、海报、二维码、pptx）不入库 ===
-#     海报/二维码的渲染副本已在 docs/images/ 中，线上站点正常显示。
+# === images/：提交封面、logo、海报、二维码；其余（草稿版本、pptx）不入库 ===
 images/*
 !images/book-front.png
 !images/book-logo.png
+!images/poster-2026summer.png
+!images/qrcode-2026summer.png
 
 # 说明：CLAUDE.md、working/、_task/、_materials/（harvest 除外）现在有意公开，
 #       用于向学员展示"如何借助 AI Agent 制作本仓库"的完整过程。
