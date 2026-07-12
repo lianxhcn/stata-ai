@@ -5,13 +5,13 @@ number-sections: false
 
 # 🏠 前言 {.unnumbered}
 
-<img src="images/book-front.png" width="450"/>
+<a href="https://www.lianxh.cn/open2025.html"><img src="images/book-front.png" width="450"/></a>
 
 > **公开课一：Stata 简介与 AI 辅助实证**
 >
 > - 时间：2026 年 7 月 12 日 19:30–21:00（含 10 分钟答疑）
 > - 主讲：连玉君（中山大学）
-> - 直播 / 回放入口：会在微信群中发布
+> - 直播 / 回放入口：会在微信群中发布 [查看所有公开课](https://www.lianxh.cn/open2025.html)
 
 
 
