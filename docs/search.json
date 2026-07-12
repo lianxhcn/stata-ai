@@ -657,5 +657,27 @@
       "附录",
       "<span class='chapter-number'>D</span>  <span class='chapter-title'>延伸阅读清单</span>"
     ]
+  },
+  {
+    "objectID": "appendix/E_agent_env_setup.html",
+    "href": "appendix/E_agent_env_setup.html",
+    "title": "附录 E — 把环境配置交给 Agent（真实示例）",
+    "section": "",
+    "text": "E.1 用法三步\n本附录收录两份真实的任务说明书——它们是本仓库作者当时写给 Claude Code、让它在本机诊断并绑定 Python / Stata / nbstata 环境的原始文档。把它们当模板：填上你自己的路径，整段发给 Claude Code / Codex，让 Agent 照着帮你诊断、配置、验证。这本身就是本课”用 AI 辅助配置”理念的一次真实演练。\n两份原始文档（在仓库中查看 / 下载）：_materials/Python-nbstata-setting/",
+    "crumbs": [
+      "附录",
+      "<span class='chapter-number'>E</span>  <span class='chapter-title'>把环境配置交给 Agent（真实示例）</span>"
+    ]
+  },
+  {
+    "objectID": "appendix/E_agent_env_setup.html#用法三步",
+    "href": "appendix/E_agent_env_setup.html#用法三步",
+    "title": "附录 E — 把环境配置交给 Agent（真实示例）",
+    "section": "",
+    "text": "先装好基础软件（见上方 note）——Anaconda / VS Code / Jupyter / Stata。\n查出并替换路径：把文档里作者的值换成你自己的，至少这三处——Stata 安装目录、conda 环境名、Stata edition（mp / se / be）。\n交给 Agent：在你的项目文件夹启动 Claude Code / Codex，把改好的文档发给它，让它按文档诊断 → 安装并配置 nbstata → 验证。\n\n\n\n\n\n\n\n✅ 配置成功的标志\n\n\n\n在 notebook 里选 Stata 内核，运行 sysuse auto, clear + summarize 有正常输出；在 nbstata 里运行 %status，显示的 stata_dir 正是你自己的 Stata 安装目录。\n\n\n\n这两份文档也是”一份清楚的任务说明书长什么样”的好样例，可与 第 3 讲 和 附录 A 对照阅读。",
+    "crumbs": [
+      "附录",
+      "<span class='chapter-number'>E</span>  <span class='chapter-title'>把环境配置交给 Agent（真实示例）</span>"
+    ]
   }
 ]

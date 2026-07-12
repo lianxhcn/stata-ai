@@ -42,6 +42,7 @@ book:
     - appendix/B_replication.qmd
     - appendix/C_more_usage.qmd
     - appendix/D_reading_list.qmd
+    - appendix/E_agent_env_setup.qmd
 
 format:
   html:

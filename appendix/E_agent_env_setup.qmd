@@ -1,0 +1,40 @@
+---
+title: "把环境配置交给 Agent（真实示例）"
+---
+
+::: {.callout-note icon=false}
+## 这一附录给谁看
+给**已经装好基础软件**、想让 AI 帮忙把 `nbstata` 绑定到自己 Stata 的同学。它**不是**从零安装指南——从零安装 Anaconda / VS Code / Jupyter，请看 [环境配置](../settings.qmd) 与 [ds2026 第 2–4 章](https://lianxhcn.github.io/ds2026/)（那里有截图、镜像加速和常见问题，专为零基础准备）。
+:::
+
+本附录收录两份**真实的任务说明书**——它们是本仓库作者当时写给 Claude Code、让它在本机诊断并绑定 Python / Stata / `nbstata` 环境的原始文档。把它们当**模板**：填上你自己的路径，整段发给 Claude Code / Codex，让 Agent 照着帮你诊断、配置、验证。这本身就是本课"用 AI 辅助配置"理念的一次真实演练。
+
+两份原始文档（在仓库中查看 / 下载）：[`_materials/Python-nbstata-setting/`](https://github.com/lianxhcn/stata-ai/tree/main/_materials/Python-nbstata-setting)
+
+- `本地Python环境和Stata-nbstata配置说明.md`——面向"环境已装好、只是没被 Agent 正确找到"的诊断与绑定；
+- `claude-code-python-stata-nbstata-setup.md`——更完整的路径规则、`nbstata.conf` 模板、验证命令与"不要做的事"安全清单。
+
+::: {.callout-warning}
+## ⚠️ 一定要改成你自己的路径！
+文档里的 `D:\stata19`、`C:\Users\Administrator\.conda\envs\dml050`、edition `mp` 等，都是**作者本机**的值。**照抄一定失败**——请先查出你自己电脑上的对应路径再替换。
+
+**怎么查自己的路径？**
+
+- **Stata 安装目录**：打开 Stata，命令窗口输入 `sysdir`，看 `STATA:` 那一行；或右键桌面 Stata 图标 →「属性」→「打开文件所在的位置」。
+- **Python / conda 环境**：打开 Anaconda Prompt，`conda env list` 会列出所有环境及其路径；进入某个环境后 `python -c "import sys; print(sys.executable)"` 可看到 Python 可执行文件位置。
+- **最省事、也最贴合本课**：直接**让 Agent 帮你找**——在项目里启动 Claude Code / Codex，让它运行 `conda env list`、`where python`、并在 Stata 里跑 `sysdir`，把发现的路径列给你，你确认哪个正确即可（比人工搜索更快，也避免它猜错）。
+- （备选）用 [Everything](https://www.voidtools.com/) 搜索 `StataMP-64.exe`、`python.exe` 等文件名，也能定位，但通常不如上面几种直接。
+:::
+
+## 用法三步
+
+1. **先装好基础软件**（见上方 note）——Anaconda / VS Code / Jupyter / Stata。
+2. **查出并替换路径**：把文档里作者的值换成你自己的，至少这三处——Stata 安装目录、conda 环境名、Stata edition（`mp` / `se` / `be`）。
+3. **交给 Agent**：在你的项目文件夹启动 Claude Code / Codex，把改好的文档发给它，让它按文档**诊断 → 安装并配置 `nbstata` → 验证**。
+
+::: {.callout-tip icon=false}
+## ✅ 配置成功的标志
+在 notebook 里选 **Stata** 内核，运行 `sysuse auto, clear` + `summarize` 有正常输出；在 `nbstata` 里运行 `%status`，显示的 `stata_dir` 正是你自己的 Stata 安装目录。
+:::
+
+> 这两份文档也是"一份清楚的任务说明书长什么样"的好样例，可与 [第 3 讲](../lectures/03_ai_vs_agent.qmd) 和 [附录 A](A_prompt_templates.qmd) 对照阅读。
