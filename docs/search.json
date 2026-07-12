@@ -484,12 +484,56 @@
   {
     "objectID": "appendix/B_replication.html",
     "href": "appendix/B_replication.html",
-    "title": "附录 B — 论文复现全记录",
+    "title": "附录 B — 用 Agent 复现一篇论文",
     "section": "",
-    "text": "本附录记录一次完整的论文复现——从拿到一个「一篇 PDF + 一个 dofile + 一份数据」的复现包开始，如何借助 Agent 把它跑起来、并逐步核对结果与论文是否一致。\n\n\n\n\n\n\n施工中\n\n\n\n本附录将在公开课后 3 日内补充完整的复现全记录（含每一步的任务说明、Agent 产出、diff 与运行日志、以及与论文原表的对照）。复现所用的任务说明书骨架，可先参考 附录 A · 场景模板二：论文复现。",
+    "text": "B.1 四步流程\n很多经管论文的复现包并不复杂——一篇 PDF、一个（或几个）dofile、一份数据（Energy Economics 等期刊的复现包常常就是这样）。真正的难点不在跑代码，而在读懂项目结构、理顺运行顺序、核对结果与论文是否一致。这一节给出一套用 Agent 复现论文的通用流程。\n第一步，先诊断，不要改。 让 Agent 先读 PDF 和代码，弄清：主程序是哪个、脚本按什么顺序运行、路径是否写死在作者电脑上、缺哪些外部命令、哪个脚本生成哪张表 / 图。第一条指令永远是”先诊断、列计划，不要动文件”。\n第二步，让它给一份复现路线图。 产出 reproduce_plan.md，把运行顺序、依赖、每步产物写清楚，你先审一遍再放行。\n第三步，逐脚本复跑。 把绝对路径改成相对路径、补装缺失的外部命令、逐个脚本运行，全程留 log。发现报错就带着 log 回到 Agent，一步步修。\n第四步，逐表核对。 把复现出的表格、图形与论文原文逐一对照，记录一致 / 不一致，不一致的要追因（数据版本？样本口径？随机种子？）。",
     "crumbs": [
       "附录",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>论文复现全记录</span>"
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>用 Agent 复现一篇论文</span>"
+    ]
+  },
+  {
+    "objectID": "appendix/B_replication.html#四步流程",
+    "href": "appendix/B_replication.html#四步流程",
+    "title": "附录 B — 用 Agent 复现一篇论文",
+    "section": "",
+    "text": "论文复现\n\n先诊断（不改文件）→出复现路线图→逐脚本复跑→逐表核对",
+    "crumbs": [
+      "附录",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>用 Agent 复现一篇论文</span>"
+    ]
+  },
+  {
+    "objectID": "appendix/B_replication.html#一份可直接用的开场提示词",
+    "href": "appendix/B_replication.html#一份可直接用的开场提示词",
+    "title": "附录 B — 用 Agent 复现一篇论文",
+    "section": "B.2 一份可直接用的开场提示词",
+    "text": "B.2 一份可直接用的开场提示词\n\n\n\n\n\n\nNote\n\n\n\n进入复现项目文件夹启动 Claude Code / Codex 后，第一条可以这样说：\n请检查这个论文复现项目。目标：让别人下载后能从原始数据开始，\n复现论文的描述性统计、主回归表和主要图形。\n\n请先不要修改任何文件，先说明：\n- 主程序是哪个、脚本按什么顺序运行\n- 路径是否写死在作者电脑上、缺哪些外部命令\n- 哪个脚本生成描述性统计 / 主回归表 / 主要图形\n\n然后输出一份复现路线图（reproduce_plan.md），等我确认后再动手。\n\n\n完整的任务说明书骨架见 附录 A · 场景模板二：论文复现。",
+    "crumbs": [
+      "附录",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>用 Agent 复现一篇论文</span>"
+    ]
+  },
+  {
+    "objectID": "appendix/B_replication.html#复现自查清单",
+    "href": "appendix/B_replication.html#复现自查清单",
+    "title": "附录 B — 用 Agent 复现一篇论文",
+    "section": "B.3 复现自查清单",
+    "text": "B.3 复现自查清单\n\n从原始数据能一键跑到最终结果（不依赖任何中间文件）；\n路径全部相对化，换台电脑也能跑；\n外部命令依赖已列出且可安装（ssc install ...）；\n每一张表、每一张图都能对应到论文中的具体位置；\n有一份 reproduce_log.md，记录每步做了什么、结果是否与论文一致。",
+    "crumbs": [
+      "附录",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>用 Agent 复现一篇论文</span>"
+    ]
+  },
+  {
+    "objectID": "appendix/B_replication.html#延伸阅读",
+    "href": "appendix/B_replication.html#延伸阅读",
+    "title": "附录 B — 用 Agent 复现一篇论文",
+    "section": "B.4 延伸阅读",
+    "text": "B.4 延伸阅读\n\n社会科学研究复现包中的自述文档模板\n代码审计：如何从源头确保你的论文可复现？\nEJD 平台：13000 篇顶刊论文的复现数据和代码\n\n\n\n一次真实论文的完整复现实录（含截图、diff、与论文原表的逐项对照）将在课后补充到这里。",
+    "crumbs": [
+      "附录",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>用 Agent 复现一篇论文</span>"
     ]
   },
   {
@@ -497,7 +541,18 @@
     "href": "appendix/C_more_usage.html",
     "title": "附录 C — 更多用法",
     "section": "",
-    "text": "C.1 C.1 模拟分析：自己造数据检验方法\n本附录汇集几类因课时有限未及展开的用法，供课后延伸尝试。三个小节的完整演示（含截图）将在课后陆续补充。\n当真值已知时，模拟数据是检验估计量、也是教学演示的利器。做法是先写清数据生成过程（DGP），再用不同方法估计、与真值对照。demo 里 TWFE vs csdid/jwdid vs 真值的对照表就来自这一思路。任务说明书骨架见 附录 A · 场景模板四。",
+    "text": "C.1 C.1 模拟分析：自己造数据检验方法\n本附录汇集几类因课时有限未及展开的用法。每节都给出一段可直接复制的提示词，课后即可自己尝试。\n当真值已知时，模拟数据是检验估计量、也是教学演示的利器。做法是：先写清数据生成过程（DGP），再用不同方法估计，最后和真值对照——谁离真值近、谁偏得多，一目了然。本课 demo 里 TWFE vs csdid / jwdid vs 真值的对照表，就来自这一思路。\n怎么读对照表：重点看各估计量与”真值”列的距离。若 TWFE 明显偏离、而 csdid / jwdid 贴近真值，就直观说明了：在交叠处理、效应异质的场景下，为什么要改用现代 DID 方法。完整模板见 附录 A · 场景模板四。",
+    "crumbs": [
+      "附录",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>更多用法</span>"
+    ]
+  },
+  {
+    "objectID": "appendix/C_more_usage.html#c.1-模拟分析自己造数据检验方法",
+    "href": "appendix/C_more_usage.html#c.1-模拟分析自己造数据检验方法",
+    "title": "附录 C — 更多用法",
+    "section": "",
+    "text": "Note\n\n\n\n# 任务：模拟数据并对比估计量\n\n## 设定\n- DGP：&lt;个体数、时期数、处理时点；真实处理效应 τ=…&gt;\n- 偏误来源：&lt;如 交叠处理 + 异质处理效应&gt;\n\n## 输出\n- dgp/simulate.do：生成模拟数据（固定随机种子，可复现）\n- code/compare.do：分别用 TWFE、csdid、jwdid 估计\n- outputs/compare.md：一张对照表（各估计量 vs 真值），并一句话总结谁更接近真值\n\n## 要求\n- 对照表要单列\"真值\"一列\n- 先说明 DGP 与对比方案，我确认后再执行",
     "crumbs": [
       "附录",
       "<span class='chapter-number'>C</span>  <span class='chapter-title'>更多用法</span>"
@@ -508,7 +563,7 @@
     "href": "appendix/C_more_usage.html#c.2-让-ai-写讲义把新概念学明白",
     "title": "附录 C — 更多用法",
     "section": "C.2 C.2 让 AI 写讲义：把新概念学明白",
-    "text": "C.2 C.2 让 AI 写讲义：把新概念学明白\n想弄懂一个新方法时，可以让 AI 结合可运行的 Stata 例子，生成一份自学讲义：一句话说清它解决什么问题、与传统做法的区别、一个最小可运行例子、结果怎么读、常见误用。任务说明书骨架见 附录 A · 场景模板三。",
+    "text": "C.2 C.2 让 AI 写讲义：把新概念学明白\n想弄懂一个新方法时，与其干读公式，不如让 AI 结合一个可运行的 Stata 例子，替你生成一份自学讲义：一句话说清它解决什么问题、与传统做法的区别、一个最小可运行例子、结果怎么读、常见误用。\n\n\n\n\n\n\nNote\n\n\n\n# 任务：生成一份 &lt;方法名，如 交叠 DID&gt; 的自学讲义\n\n## 目标\n面向已掌握 OLS 的读者，讲清 &lt;方法名&gt; 的直觉、适用条件与 Stata 实现。\n\n## 输出：notes/&lt;方法名&gt;.md，包含\n1. 一句话：它解决什么问题、什么时候该用\n2. 与传统做法（如 TWFE）的关键区别（讲直觉，不堆公式）\n3. 一个最小可运行的 Stata 例子（用 sysuse 或模拟数据），配中文注释\n4. 结果怎么读：看哪张表、哪个系数、哪张图\n5. 三条常见误用 + 延伸阅读\n\n## 要求\n- 例子必须能在 Stata 中跑通；用到的外部命令注明 ssc install\n- 先给提纲，我确认后再展开\n\n\n拿到初稿后别急着全盘接受——挑一两处按它的例子自己在 Stata 里跑一遍，确认结论站得住，再纳入自己的笔记。完整模板见 附录 A · 场景模板三。",
     "crumbs": [
       "附录",
       "<span class='chapter-number'>C</span>  <span class='chapter-title'>更多用法</span>"
@@ -519,7 +574,7 @@
     "href": "appendix/C_more_usage.html#c.3-从大压缩包里提取数据",
     "title": "附录 C — 更多用法",
     "section": "C.3 C.3 从大压缩包里提取数据",
-    "text": "C.3 C.3 从大压缩包里提取数据\n面对动辄几个 G 的复现包或数据压缩包，可以让 Agent 帮你先摸清目录结构、定位主程序和目标数据文件，再按需解压和抽取，而不必一次性全部展开。",
+    "text": "C.3 C.3 从大压缩包里提取数据\n顶刊复现包或数据集动辄几个 G，一次性全部解压既慢又占空间。更聪明的做法是：让 Agent 先摸清压缩包的目录结构、定位主程序和目标数据文件，再按需解压、抽取你真正要的那部分。\n\n\n\n\n\n\nNote\n\n\n\n# 任务：从大压缩包中定位并提取目标数据\n\n## 输入\n- archive/：一个（或多个）较大的压缩包 / 复现包\n\n## 要求（先看清，再动手）\n1. 先不要全部解压。列出压缩包的目录结构与主要文件（含大小、类型）\n2. 指出：主程序、数据处理脚本、原始数据文件分别在哪\n3. 我确认目标文件后，再只解压 / 抽取这些文件到 data/\n4. 给出一段说明：这些文件之间的关系、以及运行入口在哪\n\n\n这样既省时间也省磁盘，还顺带得到一份”项目地图”，为后续复现（见 附录 B）打好基础。\n\n\n三个小节的完整演示（含截图）将在课后陆续补充。",
     "crumbs": [
       "附录",
       "<span class='chapter-number'>C</span>  <span class='chapter-title'>更多用法</span>"
