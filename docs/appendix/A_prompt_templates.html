@@ -171,7 +171,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lectures/04_agent_workflow.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Agent 工作流：从任务说明到结果检查</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Agent 工作流</span></span></a>
   </div>
 </li>
       </ul>
@@ -233,6 +233,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#场景模板三概念学习-生成讲义" id="toc-场景模板三概念学习-生成讲义" class="nav-link" data-scroll-target="#场景模板三概念学习-生成讲义"><span class="header-section-number">A.4</span> 场景模板三：概念学习 / 生成讲义</a></li>
   <li><a href="#场景模板四模拟分析" id="toc-场景模板四模拟分析" class="nav-link" data-scroll-target="#场景模板四模拟分析"><span class="header-section-number">A.5</span> 场景模板四：模拟分析</a></li>
   <li><a href="#场景模板五让-ai-找一篇研究设计相近的论文当模板" id="toc-场景模板五让-ai-找一篇研究设计相近的论文当模板" class="nav-link" data-scroll-target="#场景模板五让-ai-找一篇研究设计相近的论文当模板"><span class="header-section-number">A.6</span> 场景模板五：让 AI 找一篇”研究设计相近”的论文当模板</a></li>
+  <li><a href="#换个风格口语化的分阶段推进" id="toc-换个风格口语化的分阶段推进" class="nav-link" data-scroll-target="#换个风格口语化的分阶段推进"><span class="header-section-number">A.7</span> 换个风格：口语化的分阶段推进</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/lianxhcn/stata-ai/edit/main/appendix/A_prompt_templates.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lianxhcn/stata-ai/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -541,6 +542,38 @@ Note
 </div>
 </div>
 <p>拿到候选清单<strong>并核实之后</strong>，把选定论文的 PDF 与复现包放进项目文件夹，按 <a href="../appendix/B_replication.html">附录 B《用 Agent 复现一篇论文》</a> 的流程让 Agent 读，产出一份”研究设计 + 数据处理路线图”，作为你自己研究的脚手架。</p>
+</section>
+<section id="换个风格口语化的分阶段推进" class="level2" data-number="A.7">
+<h2 data-number="A.7" class="anchored" data-anchor-id="换个风格口语化的分阶段推进"><span class="header-section-number">A.7</span> 换个风格：口语化的分阶段推进</h2>
+<p>前面五个模板是<strong>结构化的任务说明书</strong>，适合边界清楚的正式任务。但真实研究往往更复杂——与其一开始就让 Agent 设计一个面面俱到的大方案，不如<strong>切成几个阶段、用日常口语一段一段地交代，每跑完一段自己看一眼再继续</strong>。提示词说清大意即可，不必反复润色，一般的 AI 都能理解。</p>
+<p>下面是本课 demo 的一个分阶段示例。<strong>注意开场</strong>：想清楚”这份数据到底是为回答哪个问题而收集的”是第一位的，否则 AI 也帮不上忙。</p>
+<p><strong>开场（先讲清问题和数据）</strong></p>
+<blockquote class="blockquote">
+<p>我想搞清楚：「绿色转型试点」政策到底有没有真的提升城市的绿色创新。背景是——某国从 2016 年起分三批（2016、2018、2020）在一部分城市推行试点；我关心的结果是城市每万人绿色专利授权量。数据在 <code>01_data/</code>，字段和三张表怎么关联见 <code>01_data/README.md</code>。你先读一遍，用自己的话跟我讲讲每张表是啥、靠什么 key 关联，我确认对了再往下走。</p>
+</blockquote>
+<p><strong>第一步 · 查验清洗</strong></p>
+<blockquote class="blockquote">
+<p>帮我把这三张表先查验和清洗一下：有没有缺失、重复，字段类型对不对，城市名各表是否一致。发现的问题先列给我看，别急着改。</p>
+</blockquote>
+<p><strong>第二步 · 合并 + 描述统计</strong></p>
+<blockquote class="blockquote">
+<p>按确认的 key 合并成”城市-年份”面板，对关键变量做描述性统计；顺便说下合并前后样本量怎么变的。</p>
+</blockquote>
+<p><strong>第三步 · 探索性分析</strong></p>
+<blockquote class="blockquote">
+<p>做点探索性分析——画几张图、分组比较或简单回归，先看看变量大致什么关系。只是探路，先别下因果结论。</p>
+</blockquote>
+<p><strong>第四步 · DID 设计与估计</strong></p>
+<blockquote class="blockquote">
+<p>这是政策在不同城市、不同年份先后推行的场景，适合 DID。先别动手：先告诉我能用哪几种 DID 估计方法、各自假设和局限，我们商量着选。选定后在一个 notebook 里都跑一遍，代码和解释都写进去；你不确定、要我拍板的地方专门开个单元格列出来。</p>
+</blockquote>
+<p><strong>第五步 · 整理成报告</strong></p>
+<blockquote class="blockquote">
+<p>把 notebook 结果整理成报告：各方法估计结果放一起对比，说清假设和局限，最后谈谈政策启示。像论文实证部分那样，克制、准确就行。</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>完整可编辑的版本见仓库 <a href="https://github.com/lianxhcn/stata-ai/blob/main/demo/task-plan-Lian-R0.md"><code>demo/task-plan-Lian-R0.md</code></a>。<strong>“口语化分阶段”和”结构化说明书”各有场景</strong>：正式项目值得把说明书写清楚，日常推进口语交代即可。</p>
+</blockquote>
 <hr>
 <blockquote class="blockquote">
 <p>更系统的提示词与工作流写法，见延伸阅读：<a href="https://www.lianxh.cn/details/1790.html">从 Prompt 到 Skills：把论文复现、数据清洗和代码规范写进 AI</a>、<a href="https://www.lianxh.cn/details/1791.html">Claude Code Skills 写作指南</a>。</p>
@@ -1118,8 +1151,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../lectures/04_agent_workflow.html" class="pagination-link" aria-label="Agent 工作流：从任务说明到结果检查">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Agent 工作流：从任务说明到结果检查</span></span>
+      <a href="../lectures/04_agent_workflow.html" class="pagination-link" aria-label="Agent 工作流">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Agent 工作流</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
