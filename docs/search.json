@@ -94,7 +94,7 @@
     "href": "settings.html#b.-vs-code-jupyter-nbstata",
     "title": "🚀 环境配置",
     "section": "B. VS Code + Jupyter + nbstata",
-    "text": "B. VS Code + Jupyter + nbstata\n这一步的目标：在 VS Code 的一个 notebook 文件里，既能写 markdown 笔记，又能运行 Stata 代码。\n\n装什么\n\nVS Code：到官网下载安装。\nVS Code 扩展：在扩展面板搜索并安装 Python、Jupyter（微软官方）。参考 VS Code 插件：安装、配置和使用。\nPython 环境：建议装 Anaconda / Miniconda。注意：nbstata 目前只支持 Python 3.11 及以下，请单独建一个 Python 3.11 环境使用。\n\n\n\n配置 nbstata（Stata 内核）\n在 Python 3.11 环境中安装并注册 Stata 内核：\npip install nbstata\npython -m nbstata.install\n如果 nbstata 没能自动找到 Stata，手动指定安装路径（按你的 Stata 版本改）：\n# Windows\npython -m nbstata.install --stata-dir \"C:\\Program Files\\Stata19\"\n装好后，在 VS Code 中新建一个 .ipynb 文件，点击右上角内核选择器，选择 Stata 内核。\n\n完整的 Anaconda / 虚拟环境 / nbstata 配置流程（含镜像加速、报错排查、可直接粘给 AI 的提示词），见 ds2026 在线书：Python 安装、Jupyter Notebook 使用、安装常见问题。\n\n\n\n\n\n\n\n\n✅ 配置成功的标志\n\n\n\n在 VS Code 的 notebook 中选中 Stata 内核，运行下面两行有正常输出：\nsysuse auto, clear\nsummarize",
+    "text": "B. VS Code + Jupyter + nbstata\n这一步的目标：在 VS Code 的一个 notebook 文件里，既能写 markdown 笔记，又能运行 Stata 代码。\n\n装什么\n\nVS Code：到官网下载安装。\nVS Code 扩展：在扩展面板搜索并安装 Python、Jupyter（微软官方）。参考 VS Code 插件：安装、配置和使用。\nPython 环境：建议装 Anaconda / Miniconda。注意：nbstata 目前只支持 Python 3.11 及以下，请单独建一个 Python 3.11 环境使用。\n\n\n\n配置 nbstata（Stata 内核）\n在 Python 3.11 环境中安装并注册 Stata 内核：\npip install nbstata\npython -m nbstata.install\n如果 nbstata 没能自动找到 Stata，手动指定安装路径（按你的 Stata 版本改）：\n# Windows\npython -m nbstata.install --stata-dir \"C:\\Program Files\\Stata19\"\n装好后，在 VS Code 中新建一个 .ipynb 文件，点击右上角内核选择器，选择 Stata 内核。\n\n完整的 Anaconda / 虚拟环境 / nbstata 配置流程（含镜像加速、报错排查、可直接粘给 AI 的提示词），见 ds2026 在线书：Python 安装、Jupyter Notebook 使用、安装常见问题。\n\n\n\n\n\n\n\n✅ 配置成功的标志\n\n\n\n在 VS Code 的 notebook 中选中 Stata 内核，运行下面两行有正常输出：\nsysuse auto, clear\nsummarize",
     "crumbs": [
       "🚀 环境配置"
     ]
@@ -245,7 +245,7 @@
     "href": "lectures/03_ai_vs_agent.html",
     "title": "3  对话式 AI 与执行型 Agent",
     "section": "",
-    "text": "3.1 先分清两类任务\n用 AI 时的很多低效，不是因为模型不够强，而是把任务放错了地方。任务其实只有两类。\n一类是对话任务：主要发生在「脑子里」和「文字讨论」中。比如解释一篇论文的贡献、比较几种研究设计、判断一个识别策略有没有风险、把一段话改得更清楚、生成一张教学插图。这类任务的重点是理解、表达和判断——放在 ChatGPT / Claude 的对话框里最合适。例如，定制每日 Stata 快讯，\n另一类是项目任务：已经落到「文件夹」和「代码库」里。比如批量修改一组脚本、检查一个 notebook、统一图片路径、根据报错改代码、把数据、结果和文字整合进同一个项目。这类任务的重点不是继续聊天，而是读取文件、执行修改、验证结果——放进 Codex / Claude Code 这样的执行型 Agent 里最合适。\n一个简单的判断标准：\n很多人觉得「AI 工具越用越乱」，往往不是工具太多，而是没把任务拆成不同环节：任务还没想清楚就丢给 Agent，会得到一堆看似完整、方向却不准的修改；任务已经散落在几十个文件里，却还在对话框里反复复制粘贴，人就成了低效的「文件搬运工」。",
+    "text": "3.1 先分清两类任务\n用 AI 时的很多低效，不是因为模型不够强，而是把任务放错了地方。任务其实只有两类。\n一类是对话任务：主要发生在「脑子里」和「文字讨论」中。比如解释一篇论文的贡献、比较几种研究设计、判断一个识别策略有没有风险、把一段话改得更清楚、生成一张教学插图。这类任务的重点是理解、表达和判断——放在 ChatGPT / Claude 的对话框里最合适。例如，定制每日 Stata 快讯。\n另一类是项目任务：已经落到「文件夹」和「代码库」里。比如批量修改一组脚本、检查一个 notebook、统一图片路径、根据报错改代码、把数据、结果和文字整合进同一个项目。这类任务的重点不是继续聊天，而是读取文件、执行修改、验证结果——放进 Codex / Claude Code 这样的执行型 Agent 里最合适。例如，可以让 ChatGPT 做好可以直接让 Codex 在本地执行的任务说明文档，参见 DID 与 ML 结合推文规划。\n一个简单的判断标准：\n很多人觉得「AI 工具越用越乱」，往往不是工具太多，而是没把任务拆成不同环节：任务还没想清楚就丢给 Agent，会得到一堆看似完整、方向却不准的修改；任务已经散落在几十个文件里，却还在对话框里反复复制粘贴，人就成了低效的「文件搬运工」。",
     "crumbs": [
       "**讲义**",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>对话式 AI 与执行型 Agent</span>"
