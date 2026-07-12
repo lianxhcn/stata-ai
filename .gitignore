@@ -17,6 +17,9 @@ images/*
 !images/poster-2026summer.png
 !images/qrcode-2026summer.png
 
+# 脏数据练习的"埋点答案清单"——仅老师本地留存，不发布（否则学员练习时会看到答案）。
+working/01_data_messy_埋点答案.md
+
 # demo_test/：提示词试跑用的一次性沙箱（demo 的副本），不入库、不发布。
 #   想保留某次结果，手动 git add -f 即可。
 demo_test/
