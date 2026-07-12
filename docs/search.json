@@ -20,21 +20,11 @@
     ]
   },
   {
-    "objectID": "index.html#一条主线",
-    "href": "index.html#一条主线",
-    "title": "Stata 简介与 AI 辅助实证",
-    "section": "一条主线",
-    "text": "一条主线\n本课程不从某一种软件讲起，而是从一条工作流主线讲起：\n\n本课主线\n\n研究问题→对话式 AI 拆解规划→任务说明书→Agent 在项目中执行→人来检查与迭代\n\n\nStata、Python、R 都是这条主线上可以替换的零件。每个模块都会回到这张图：先想清楚要解决什么问题，再决定用哪种工具、交给谁做、如何检查。",
-    "crumbs": [
-      "🏠 前言"
-    ]
-  },
-  {
     "objectID": "index.html#如何使用本仓库",
     "href": "index.html#如何使用本仓库",
     "title": "Stata 简介与 AI 辅助实证",
     "section": "如何使用本仓库",
-    "text": "如何使用本仓库\n本仓库使用 VS Code + Quarto 编写，并通过 GitHub Pages 发布。你可以：\n\nFork 或克隆本仓库的 GitHub 仓库，在本地阅读、修改、运行示例。\n\n根据你的需要，有三条阅读路径：\n\n只想把环境配好 → 直接看 环境配置。里面按「Stata 外部命令 → VS Code + nbstata → GitHub Copilot → Claude Code / Codex」四步给出配置清单与「配置成功的标志」。\n想复现课堂演示 → 下载本仓库的 demo/ 文件夹，按其中的 README.md 操作，在文件夹内启动 Claude Code 或 Codex，即可重跑本课的 Agent 分析演示。\n想系统学习实证研究 → 欢迎报名 7 月 21–31 日的连享会 2026 暑期班，通过 9 天的学习，让你有信心独立完成一篇实证分析论文。\n\n\n\n连享会 2026 暑期班\n\n\n\n连享会 2026 暑期班海报\n\n\n\n时间：2026 年 7 月 21–23 日（三天），连玉君（中山大学）\n课程主页：https://www.lianxh.cn/PX.html\n报名链接：https://www.wjx.top/vm/QhgLvx1.aspx#\n\n\n扫码报名 · 2026 暑期班\n\n主页 | 课程 | 推文 | 资料",
+    "text": "如何使用本仓库\n本仓库使用 VS Code + Quarto 编写，并通过 GitHub Pages 发布。它既是课程主页，也是可下载复现的演示项目。你可以：\n\nFork 或克隆本仓库的 GitHub 仓库，在本地阅读、修改、运行示例。\n想快速了解课程结构、并按自己的需求（配环境 / 复现演示 / 系统学习）选择该读哪些内容，请先看 课程导览。\n\n \n\n \n\n附：连享会 2026 暑期班\n想系统学习实证研究，欢迎报名——通过 9 天的学习，让你有信心独立完成一篇实证分析论文。\n\n\n\n连享会 2026 暑期班海报\n\n\n\n时间：2026 年 7 月 21–23 日（三天），连玉君（中山大学）\n课程主页：https://www.lianxh.cn/PX.html\n报名链接：https://www.wjx.top/vm/QhgLvx1.aspx#\n\n\n扫码报名 · 2026 暑期班\n\n主页 | 课程 | 推文 | 资料",
     "crumbs": [
       "🏠 前言"
     ]
@@ -44,7 +34,7 @@
     "href": "outline.html",
     "title": "📌 课程导览",
     "section": "",
-    "text": "本课要点：你会看到什么\n这一页写给你——来听课的学员。它帮你快速了解本次公开课想传达什么、本仓库里有哪些内容，以及根据你自己的需求该重点看哪些部分。\n本课不从某一种软件讲起，而是从一条工作流主线讲起：\n这 80 分钟里，我们会用一个小例子把这条主线走给你看，并说清每一步该由谁来做；至于把它熟练用到自己的研究上，需要课后动手练习——这也正是暑期班要带你系统完成的。\nStata、Python、R 都是这条主线上可以替换的零件。想清楚要解决什么问题，再决定用哪种工具、交给谁做、如何检查——这比纠结”学哪个软件”更重要。",
+    "text": "本课要点：你会看到什么\n这 80 分钟里，我们会用一个小例子把这条主线走给你看，并说清每一步该由谁来做；至于把它熟练用到自己的研究上，需要课后动手练习 —— 这也正是暑期班要带你系统完成的。\nStata、Python、R 都是这条主线上可以替换的零件。想清楚要解决什么问题，再决定用哪种工具、交给谁做、如何检查——这比纠结”学哪个软件”更重要。",
     "crumbs": [
       "📌 课程导览"
     ]
@@ -74,7 +64,7 @@
     "href": "outline.html#课后务必完成本地配置",
     "title": "📌 课程导览",
     "section": "课后务必完成本地配置",
-    "text": "课后务必完成本地配置\n受课时所限，安装与配置的完整过程更适合课后按文档从容完成。但请注意：在本地用 Agent 和 AI 工具做分析，前提就是先把环境配好。 因此，请务必花点时间，按下面的文档把配置走通。\n好消息是：配置过程本身就可以借助网页版 ChatGPT 或 Claude 边问边做——把你的系统信息、报错原文贴给它，让它一步步指导你。这本身也是本课”用 AI 辅助”理念的一次练习。\n\n\n\n\n\n\nStata 安装的两个要点\n\n\n\nStata 本体的安装很简单，通过正版渠道下载安装即可。只需特别注意两点：\n\n安装路径不要包含中文字符，也不要有空格等特殊字符（例如用 D:\\stata19 这样的纯英文路径）。\n安装完成后，确认安装目录下存在 STATA.LIC 文件——这是 nbstata 插件，以及 Agent、MCP 等工具能够正确关联到你的 Stata 应用程序的关键。\n\n以上两点及更完整的说明，见 ds2026 · 配置 Stata 环境（nbstata）。\n\n\n配置参考清单（建议课后依次阅读）：\n\n本仓库 环境配置 页——按「Stata 外部命令 → VS Code + nbstata → Copilot → Claude Code / Codex」四步走，每步都有「配置成功的标志」。\nVS Code 插件：安装、配置和使用\n公开课：Claude Code 协同 Stata：环境配置与应用实践\nds2026 在线书·环境配置章（Anaconda / Jupyter / nbstata 从零安装及常见问题）\n\n\n\n讲义正文将在课后 3 日内持续更新，欢迎 Star 本仓库或在 issues 中反馈。",
+    "text": "课后务必完成本地配置\n受课时所限，安装与配置的完整过程更适合课后按文档从容完成。但请注意：在本地用 Agent 和 AI 工具做分析，前提就是先把环境配好。 因此，请务必花点时间，按下面的文档把配置走通。\n好消息是：配置过程本身就可以借助网页版 ChatGPT 或 Claude 边问边做——把你的系统信息、报错原文贴给它，让它一步步指导你。这本身也是本课”用 AI 辅助”理念的一次练习。\n\n\n\n\n\n\nStata 安装的两个要点\n\n\n\nStata 本体的安装很简单，通过正版渠道下载安装即可。只需特别注意两点：\n\n安装路径不要包含中文字符，也不要有空格等特殊字符（例如用 D:\\stata19 这样的纯英文路径）。\n安装完成后，确认安装目录下存在 STATA.LIC 文件——这是 nbstata 插件，以及 Agent、MCP 等工具能够正确关联到你的 Stata 应用程序的关键。\n\n以上两点及更完整的说明，见 ds2026 · 配置 Stata 环境（nbstata）。\n\n\n配置参考清单（建议课后依次阅读）：\n\n本仓库 环境配置 页——按「Stata 外部命令 → VS Code + nbstata → Copilot → Claude Code / Codex」四步走，每步都有「配置成功的标志」。\nVS Code 插件：安装、配置和使用\n公开课：Claude Code 协同 Stata：环境配置与应用实践\nds2026 在线书·环境配置章（Anaconda / Jupyter / nbstata 从零安装及常见问题）\n\n\n\n本讲义会持续更新，欢迎 Star 本仓库或在 issues 中反馈。",
     "crumbs": [
       "📌 课程导览"
     ]
@@ -84,14 +74,14 @@
     "href": "settings.html",
     "title": "🚀 环境配置",
     "section": "",
-    "text": "Stata 本体与外部命令\n本页是全站最实用的一页：把本课用到的四类工具，按「装什么、怎么装、装好没」的顺序列成清单。你不必一次配齐，用到哪一节看哪一节即可。每一节末尾都有一个 ✅ 配置成功的标志——只要那一步能跑通，这一节就算过关。\n四类工具与它们的角色：",
+    "text": "A. Stata 本体与外部命令\n本页是全站最实用的一页：把本课用到的四类工具，按「装什么、怎么装、装好没」的顺序列成清单。你不必一次配齐，用到哪一节看哪一节即可。每一节末尾都有一个 ✅ 配置成功的标志——只要那一步能跑通，这一节就算过关。\n四类工具与它们的角色：",
     "crumbs": [
       "🚀 环境配置"
     ]
   },
   {
-    "objectID": "settings.html#stata-本体与外部命令",
-    "href": "settings.html#stata-本体与外部命令",
+    "objectID": "settings.html#a.-stata-本体与外部命令",
+    "href": "settings.html#a.-stata-本体与外部命令",
     "title": "🚀 环境配置",
     "section": "",
     "text": "安装\nStata 请通过正版渠道购买、安装（Stata 官网或授权代理）。安装时注意两点：\n\n安装路径不要包含中文，也不要有空格等特殊字符（如用 D:\\stata19 这样的纯英文路径）；\n装完确认安装目录下有 STATA.LIC 文件——这是 nbstata 以及 Agent、MCP 等工具能正确关联到 Stata 的关键。\n\n记住这个安装路径，后面配置 nbstata 时会用到。更完整的说明见 ds2026 · 配置 Stata 环境（nbstata）。\n\n\n外部命令：ssc install\nStata 的很多实用功能来自外部命令。最常用的来源是 SSC（Statistical Software Components）。基本用法：\nssc install winsor2, replace   // 安装（或覆盖旧版本）\nhelp winsor2                    // 打开帮助文件\nwhich winsor2                   // 查看版本与安装位置\nado, find(winsor)              // 查询本机已装的相关命令\n不知道命令确切名字时，用模糊检索：\nfindit dynamic panel           // 按关键词搜索（等价于 search）\n检索小技巧：大小写和词序不影响结果、介词可省略、尽量用单数与原形（distribution 优于 distributions）、逐步缩小范围（distribution → normal distribution）。\n\n\n常见失败与处理\n\n装不上 / 超时：多为网络问题。先重试 ssc install winsor2, replace；仍失败可换网络，或参考 SSC 外部命令清单 查证命令名与来源。\ncommand winsor2 not found：命令没装上，或装到了别处。用 which winsor2 看是否已安装、装在哪个路径。\n想改外部命令的安装位置：先建好目标文件夹，再 net set ado \"D:\\stata\\personal\\myplus\"。\n看官方 PDF 手册：ssc install ihelp 后用 ihelp xtreg 直接打开官方 PDF。\n\n\n延伸阅读：Stata: 外部命令的搜索、安装与使用。\n\n\n\n\n\n\n\n✅ 配置成功的标志\n\n\n\n在 Stata 中运行 ssc install winsor2, replace 能装上，且 help winsor2 能打开帮助文件。",
@@ -100,31 +90,31 @@
     ]
   },
   {
-    "objectID": "settings.html#vs-code-jupyter-nbstata",
-    "href": "settings.html#vs-code-jupyter-nbstata",
+    "objectID": "settings.html#b.-vs-code-jupyter-nbstata",
+    "href": "settings.html#b.-vs-code-jupyter-nbstata",
     "title": "🚀 环境配置",
-    "section": "VS Code + Jupyter + nbstata",
-    "text": "VS Code + Jupyter + nbstata\n这一步的目标：在 VS Code 的一个 notebook 文件里，既能写 markdown 笔记，又能运行 Stata 代码。\n\n装什么\n\nVS Code：到官网下载安装。\nVS Code 扩展：在扩展面板搜索并安装 Python、Jupyter（微软官方）。参考 VS Code 插件：安装、配置和使用。\nPython 环境：建议装 Anaconda / Miniconda。注意：nbstata 目前只支持 Python 3.11 及以下，请单独建一个 Python 3.11 环境使用。\n\n\n\n配置 nbstata（Stata 内核）\n在 Python 3.11 环境中安装并注册 Stata 内核：\npip install nbstata\npython -m nbstata.install\n如果 nbstata 没能自动找到 Stata，手动指定安装路径（按你的 Stata 版本改）：\n# Windows\npython -m nbstata.install --stata-dir \"C:\\Program Files\\Stata19\"\n装好后，在 VS Code 中新建一个 .ipynb 文件，点击右上角内核选择器，选择 Stata 内核。\n\n完整的 Anaconda / 虚拟环境 / nbstata 配置流程（含镜像加速、报错排查、可直接粘给 AI 的提示词），见 ds2026 在线书：Python 安装、Jupyter Notebook 使用、安装常见问题。\n\n\n\n\n\n\n\n\n✅ 配置成功的标志\n\n\n\n在 VS Code 的 notebook 中选中 Stata 内核，运行下面两行有正常输出：\nsysuse auto, clear\nsummarize",
+    "section": "B. VS Code + Jupyter + nbstata",
+    "text": "B. VS Code + Jupyter + nbstata\n这一步的目标：在 VS Code 的一个 notebook 文件里，既能写 markdown 笔记，又能运行 Stata 代码。\n\n装什么\n\nVS Code：到官网下载安装。\nVS Code 扩展：在扩展面板搜索并安装 Python、Jupyter（微软官方）。参考 VS Code 插件：安装、配置和使用。\nPython 环境：建议装 Anaconda / Miniconda。注意：nbstata 目前只支持 Python 3.11 及以下，请单独建一个 Python 3.11 环境使用。\n\n\n\n配置 nbstata（Stata 内核）\n在 Python 3.11 环境中安装并注册 Stata 内核：\npip install nbstata\npython -m nbstata.install\n如果 nbstata 没能自动找到 Stata，手动指定安装路径（按你的 Stata 版本改）：\n# Windows\npython -m nbstata.install --stata-dir \"C:\\Program Files\\Stata19\"\n装好后，在 VS Code 中新建一个 .ipynb 文件，点击右上角内核选择器，选择 Stata 内核。\n\n完整的 Anaconda / 虚拟环境 / nbstata 配置流程（含镜像加速、报错排查、可直接粘给 AI 的提示词），见 ds2026 在线书：Python 安装、Jupyter Notebook 使用、安装常见问题。\n\n\n\n\n\n\n\n\n✅ 配置成功的标志\n\n\n\n在 VS Code 的 notebook 中选中 Stata 内核，运行下面两行有正常输出：\nsysuse auto, clear\nsummarize",
     "crumbs": [
       "🚀 环境配置"
     ]
   },
   {
-    "objectID": "settings.html#github-copilot",
-    "href": "settings.html#github-copilot",
+    "objectID": "settings.html#c.-github-copilot",
+    "href": "settings.html#c.-github-copilot",
     "title": "🚀 环境配置",
-    "section": "GitHub Copilot",
-    "text": "GitHub Copilot\nCopilot 在编辑器里根据上下文给出灰色的补全建议，也能把注释变成代码、把代码变成注释。\n\n开通与登录\n\n在 github.com/features/copilot 用 GitHub 账号开通 Copilot（学生 / 教师可申请免费权益）。\n在 VS Code 扩展面板搜索安装 GitHub Copilot（及 GitHub Copilot Chat）。\n安装后按提示用 GitHub 账号登录授权。\n\n\n\n快速自测\n新建一个 .do 或 notebook 的 Stata cell，输入一行注释后回车，例如：\n* 载入 auto 数据并对 price 做描述性统计\n正常情况下，光标下方会浮现灰色的补全建议，按 Tab 采纳。\n\n\n\n\n\n\n✅ 配置成功的标志\n\n\n\n写下一行注释后，编辑器出现灰色的 Copilot 补全建议。",
+    "section": "C. GitHub Copilot",
+    "text": "C. GitHub Copilot\nCopilot 在编辑器里根据上下文给出灰色的补全建议，也能把注释变成代码、把代码变成注释。\n\n开通与登录\n\n在 github.com/features/copilot 用 GitHub 账号开通 Copilot（学生 / 教师可申请免费权益）。\n在 VS Code 扩展面板搜索安装 GitHub Copilot（及 GitHub Copilot Chat）。\n安装后按提示用 GitHub 账号登录授权。\n\n\n\n快速自测\n新建一个 .do 或 notebook 的 Stata cell，输入一行注释后回车，例如：\n* 载入 auto 数据并对 price 做描述性统计\n正常情况下，光标下方会浮现灰色的补全建议，按 Tab 采纳。\n\n\n\n\n\n\n✅ 配置成功的标志\n\n\n\n写下一行注释后，编辑器出现灰色的 Copilot 补全建议。",
     "crumbs": [
       "🚀 环境配置"
     ]
   },
   {
-    "objectID": "settings.html#claude-code-codex",
-    "href": "settings.html#claude-code-codex",
+    "objectID": "settings.html#d.-claude-code-codex",
+    "href": "settings.html#d.-claude-code-codex",
     "title": "🚀 环境配置",
-    "section": "Claude Code / Codex",
-    "text": "Claude Code / Codex\n这两个是执行型 Agent：在你的项目文件夹里读写文件、运行脚本、整理结果。第 4 讲的演示就靠它。\n\n安装与首次运行（Windows）\n\n按官方文档安装（通常经 npm 安装 CLI，或使用其桌面 / VS Code 版本）。\n首次运行需登录对应账号并完成授权。\n在 VS Code 中启动：打开你的项目文件夹 → 打开集成终端（Ctrl+`）→ 在终端里运行 claude（或 codex）启动。\n\n\n\n快速自测\n在一个项目文件夹内启动 Agent 后，输入：\n请列出当前文件夹里的文件清单。\n它应当能读取并列出该目录下的文件。\n\n更系统的安装与协同实践，见公开课录播：Claude Code 协同 Stata：环境配置与应用实践。\n\n\n\n\n\n\n\n✅ 配置成功的标志\n\n\n\n在某个项目文件夹内启动 Claude Code 或 Codex 后，它能正确列出该文件夹中的文件清单。\n\n\n\n主页 | 课程 | 推文 | 资料",
+    "section": "D. Claude Code / Codex",
+    "text": "D. Claude Code / Codex\n这两个是执行型 Agent：在你的项目文件夹里读写文件、运行脚本、整理结果。第 4 讲的演示就靠它。\n\n安装与首次运行（Windows）\n\n按官方文档安装（通常经 npm 安装 CLI，或使用其桌面 / VS Code 版本）。\n首次运行需登录对应账号并完成授权。\n在 VS Code 中启动：打开你的项目文件夹 → 打开集成终端（Ctrl+`）→ 在终端里运行 claude（或 codex）启动。\n\n\n\n快速自测\n在一个项目文件夹内启动 Agent 后，输入：\n请列出当前文件夹里的文件清单。\n它应当能读取并列出该目录下的文件。\n\n更系统的安装与协同实践，见公开课录播：Claude Code 协同 Stata：环境配置与应用实践。\n\n\n\n\n\n\n\n✅ 配置成功的标志\n\n\n\n在某个项目文件夹内启动 Claude Code 或 Codex 后，它能正确列出该文件夹中的文件清单。\n\n\n\n主页 | 课程 | 推文 | 资料",
     "crumbs": [
       "🚀 环境配置"
     ]

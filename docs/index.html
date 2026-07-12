@@ -225,10 +225,9 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#前言" id="toc-前言" class="nav-link active" data-scroll-target="#前言">🏠 前言</a>
   <ul class="collapse">
   <li><a href="#简介" id="toc-简介" class="nav-link" data-scroll-target="#简介">简介</a></li>
-  <li><a href="#一条主线" id="toc-一条主线" class="nav-link" data-scroll-target="#一条主线">一条主线</a></li>
   <li><a href="#如何使用本仓库" id="toc-如何使用本仓库" class="nav-link" data-scroll-target="#如何使用本仓库">如何使用本仓库</a>
   <ul class="collapse">
-  <li><a href="#连享会-2026-暑期班" id="toc-连享会-2026-暑期班" class="nav-link" data-scroll-target="#连享会-2026-暑期班">连享会 2026 暑期班</a></li>
+  <li><a href="#附连享会-2026-暑期班" id="toc-附连享会-2026-暑期班" class="nav-link" data-scroll-target="#附连享会-2026-暑期班">附：连享会 2026 暑期班</a></li>
   </ul></li>
   </ul></li>
   </ul>
@@ -285,32 +284,19 @@ ul.task-list li input[type="checkbox"] {
 <p>课程先从 Stata 基础讲起——界面、dofile、工作目录、帮助文件与外部命令；再演示如何在 VS Code 中借助 Copilot 为 Stata 代码添加注释、补全命令、生成代码片段；最后展示如何借助 Agent 完成更复杂的任务。</p>
 <p>课程不会停留在「把代码贴进对话框、让 AI 解释几行命令」的层面，而是进一步展示<strong>对话式 AI</strong> 与<strong>执行型 Agent</strong> 在科研工作流中的分工：ChatGPT、Claude 适合帮我们拆解问题、制定计划、形成任务说明；Codex、Claude Code 则可以在本地项目里读写文件、执行脚本、整理结果。我们会结合一个简化项目，演示先用对话式 AI 规划任务，再交给 Agent 执行，最后由人检查、复核与迭代的完整过程。Stata 仍是实证研究的重要入口，但更重要的是理解数据结构、模型设定、识别策略与结果解释，并把多种软件和 AI 工具组织进一个清楚、可运行、可检查、可迭代的研究项目。</p>
 </section>
-<section id="一条主线" class="level2">
-<h2 class="anchored" data-anchor-id="一条主线">一条主线</h2>
-<p>本课程不从某一种软件讲起，而是从一条工作流主线讲起：</p>
-<div class="flow-box">
-<span class="flow-title">本课主线</span>
-<div class="flow-steps">
-<p><span class="step">研究问题</span><span class="arrow">→</span><span class="step">对话式 AI 拆解规划</span><span class="arrow">→</span><span class="step">任务说明书</span><span class="arrow">→</span><span class="step">Agent 在项目中执行</span><span class="arrow">→</span><span class="step">人来检查与迭代</span></p>
-</div>
-</div>
-<p>Stata、Python、R 都是这条主线上可以替换的零件。每个模块都会回到这张图：先想清楚要解决什么问题，再决定用哪种工具、交给谁做、如何检查。</p>
-</section>
 <section id="如何使用本仓库" class="level2">
 <h2 class="anchored" data-anchor-id="如何使用本仓库">如何使用本仓库</h2>
-<p>本仓库使用 VS Code + Quarto 编写，并通过 GitHub Pages 发布。你可以：</p>
+<p>本仓库使用 VS Code + Quarto 编写，并通过 GitHub Pages 发布。它既是课程主页，也是可下载复现的演示项目。你可以：</p>
 <ul>
 <li><a href="https://github.com/lianxhcn/stata-ai/fork">Fork</a> 或克隆本仓库的 <a href="https://github.com/lianxhcn/stata-ai">GitHub 仓库</a>，在本地阅读、修改、运行示例。</li>
+<li>想快速了解课程结构、并按自己的需求（配环境 / 复现演示 / 系统学习）选择该读哪些内容，请先看 <a href="./outline.html">课程导览</a>。</li>
 </ul>
-<p>根据你的需要，有三条阅读路径：</p>
-<ol type="1">
-<li><strong>只想把环境配好</strong> → 直接看 <a href="./settings.html">环境配置</a>。里面按「Stata 外部命令 → VS Code + nbstata → GitHub Copilot → Claude Code / Codex」四步给出配置清单与「配置成功的标志」。</li>
-<li><strong>想复现课堂演示</strong> → 下载本仓库的 <code>demo/</code> 文件夹，按其中的 <code>README.md</code> 操作，在文件夹内启动 Claude Code 或 Codex，即可重跑本课的 Agent 分析演示。</li>
-<li><strong>想系统学习实证研究</strong> → 欢迎报名 7 月 21–31 日的<strong>连享会 2026 暑期班</strong>，通过 9 天的学习，让你有信心独立完成一篇实证分析论文。</li>
-</ol>
+<p> </p>
 <hr>
-<section id="连享会-2026-暑期班" class="level3">
-<h3 class="anchored" data-anchor-id="连享会-2026-暑期班"><a href="https://www.lianxh.cn/PX.html">连享会 2026 暑期班</a></h3>
+<p> </p>
+<section id="附连享会-2026-暑期班" class="level3">
+<h3 class="anchored" data-anchor-id="附连享会-2026-暑期班">附：<a href="https://www.lianxh.cn/PX.html">连享会 2026 暑期班</a></h3>
+<p>想系统学习实证研究，欢迎报名——通过 9 天的学习，让你有信心独立完成一篇实证分析论文。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="https://www.lianxh.cn/PX.html"><img src="images/poster-2026summer.png" class="img-fluid figure-img" alt="连享会 2026 暑期班海报"></a></p>

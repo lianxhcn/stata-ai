@@ -23,38 +23,22 @@ number-sections: false
 
 课程不会停留在「把代码贴进对话框、让 AI 解释几行命令」的层面，而是进一步展示**对话式 AI** 与**执行型 Agent** 在科研工作流中的分工：ChatGPT、Claude 适合帮我们拆解问题、制定计划、形成任务说明；Codex、Claude Code 则可以在本地项目里读写文件、执行脚本、整理结果。我们会结合一个简化项目，演示先用对话式 AI 规划任务，再交给 Agent 执行，最后由人检查、复核与迭代的完整过程。Stata 仍是实证研究的重要入口，但更重要的是理解数据结构、模型设定、识别策略与结果解释，并把多种软件和 AI 工具组织进一个清楚、可运行、可检查、可迭代的研究项目。
 
-## 一条主线
-
-本课程不从某一种软件讲起，而是从一条工作流主线讲起：
-
-<div class="flow-box">
-<span class="flow-title">本课主线</span>
-<div class="flow-steps">
-<span class="step">研究问题</span><span class="arrow">→</span><span class="step">对话式 AI 拆解规划</span><span class="arrow">→</span><span class="step">任务说明书</span><span class="arrow">→</span><span class="step">Agent 在项目中执行</span><span class="arrow">→</span><span class="step">人来检查与迭代</span>
-</div>
-</div>
-
-Stata、Python、R 都是这条主线上可以替换的零件。每个模块都会回到这张图：先想清楚要解决什么问题，再决定用哪种工具、交给谁做、如何检查。
-
 ## 如何使用本仓库
 
-本仓库使用 VS Code + Quarto 编写，并通过 GitHub Pages 发布。你可以：
+本仓库使用 VS Code + Quarto 编写，并通过 GitHub Pages 发布。它既是课程主页，也是可下载复现的演示项目。你可以：
 
 - [Fork](https://github.com/lianxhcn/stata-ai/fork) 或克隆本仓库的 [GitHub 仓库](https://github.com/lianxhcn/stata-ai)，在本地阅读、修改、运行示例。
+- 想快速了解课程结构、并按自己的需求（配环境 / 复现演示 / 系统学习）选择该读哪些内容，请先看 [课程导览](outline.qmd)。
 
-根据你的需要，有三条阅读路径：
-
-1. **只想把环境配好** → 直接看 [环境配置](settings.qmd)。里面按「Stata 外部命令 → VS Code + nbstata → GitHub Copilot → Claude Code / Codex」四步给出配置清单与「配置成功的标志」。
-2. **想复现课堂演示** → 下载本仓库的 `demo/` 文件夹，按其中的 `README.md` 操作，在文件夹内启动 Claude Code 或 Codex，即可重跑本课的 Agent 分析演示。
-3. **想系统学习实证研究** → 欢迎报名 7 月 21–31 日的**连享会 2026 暑期班**，通过 9 天的学习，让你有信心独立完成一篇实证分析论文。 
-
-&emsp; 
+&emsp;
 
 ---
 
 &emsp;
 
 ### 附：[连享会 2026 暑期班](https://www.lianxh.cn/PX.html)
+
+想系统学习实证研究，欢迎报名——通过 9 天的学习，让你有信心独立完成一篇实证分析论文。
 
 [![连享会 2026 暑期班海报](images/poster-2026summer.png)](https://www.lianxh.cn/PX.html)
 
