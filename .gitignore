@@ -20,9 +20,10 @@ images/*
 # 脏数据练习的"埋点答案清单"——仅老师本地留存，不发布（否则学员练习时会看到答案）。
 working/01_data_messy_埋点答案.md
 
-# demo_test/：提示词试跑用的一次性沙箱（demo 的副本），不入库、不发布。
-#   想保留某次结果，手动 git add -f 即可。
-demo_test/
+# demo_live/：上课现场演示用的一次性副本（demo 的镜像），不入库、不发布——
+#   现场让 agent 跑动产生的中间文件不会污染发布的 demo/。demo/ 更新后重新
+#   `cp -r demo demo_live` 同步即可；想保留某次结果，手动 git add -f。
+demo_live/
 
 # 说明：CLAUDE.md、working/、_task/、_materials/（harvest 除外）现在有意公开，
 #       用于向学员展示"如何借助 AI Agent 制作本仓库"的完整过程。
