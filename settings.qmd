@@ -14,9 +14,9 @@ number-sections: true
 - **GitHub Copilot**：在编辑器里做代码补全与注释生成。
 - **Claude Code / Codex**：执行型 Agent，在本地项目里读写文件、执行脚本、整理结果。
 
-> 若需从零安装 Anaconda、VS Code、Jupyter（含常见问题排查），请参考 [ds2026 在线书·环境配置](https://lianxhcn.github.io/ds2026/) 一章。
+> 若需从零安装 Anaconda、VS Code、Jupyter（含常见问题排查），请参考 [ds2026 在线书·环境配置](https://lianxhcn.github.io/ds2026/) 一章 (第 2-4 章)。
 
-## Stata 本体与外部命令
+## A. Stata 本体与外部命令
 
 ### 安装
 
@@ -60,7 +60,7 @@ findit dynamic panel           // 按关键词搜索（等价于 search）
 在 Stata 中运行 `ssc install winsor2, replace` 能装上，且 `help winsor2` 能打开帮助文件。
 :::
 
-## VS Code + Jupyter + nbstata
+## B. VS Code + Jupyter + nbstata
 
 这一步的目标：在 VS Code 的一个 notebook 文件里，既能写 markdown 笔记，又能运行 Stata 代码。
 
@@ -102,7 +102,7 @@ summarize
 ```
 :::
 
-## GitHub Copilot
+## C. GitHub Copilot
 
 Copilot 在编辑器里根据上下文给出灰色的补全建议，也能把注释变成代码、把代码变成注释。
 
@@ -127,7 +127,7 @@ Copilot 在编辑器里根据上下文给出灰色的补全建议，也能把注
 写下一行注释后，编辑器出现灰色的 Copilot 补全建议。
 :::
 
-## Claude Code / Codex
+## D. Claude Code / Codex
 
 这两个是**执行型 Agent**：在你的项目文件夹里读写文件、运行脚本、整理结果。第 4 讲的演示就靠它。
 
