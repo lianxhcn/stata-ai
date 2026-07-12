@@ -227,9 +227,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#c.1-模拟分析自己造数据检验方法" id="toc-c.1-模拟分析自己造数据检验方法" class="nav-link active" data-scroll-target="#c.1-模拟分析自己造数据检验方法"><span class="header-section-number">C.1</span> C.1 模拟分析：自己造数据检验方法</a></li>
-  <li><a href="#c.2-让-ai-写讲义把新概念学明白" id="toc-c.2-让-ai-写讲义把新概念学明白" class="nav-link" data-scroll-target="#c.2-让-ai-写讲义把新概念学明白"><span class="header-section-number">C.2</span> C.2 让 AI 写讲义：把新概念学明白</a></li>
-  <li><a href="#c.3-从大压缩包里提取数据" id="toc-c.3-从大压缩包里提取数据" class="nav-link" data-scroll-target="#c.3-从大压缩包里提取数据"><span class="header-section-number">C.3</span> C.3 从大压缩包里提取数据</a></li>
+  <li><a href="#模拟分析自己造数据检验方法" id="toc-模拟分析自己造数据检验方法" class="nav-link active" data-scroll-target="#模拟分析自己造数据检验方法"><span class="header-section-number">C.1</span> 模拟分析：自己造数据检验方法</a></li>
+  <li><a href="#让-ai-写讲义把新概念学明白" id="toc-让-ai-写讲义把新概念学明白" class="nav-link" data-scroll-target="#让-ai-写讲义把新概念学明白"><span class="header-section-number">C.2</span> 让 AI 写讲义：把新概念学明白</a></li>
+  <li><a href="#从大压缩包里提取数据" id="toc-从大压缩包里提取数据" class="nav-link" data-scroll-target="#从大压缩包里提取数据"><span class="header-section-number">C.3</span> 从大压缩包里提取数据</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/lianxhcn/stata-ai/edit/main/appendix/C_more_usage.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lianxhcn/stata-ai/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -256,8 +256,8 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>本附录汇集几类因课时有限未及展开的用法。每节都给出一段可直接复制的提示词，课后即可自己尝试。</p>
-<section id="c.1-模拟分析自己造数据检验方法" class="level2" data-number="C.1">
-<h2 data-number="C.1" class="anchored" data-anchor-id="c.1-模拟分析自己造数据检验方法"><span class="header-section-number">C.1</span> C.1 模拟分析：自己造数据检验方法</h2>
+<section id="模拟分析自己造数据检验方法" class="level2" data-number="C.1">
+<h2 data-number="C.1" class="anchored" data-anchor-id="模拟分析自己造数据检验方法"><span class="header-section-number">C.1</span> 模拟分析：自己造数据检验方法</h2>
 <p>当<strong>真值已知</strong>时，模拟数据是检验估计量、也是教学演示的利器。做法是：先写清数据生成过程（DGP），再用不同方法估计，最后和真值对照——谁离真值近、谁偏得多，一目了然。本课 demo 里 TWFE vs <code>csdid</code> / <code>jwdid</code> vs 真值的对照表，就来自这一思路。</p>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -287,8 +287,8 @@ Note
 </div>
 <p><strong>怎么读对照表</strong>：重点看各估计量与”真值”列的距离。若 TWFE 明显偏离、而 <code>csdid</code> / <code>jwdid</code> 贴近真值，就直观说明了：在交叠处理、效应异质的场景下，为什么要改用现代 DID 方法。完整模板见 <a href="../appendix/A_prompt_templates.html">附录 A · 场景模板四</a>。</p>
 </section>
-<section id="c.2-让-ai-写讲义把新概念学明白" class="level2" data-number="C.2">
-<h2 data-number="C.2" class="anchored" data-anchor-id="c.2-让-ai-写讲义把新概念学明白"><span class="header-section-number">C.2</span> C.2 让 AI 写讲义：把新概念学明白</h2>
+<section id="让-ai-写讲义把新概念学明白" class="level2" data-number="C.2">
+<h2 data-number="C.2" class="anchored" data-anchor-id="让-ai-写讲义把新概念学明白"><span class="header-section-number">C.2</span> 让 AI 写讲义：把新概念学明白</h2>
 <p>想弄懂一个新方法时，与其干读公式，不如让 AI 结合一个<strong>可运行的 Stata 例子</strong>，替你生成一份自学讲义：一句话说清它解决什么问题、与传统做法的区别、一个最小可运行例子、结果怎么读、常见误用。</p>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -319,8 +319,8 @@ Note
 </div>
 <p>拿到初稿后别急着全盘接受——挑一两处按它的例子<strong>自己在 Stata 里跑一遍</strong>，确认结论站得住，再纳入自己的笔记。完整模板见 <a href="../appendix/A_prompt_templates.html">附录 A · 场景模板三</a>。</p>
 </section>
-<section id="c.3-从大压缩包里提取数据" class="level2" data-number="C.3">
-<h2 data-number="C.3" class="anchored" data-anchor-id="c.3-从大压缩包里提取数据"><span class="header-section-number">C.3</span> C.3 从大压缩包里提取数据</h2>
+<section id="从大压缩包里提取数据" class="level2" data-number="C.3">
+<h2 data-number="C.3" class="anchored" data-anchor-id="从大压缩包里提取数据"><span class="header-section-number">C.3</span> 从大压缩包里提取数据</h2>
 <p>顶刊复现包或数据集动辄几个 G，一次性全部解压既慢又占空间。更聪明的做法是：让 Agent 先摸清压缩包的目录结构、定位主程序和目标数据文件，再<strong>按需</strong>解压、抽取你真正要的那部分。</p>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
