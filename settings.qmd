@@ -46,6 +46,16 @@ findit dynamic panel           // 按关键词搜索（等价于 search）
 
 检索小技巧：大小写和词序不影响结果、介词可省略、尽量用单数与原形（`distribution` 优于 `distributions`）、逐步缩小范围（`distribution` → `normal distribution`）。
 
+你可以可以使用如下命令查看最新的和最热门的外部命令：
+
+```stata
+ssc new
+ssc hot
+ssc hot, n(30) 
+```
+
+
+
 ### 常见失败与处理
 
 - **装不上 / 超时**：多为网络问题。先重试 `ssc install winsor2, replace`；仍失败可换网络，或参考 [SSC 外部命令清单](https://www.lianxh.cn/details/1501.html) 查证命令名与来源。
@@ -108,7 +118,7 @@ Copilot 在编辑器里根据上下文给出灰色的补全建议，也能把注
 
 ### 开通与登录
 
-1. 在 [github.com/features/copilot](https://github.com/features/copilot) 用 GitHub 账号开通 Copilot（学生 / 教师可申请免费权益）。
+1. 在 [github.com/features/copilot](https://github.com/features/copilot) 用 GitHub 账号开通 Copilot（学生 / 教师可申请免费权益；如果自己付费的话，可以用 Visa 卡或 Master 卡，费用为 10 美元/月）。
 2. 在 VS Code 扩展面板搜索安装 **GitHub Copilot**（及 **GitHub Copilot Chat**）。
 3. 安装后按提示用 GitHub 账号登录授权。
 
@@ -129,13 +139,29 @@ Copilot 在编辑器里根据上下文给出灰色的补全建议，也能把注
 
 ## D. Claude Code / Codex
 
-这两个是**执行型 Agent**：在你的项目文件夹里读写文件、运行脚本、整理结果。第 4 讲的演示就靠它。
+这两个是**执行型 Agent**：在你的项目文件夹里读写文件、运行脚本、整理结果。第 4 讲的演示就靠它。二者用法相近，选其一即可（两个都装也行）。
 
-### 安装与首次运行（Windows）
+### 官方下载与安装文档
 
-1. 按官方文档安装（通常经 npm 安装 CLI，或使用其桌面 / VS Code 版本）。
-2. 首次运行需登录对应账号并完成授权。
-3. **在 VS Code 中启动**：打开你的项目文件夹 → 打开集成终端（`` Ctrl+` ``）→ 在终端里运行 `claude`（或 `codex`）启动。
+两者的命令行版都通过 npm 安装，**需先安装 [Node.js](https://nodejs.org/)**。点击下面的链接可直接跳转到官方页面：
+
+**Claude Code（Anthropic）**
+
+- 快速上手（中文）：<https://code.claude.com/docs/zh-CN/quickstart>
+- 文档总览：<https://code.claude.com/docs/en/overview>
+- 安装命令：`npm install -g @anthropic-ai/claude-code`
+
+**Codex（OpenAI）**
+
+- 官方文档：<https://developers.openai.com/codex>
+- CLI 安装说明：<https://developers.openai.com/codex/cli>
+- CLI 源码与发行页：<https://github.com/openai/codex>
+- 安装命令：`npm install -g @openai/codex`
+
+### 首次运行（Windows）
+
+1. 装好后首次运行，需登录对应账号（Anthropic / OpenAI）并完成授权。
+2. **在 VS Code 中启动**：打开你的项目文件夹 → 打开集成终端（`` Ctrl+` ``）→ 在终端里运行 `claude`（或 `codex`）启动。
 
 ### 快速自测
 

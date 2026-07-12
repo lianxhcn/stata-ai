@@ -84,7 +84,7 @@
     "href": "settings.html#a.-stata-本体与外部命令",
     "title": "🚀 环境配置",
     "section": "",
-    "text": "安装\nStata 请通过正版渠道购买、安装（Stata 官网或授权代理）。安装时注意两点：\n\n安装路径不要包含中文，也不要有空格等特殊字符（如用 D:\\stata19 这样的纯英文路径）；\n装完确认安装目录下有 STATA.LIC 文件——这是 nbstata 以及 Agent、MCP 等工具能正确关联到 Stata 的关键。\n\n记住这个安装路径，后面配置 nbstata 时会用到。更完整的说明见 ds2026 · 配置 Stata 环境（nbstata）。\n\n\n外部命令：ssc install\nStata 的很多实用功能来自外部命令。最常用的来源是 SSC（Statistical Software Components）。基本用法：\nssc install winsor2, replace   // 安装（或覆盖旧版本）\nhelp winsor2                    // 打开帮助文件\nwhich winsor2                   // 查看版本与安装位置\nado, find(winsor)              // 查询本机已装的相关命令\n不知道命令确切名字时，用模糊检索：\nfindit dynamic panel           // 按关键词搜索（等价于 search）\n检索小技巧：大小写和词序不影响结果、介词可省略、尽量用单数与原形（distribution 优于 distributions）、逐步缩小范围（distribution → normal distribution）。\n\n\n常见失败与处理\n\n装不上 / 超时：多为网络问题。先重试 ssc install winsor2, replace；仍失败可换网络，或参考 SSC 外部命令清单 查证命令名与来源。\ncommand winsor2 not found：命令没装上，或装到了别处。用 which winsor2 看是否已安装、装在哪个路径。\n想改外部命令的安装位置：先建好目标文件夹，再 net set ado \"D:\\stata\\personal\\myplus\"。\n看官方 PDF 手册：ssc install ihelp 后用 ihelp xtreg 直接打开官方 PDF。\n\n\n延伸阅读：Stata: 外部命令的搜索、安装与使用。\n\n\n\n\n\n\n\n✅ 配置成功的标志\n\n\n\n在 Stata 中运行 ssc install winsor2, replace 能装上，且 help winsor2 能打开帮助文件。",
+    "text": "安装\nStata 请通过正版渠道购买、安装（Stata 官网或授权代理）。安装时注意两点：\n\n安装路径不要包含中文，也不要有空格等特殊字符（如用 D:\\stata19 这样的纯英文路径）；\n装完确认安装目录下有 STATA.LIC 文件——这是 nbstata 以及 Agent、MCP 等工具能正确关联到 Stata 的关键。\n\n记住这个安装路径，后面配置 nbstata 时会用到。更完整的说明见 ds2026 · 配置 Stata 环境（nbstata）。\n\n\n外部命令：ssc install\nStata 的很多实用功能来自外部命令。最常用的来源是 SSC（Statistical Software Components）。基本用法：\nssc install winsor2, replace   // 安装（或覆盖旧版本）\nhelp winsor2                    // 打开帮助文件\nwhich winsor2                   // 查看版本与安装位置\nado, find(winsor)              // 查询本机已装的相关命令\n不知道命令确切名字时，用模糊检索：\nfindit dynamic panel           // 按关键词搜索（等价于 search）\n检索小技巧：大小写和词序不影响结果、介词可省略、尽量用单数与原形（distribution 优于 distributions）、逐步缩小范围（distribution → normal distribution）。\n你可以可以使用如下命令查看最新的和最热门的外部命令：\nssc new\nssc hot\nssc hot, n(30) \n\n\n常见失败与处理\n\n装不上 / 超时：多为网络问题。先重试 ssc install winsor2, replace；仍失败可换网络，或参考 SSC 外部命令清单 查证命令名与来源。\ncommand winsor2 not found：命令没装上，或装到了别处。用 which winsor2 看是否已安装、装在哪个路径。\n想改外部命令的安装位置：先建好目标文件夹，再 net set ado \"D:\\stata\\personal\\myplus\"。\n看官方 PDF 手册：ssc install ihelp 后用 ihelp xtreg 直接打开官方 PDF。\n\n\n延伸阅读：Stata: 外部命令的搜索、安装与使用。\n\n\n\n\n\n\n\n✅ 配置成功的标志\n\n\n\n在 Stata 中运行 ssc install winsor2, replace 能装上，且 help winsor2 能打开帮助文件。",
     "crumbs": [
       "🚀 环境配置"
     ]
@@ -104,7 +104,7 @@
     "href": "settings.html#c.-github-copilot",
     "title": "🚀 环境配置",
     "section": "C. GitHub Copilot",
-    "text": "C. GitHub Copilot\nCopilot 在编辑器里根据上下文给出灰色的补全建议，也能把注释变成代码、把代码变成注释。\n\n开通与登录\n\n在 github.com/features/copilot 用 GitHub 账号开通 Copilot（学生 / 教师可申请免费权益）。\n在 VS Code 扩展面板搜索安装 GitHub Copilot（及 GitHub Copilot Chat）。\n安装后按提示用 GitHub 账号登录授权。\n\n\n\n快速自测\n新建一个 .do 或 notebook 的 Stata cell，输入一行注释后回车，例如：\n* 载入 auto 数据并对 price 做描述性统计\n正常情况下，光标下方会浮现灰色的补全建议，按 Tab 采纳。\n\n\n\n\n\n\n✅ 配置成功的标志\n\n\n\n写下一行注释后，编辑器出现灰色的 Copilot 补全建议。",
+    "text": "C. GitHub Copilot\nCopilot 在编辑器里根据上下文给出灰色的补全建议，也能把注释变成代码、把代码变成注释。\n\n开通与登录\n\n在 github.com/features/copilot 用 GitHub 账号开通 Copilot（学生 / 教师可申请免费权益；如果自己付费的话，可以用 Visa 卡或 Master 卡，费用为 10 美元/月）。\n在 VS Code 扩展面板搜索安装 GitHub Copilot（及 GitHub Copilot Chat）。\n安装后按提示用 GitHub 账号登录授权。\n\n\n\n快速自测\n新建一个 .do 或 notebook 的 Stata cell，输入一行注释后回车，例如：\n* 载入 auto 数据并对 price 做描述性统计\n正常情况下，光标下方会浮现灰色的补全建议，按 Tab 采纳。\n\n\n\n\n\n\n✅ 配置成功的标志\n\n\n\n写下一行注释后，编辑器出现灰色的 Copilot 补全建议。",
     "crumbs": [
       "🚀 环境配置"
     ]
@@ -114,7 +114,7 @@
     "href": "settings.html#d.-claude-code-codex",
     "title": "🚀 环境配置",
     "section": "D. Claude Code / Codex",
-    "text": "D. Claude Code / Codex\n这两个是执行型 Agent：在你的项目文件夹里读写文件、运行脚本、整理结果。第 4 讲的演示就靠它。\n\n安装与首次运行（Windows）\n\n按官方文档安装（通常经 npm 安装 CLI，或使用其桌面 / VS Code 版本）。\n首次运行需登录对应账号并完成授权。\n在 VS Code 中启动：打开你的项目文件夹 → 打开集成终端（Ctrl+`）→ 在终端里运行 claude（或 codex）启动。\n\n\n\n快速自测\n在一个项目文件夹内启动 Agent 后，输入：\n请列出当前文件夹里的文件清单。\n它应当能读取并列出该目录下的文件。\n\n更系统的安装与协同实践，见公开课录播：Claude Code 协同 Stata：环境配置与应用实践。\n\n\n\n\n\n\n\n✅ 配置成功的标志\n\n\n\n在某个项目文件夹内启动 Claude Code 或 Codex 后，它能正确列出该文件夹中的文件清单。\n\n\n\n主页 | 课程 | 推文 | 资料",
+    "text": "D. Claude Code / Codex\n这两个是执行型 Agent：在你的项目文件夹里读写文件、运行脚本、整理结果。第 4 讲的演示就靠它。二者用法相近，选其一即可（两个都装也行）。\n\n官方下载与安装文档\n两者的命令行版都通过 npm 安装，需先安装 Node.js。点击下面的链接可直接跳转到官方页面：\nClaude Code（Anthropic）\n\n快速上手（中文）：https://code.claude.com/docs/zh-CN/quickstart\n文档总览：https://code.claude.com/docs/en/overview\n安装命令：npm install -g @anthropic-ai/claude-code\n\nCodex（OpenAI）\n\n官方文档：https://developers.openai.com/codex\nCLI 安装说明：https://developers.openai.com/codex/cli\nCLI 源码与发行页：https://github.com/openai/codex\n安装命令：npm install -g @openai/codex\n\n\n\n首次运行（Windows）\n\n装好后首次运行，需登录对应账号（Anthropic / OpenAI）并完成授权。\n在 VS Code 中启动：打开你的项目文件夹 → 打开集成终端（Ctrl+`）→ 在终端里运行 claude（或 codex）启动。\n\n\n\n快速自测\n在一个项目文件夹内启动 Agent 后，输入：\n请列出当前文件夹里的文件清单。\n它应当能读取并列出该目录下的文件。\n\n更系统的安装与协同实践，见公开课录播：Claude Code 协同 Stata：环境配置与应用实践。\n\n\n\n\n\n\n\n✅ 配置成功的标志\n\n\n\n在某个项目文件夹内启动 Claude Code 或 Codex 后，它能正确列出该文件夹中的文件清单。\n\n\n\n主页 | 课程 | 推文 | 资料",
     "crumbs": [
       "🚀 环境配置"
     ]
@@ -245,7 +245,7 @@
     "href": "lectures/03_ai_vs_agent.html",
     "title": "3  对话式 AI 与执行型 Agent",
     "section": "",
-    "text": "3.1 先分清两类任务\n用 AI 时的很多低效，不是因为模型不够强，而是把任务放错了地方。任务其实只有两类。\n一类是对话任务：主要发生在「脑子里」和「文字讨论」中。比如解释一篇论文的贡献、比较几种研究设计、判断一个识别策略有没有风险、把一段话改得更清楚、生成一张教学插图。这类任务的重点是理解、表达和判断——放在 ChatGPT / Claude 的对话框里最合适。\n另一类是项目任务：已经落到「文件夹」和「代码库」里。比如批量修改一组脚本、检查一个 notebook、统一图片路径、根据报错改代码、把数据、结果和文字整合进同一个项目。这类任务的重点不是继续聊天，而是读取文件、执行修改、验证结果——放进 Codex / Claude Code 这样的执行型 Agent 里最合适。\n一个简单的判断标准：\n很多人觉得「AI 工具越用越乱」，往往不是工具太多，而是没把任务拆成不同环节：任务还没想清楚就丢给 Agent，会得到一堆看似完整、方向却不准的修改；任务已经散落在几十个文件里，却还在对话框里反复复制粘贴，人就成了低效的「文件搬运工」。",
+    "text": "3.1 先分清两类任务\n用 AI 时的很多低效，不是因为模型不够强，而是把任务放错了地方。任务其实只有两类。\n一类是对话任务：主要发生在「脑子里」和「文字讨论」中。比如解释一篇论文的贡献、比较几种研究设计、判断一个识别策略有没有风险、把一段话改得更清楚、生成一张教学插图。这类任务的重点是理解、表达和判断——放在 ChatGPT / Claude 的对话框里最合适。例如，定制每日 Stata 快讯，\n另一类是项目任务：已经落到「文件夹」和「代码库」里。比如批量修改一组脚本、检查一个 notebook、统一图片路径、根据报错改代码、把数据、结果和文字整合进同一个项目。这类任务的重点不是继续聊天，而是读取文件、执行修改、验证结果——放进 Codex / Claude Code 这样的执行型 Agent 里最合适。\n一个简单的判断标准：\n很多人觉得「AI 工具越用越乱」，往往不是工具太多，而是没把任务拆成不同环节：任务还没想清楚就丢给 Agent，会得到一堆看似完整、方向却不准的修改；任务已经散落在几十个文件里，却还在对话框里反复复制粘贴，人就成了低效的「文件搬运工」。",
     "crumbs": [
       "**讲义**",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>对话式 AI 与执行型 Agent</span>"

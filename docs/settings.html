@@ -273,7 +273,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></li>
   <li><a href="#d.-claude-code-codex" id="toc-d.-claude-code-codex" class="nav-link" data-scroll-target="#d.-claude-code-codex">D. Claude Code / Codex</a>
   <ul class="collapse">
-  <li><a href="#安装与首次运行windows" id="toc-安装与首次运行windows" class="nav-link" data-scroll-target="#安装与首次运行windows">安装与首次运行（Windows）</a></li>
+  <li><a href="#官方下载与安装文档" id="toc-官方下载与安装文档" class="nav-link" data-scroll-target="#官方下载与安装文档">官方下载与安装文档</a></li>
+  <li><a href="#首次运行windows" id="toc-首次运行windows" class="nav-link" data-scroll-target="#首次运行windows">首次运行（Windows）</a></li>
   <li><a href="#快速自测-1" id="toc-快速自测-1" class="nav-link" data-scroll-target="#快速自测-1">快速自测</a></li>
   </ul></li>
   </ul>
@@ -333,6 +334,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>不知道命令确切名字时，用模糊检索：</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">findit</span> dynamic panel           <span class="co">// 按关键词搜索（等价于 search）</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>检索小技巧：大小写和词序不影响结果、介词可省略、尽量用单数与原形（<code>distribution</code> 优于 <code>distributions</code>）、逐步缩小范围（<code>distribution</code> → <code>normal distribution</code>）。</p>
+<p>你可以可以使用如下命令查看最新的和最热门的外部命令：</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">ssc</span> <span class="kw">new</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">ssc</span> hot</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">ssc</span> hot, n(30) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="常见失败与处理" class="level3">
 <h3 class="anchored" data-anchor-id="常见失败与处理">常见失败与处理</h3>
@@ -374,11 +379,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="配置-nbstatastata-内核" class="level3">
 <h3 class="anchored" data-anchor-id="配置-nbstatastata-内核">配置 nbstata（Stata 内核）</h3>
 <p>在 Python 3.11 环境中安装并注册 Stata 内核：</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install nbstata</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> nbstata.install</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install nbstata</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> nbstata.install</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>如果 nbstata 没能自动找到 Stata，手动指定安装路径（按你的 Stata 版本改）：</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Windows</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> nbstata.install <span class="at">--stata-dir</span> <span class="st">"C:\Program Files\Stata19"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Windows</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> nbstata.install <span class="at">--stata-dir</span> <span class="st">"C:\Program Files\Stata19"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>装好后，在 VS Code 中新建一个 <code>.ipynb</code> 文件，点击右上角内核选择器，选择 <strong>Stata</strong> 内核。</p>
 <blockquote class="blockquote">
 <p>完整的 Anaconda / 虚拟环境 / nbstata 配置流程（含镜像加速、报错排查、可直接粘给 AI 的提示词），见 ds2026 在线书：<a href="https://lianxhcn.github.io/ds2026/Lecture/00-setup/01_01_install_anaconda.html">Python 安装</a>、<a href="https://lianxhcn.github.io/ds2026/Lecture/00-setup/01_02_jupyter_notebook.html">Jupyter Notebook 使用</a>、<a href="https://lianxhcn.github.io/ds2026/Lecture/00-setup/01_03_install_FAQs.html">安装常见问题</a>。</p>
@@ -395,8 +400,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="callout-body-container callout-body">
 <p>在 VS Code 的 notebook 中选中 Stata 内核，运行下面两行有正常输出：</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">sysuse</span> auto, <span class="kw">clear</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="kw">summarize</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">sysuse</span> auto, <span class="kw">clear</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="kw">summarize</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section>
@@ -407,7 +412,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="开通与登录" class="level3">
 <h3 class="anchored" data-anchor-id="开通与登录">开通与登录</h3>
 <ol type="1">
-<li>在 <a href="https://github.com/features/copilot">github.com/features/copilot</a> 用 GitHub 账号开通 Copilot（学生 / 教师可申请免费权益）。</li>
+<li>在 <a href="https://github.com/features/copilot">github.com/features/copilot</a> 用 GitHub 账号开通 Copilot（学生 / 教师可申请免费权益；如果自己付费的话，可以用 Visa 卡或 Master 卡，费用为 10 美元/月）。</li>
 <li>在 VS Code 扩展面板搜索安装 <strong>GitHub Copilot</strong>（及 <strong>GitHub Copilot Chat</strong>）。</li>
 <li>安装后按提示用 GitHub 账号登录授权。</li>
 </ol>
@@ -415,7 +420,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="快速自测" class="level3">
 <h3 class="anchored" data-anchor-id="快速自测">快速自测</h3>
 <p>新建一个 <code>.do</code> 或 notebook 的 Stata cell，输入一行注释后回车，例如：</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>* 载入 auto 数据并对 price 做描述性统计</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>* 载入 auto 数据并对 price 做描述性统计</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>正常情况下，光标下方会浮现<strong>灰色的补全建议</strong>，按 <code>Tab</code> 采纳。</p>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -434,12 +439,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="d.-claude-code-codex" class="level2">
 <h2 class="anchored" data-anchor-id="d.-claude-code-codex">D. Claude Code / Codex</h2>
-<p>这两个是<strong>执行型 Agent</strong>：在你的项目文件夹里读写文件、运行脚本、整理结果。第 4 讲的演示就靠它。</p>
-<section id="安装与首次运行windows" class="level3">
-<h3 class="anchored" data-anchor-id="安装与首次运行windows">安装与首次运行（Windows）</h3>
+<p>这两个是<strong>执行型 Agent</strong>：在你的项目文件夹里读写文件、运行脚本、整理结果。第 4 讲的演示就靠它。二者用法相近，选其一即可（两个都装也行）。</p>
+<section id="官方下载与安装文档" class="level3">
+<h3 class="anchored" data-anchor-id="官方下载与安装文档">官方下载与安装文档</h3>
+<p>两者的命令行版都通过 npm 安装，<strong>需先安装 <a href="https://nodejs.org/">Node.js</a></strong>。点击下面的链接可直接跳转到官方页面：</p>
+<p><strong>Claude Code（Anthropic）</strong></p>
+<ul>
+<li>快速上手（中文）：<a href="https://code.claude.com/docs/zh-CN/quickstart" class="uri">https://code.claude.com/docs/zh-CN/quickstart</a></li>
+<li>文档总览：<a href="https://code.claude.com/docs/en/overview" class="uri">https://code.claude.com/docs/en/overview</a></li>
+<li>安装命令：<code>npm install -g @anthropic-ai/claude-code</code></li>
+</ul>
+<p><strong>Codex（OpenAI）</strong></p>
+<ul>
+<li>官方文档：<a href="https://developers.openai.com/codex" class="uri">https://developers.openai.com/codex</a></li>
+<li>CLI 安装说明：<a href="https://developers.openai.com/codex/cli" class="uri">https://developers.openai.com/codex/cli</a></li>
+<li>CLI 源码与发行页：<a href="https://github.com/openai/codex" class="uri">https://github.com/openai/codex</a></li>
+<li>安装命令：<code>npm install -g @openai/codex</code></li>
+</ul>
+</section>
+<section id="首次运行windows" class="level3">
+<h3 class="anchored" data-anchor-id="首次运行windows">首次运行（Windows）</h3>
 <ol type="1">
-<li>按官方文档安装（通常经 npm 安装 CLI，或使用其桌面 / VS Code 版本）。</li>
-<li>首次运行需登录对应账号并完成授权。</li>
+<li>装好后首次运行，需登录对应账号（Anthropic / OpenAI）并完成授权。</li>
 <li><strong>在 VS Code 中启动</strong>：打开你的项目文件夹 → 打开集成终端（<code>Ctrl+`</code>）→ 在终端里运行 <code>claude</code>（或 <code>codex</code>）启动。</li>
 </ol>
 </section>
