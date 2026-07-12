@@ -17,6 +17,10 @@ images/*
 !images/poster-2026summer.png
 !images/qrcode-2026summer.png
 
+# demo_test/：提示词试跑用的一次性沙箱（demo 的副本），不入库、不发布。
+#   想保留某次结果，手动 git add -f 即可。
+demo_test/
+
 # 说明：CLAUDE.md、working/、_task/、_materials/（harvest 除外）现在有意公开，
 #       用于向学员展示"如何借助 AI Agent 制作本仓库"的完整过程。
 # 注意：不要忽略 demo/，它是要随仓库发布的。
